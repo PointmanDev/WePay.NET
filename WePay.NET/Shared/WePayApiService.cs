@@ -3,13 +3,13 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using System.Net;
-using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using System.Net.Security;
+using System.Net.Http;
 
 namespace WePayApi.Shared
 {
