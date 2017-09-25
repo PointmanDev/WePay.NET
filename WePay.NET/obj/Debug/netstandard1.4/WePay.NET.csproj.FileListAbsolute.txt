@@ -1,0 +1,4 @@
+C:\Users\Nick\Documents\GIT\WePay.NET\WePay.NET\obj\Debug\netstandard1.4\WePay.NET.csprojResolveAssemblyReference.cache
+C:\Users\Nick\Documents\GIT\WePay.NET\WePay.NET\obj\Debug\netstandard1.4\WePay.NET.csproj.CoreCompileInputs.cache
+C:\Users\Nick\Documents\GIT\WePay.NET\WePay.NET\obj\Debug\netstandard1.4\WePay.NET.AssemblyInfoInputs.cache
+C:\Users\Nick\Documents\GIT\WePay.NET\WePay.NET\obj\Debug\netstandard1.4\WePay.NET.AssemblyInfo.cs
