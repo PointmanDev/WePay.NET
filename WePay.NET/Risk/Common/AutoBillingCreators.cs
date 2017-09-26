@@ -7,7 +7,7 @@ namespace WePayApi.Risk.Common
     /// </summary>
     public class AutoBillingCreators : WePayValues<AutoBillingCreators>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Payer,
             Merchant

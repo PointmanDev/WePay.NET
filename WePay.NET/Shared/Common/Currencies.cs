@@ -5,7 +5,7 @@
     /// </summary>
     public class Currencies : WePayValues<Countries>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             USD,
             CAD,

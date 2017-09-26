@@ -6,7 +6,7 @@
     /// </summary>
     public class ProcessModes : WePayValues<ProcessModes>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Regular,
             Iframe

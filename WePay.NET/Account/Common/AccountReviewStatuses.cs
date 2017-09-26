@@ -1,13 +1,17 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.Account.Common
 {
     /// <summary>
     /// All possible account review statuses
     /// </summary>
-    public class AccountReviewStatuses : WePayValues<AccountReviewStatuses>
+    public static class AccountReviewStatuses
     {
-        public enum Choices : int
+        /// <summary>
+        /// Indices for the Values property for iteration
+        /// </summary>
+        public enum Indices : int
         {
             NotRequested,
             Pending,
@@ -17,5 +21,15 @@ namespace WePayApi.Account.Common
         public const string NotRequested = "not_requested";
         public const string Pending = "pending";
         public const string ReviewOk = "review_ok";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static AccountReviewStatuses()
+        {
+            WePayValues.FillValuesList(typeof(AccountReviewStatuses), Values);
+        }
     }
 }

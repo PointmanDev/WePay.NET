@@ -4,7 +4,7 @@ namespace WePayApi.Risk.Common
 {
     public class PaymentFrequencies : WePayValues<PaymentFrequencies>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Weekly,
             Monthly,

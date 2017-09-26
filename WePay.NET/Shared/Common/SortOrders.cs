@@ -5,7 +5,7 @@
     /// </summary>
     public class SortOrders : WePayValues<SortOrders>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Asc,
             Desc

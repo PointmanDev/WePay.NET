@@ -7,7 +7,7 @@ namespace WePayApi.Order.Common
     /// </summary>
     public class TrackingInformationStatuses : WePayValues<TrackingInformationStatuses>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Shipped,
             Delivered,

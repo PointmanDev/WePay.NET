@@ -4,7 +4,7 @@ namespace WePayApi.FileUpload.Common
 {
     public class FileTypes : WePayValues<FileTypes>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Passport = 0,
             DriversLicense,

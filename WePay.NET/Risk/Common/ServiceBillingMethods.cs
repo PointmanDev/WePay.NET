@@ -7,7 +7,7 @@ namespace WePayApi.Risk.Common
     /// </summary>
     public class ServiceBillingMethods : WePayValues<ServiceBillingMethods>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             FreeFormEntry,
             TimedBillingAtStaffRate,

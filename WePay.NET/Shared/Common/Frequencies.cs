@@ -5,7 +5,7 @@
     /// </summary>
     public class Frequencies : WePayValues<Frequencies>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Daily,
             Weekly,

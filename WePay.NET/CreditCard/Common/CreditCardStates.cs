@@ -7,7 +7,7 @@ namespace WePayApi.CreditCard.Common
         /// <summary>
         /// All possible Credit Card states recognized by WePay
         /// </summary>
-        public enum Choices : int
+        public enum Indices : int
         {
             New,
             Authorized,

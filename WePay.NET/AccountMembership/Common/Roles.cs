@@ -7,7 +7,7 @@ namespace WePayApi.AccountMembership.Common
     /// </summary>
     public class Roles : WePayValues<Roles>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Moderator,
             Admin,

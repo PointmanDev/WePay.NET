@@ -4,7 +4,7 @@ namespace WePayApi.Checkout.Common
 {
     public class PaymentTypes : WePayValues<PaymentTypes>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             CreditCard,
             PaymentBank,

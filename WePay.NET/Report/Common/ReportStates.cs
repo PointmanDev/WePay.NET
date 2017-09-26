@@ -7,7 +7,7 @@ namespace WePayApi.Report.Common
     /// </summary>
     public class ReportStates : WePayValues<ReportStates>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             New,
             Processing,

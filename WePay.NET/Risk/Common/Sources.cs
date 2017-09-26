@@ -7,7 +7,7 @@ namespace WePayApi.Risk.Common
     /// </summary>
     public class Sources : WePayValues<Sources>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             User,
             Guidestar,

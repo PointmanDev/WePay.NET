@@ -7,7 +7,7 @@ namespace WePayApi.Risk.Common
     /// </summary>
     public class ExternalAccountTypes : WePayValues<ExternalAccountTypes>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Facebook,
             Linkedin,

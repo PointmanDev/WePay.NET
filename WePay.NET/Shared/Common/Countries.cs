@@ -5,7 +5,7 @@
     /// </summary>
     public class Countries : WePayValues<Countries>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             US,
             CA,

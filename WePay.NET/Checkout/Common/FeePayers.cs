@@ -4,7 +4,7 @@ namespace WePayApi.Checkout.Common
 {
     public class FeePayers : WePayValues<FeePayers>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Payer,
             Payee,

@@ -7,7 +7,7 @@ namespace WePayApi.Risk.Common
     /// </summary>
     public class RbitTypes : WePayValues<RbitTypes>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Address,
             AutoBilling,

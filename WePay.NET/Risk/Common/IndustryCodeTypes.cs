@@ -7,7 +7,7 @@ namespace WePayApi.Risk.Common
     /// </summary>
     public class IndustryCodeTypes : WePayValues<IndustryCodeTypes>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Mcc,
             Sic,

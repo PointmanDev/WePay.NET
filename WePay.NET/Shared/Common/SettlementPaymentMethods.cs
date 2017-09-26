@@ -5,7 +5,7 @@
     /// </summary>
     public class SettlementPaymentMethods : WePayValues<SettlementPaymentMethods>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Ach,
             Check

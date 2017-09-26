@@ -5,7 +5,7 @@
     /// </summary>
     public class ErrorCategories : WePayValues<ErrorCategories>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             InvalidRequest,
             AccessDenied,

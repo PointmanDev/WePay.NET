@@ -5,7 +5,7 @@
     /// </summary>
     public class BankAccountTypes : WePayValues<BankAccountTypes>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Checking,
             Savings

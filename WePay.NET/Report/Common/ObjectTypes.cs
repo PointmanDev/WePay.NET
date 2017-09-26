@@ -7,7 +7,7 @@ namespace WePayApi.Report.Common
     /// </summary>
      public class ObjectTypes : WePayValues<ObjectTypes>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Account,
             Withdrawal

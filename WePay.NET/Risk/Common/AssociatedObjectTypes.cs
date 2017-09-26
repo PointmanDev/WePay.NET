@@ -7,7 +7,7 @@ namespace WePayApi.Risk.Common
     /// </summary>
     public class AssociatedObjectTypes : WePayValues<AssociatedObjectTypes>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Account,
             User,

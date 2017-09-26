@@ -7,7 +7,7 @@ namespace WePayApi.Withdrawal.Common
     /// </summary>
     public class WithdrawalStates : WePayValues<WithdrawalStates>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Started,
             Captured,

@@ -7,7 +7,7 @@ namespace WePayApi.User.Common
     /// </summary>
     public class UserStates : WePayValues<UserStates>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Pending,
             Registered,

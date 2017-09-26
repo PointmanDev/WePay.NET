@@ -4,7 +4,7 @@ namespace WePayApi.KnowYourCustomer.Common
 {
     public class KnowYourCustomerStates : WePayValues<KnowYourCustomerStates>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Unsubmitted,
             Unverified,

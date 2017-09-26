@@ -7,7 +7,7 @@ namespace WePayApi.Report.Common
     /// </summary>
     public class ReportTypes : WePayValues<ReportTypes>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             MerchantTransactions,
             Reconciliation

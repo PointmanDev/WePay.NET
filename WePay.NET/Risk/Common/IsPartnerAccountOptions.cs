@@ -7,7 +7,7 @@ namespace WePayApi.Risk.Common
     /// </summary>
     public class IsPartnerAccountOptions : WePayValues<IsPartnerAccountOptions>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Yes,
             No

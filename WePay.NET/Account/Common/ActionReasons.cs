@@ -7,7 +7,7 @@ namespace WePayApi.Account.Common
     /// </summary>
     public class ActionReasons : WePayValues<ActionReasons>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             BankAccount,
             Kyc,

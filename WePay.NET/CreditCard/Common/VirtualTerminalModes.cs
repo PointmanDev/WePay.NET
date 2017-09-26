@@ -7,7 +7,7 @@ namespace WePayApi.CreditCard.Common
         /// <summary>
         /// All possible virtual terminal modes
         /// </summary>
-        public enum Choices : int
+        public enum Indices : int
         {
             Mobile,
             Web,

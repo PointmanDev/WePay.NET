@@ -7,7 +7,7 @@ namespace WePayApi.Order.Common
     /// </summary>
     public class OrderStatuses : WePayValues<OrderStatuses>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Open,
             Processed,

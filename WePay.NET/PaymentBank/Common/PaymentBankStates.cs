@@ -7,7 +7,7 @@ namespace WePayApi.PaymentBank.Common
     /// </summary>
     public class PaymentBankStates : WePayValues<PaymentBankStates>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             New,
             Pending,

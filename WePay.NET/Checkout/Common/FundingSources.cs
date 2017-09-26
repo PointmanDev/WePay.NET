@@ -7,7 +7,7 @@ namespace WePayApi.Checkout.Common
     /// </summary>
     public class FundingSources : WePayValues<FundingSources>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             CreditCard,
             PaymentBank

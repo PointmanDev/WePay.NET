@@ -7,7 +7,7 @@ namespace WePayApi.Risk.Common
     /// </summary>
     public class PersonRoles : WePayValues<PersonRoles>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Employee,
             Fundraiser,

@@ -7,7 +7,7 @@ namespace WePayApi.FileUpload.Common
     /// </summary>
     public class FileStatuses : WePayValues<FileStatuses>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Verified,
             InReview,

@@ -1,13 +1,17 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.Account.Common
 {
     /// <summary>
     /// All reasons for why an account was disabled
     /// </summary>
-    public class DisabledReasons : WePayValues<DisabledReasons>
+    public class DisabledReasons
     {
-        public enum Choices : int
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
+        public enum Indices : int
         {
             Fraud,
             HighRiskChargeback,
@@ -52,5 +56,15 @@ namespace WePayApi.Account.Common
         /// Occurs when more than 30 days have elapsed after the merchant accepts their first payment and no settlement path has been established. This is remediated by adding a settlement method (e.g., a bank account) and completing the KYC process.
         /// </summary>
         public const string NoSettlementPath = "no_settlement_path";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static DisabledReasons()
+        {
+            WePayValues.FillValuesList(typeof(DisabledReasons), Values);
+        }
     }
 }

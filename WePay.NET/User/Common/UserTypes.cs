@@ -5,7 +5,7 @@ namespace WePayApi.User.Common
     // All possible User Types currently recognized by WePay
     public class UserTypes : WePayValues<UserTypes>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Sso
         }

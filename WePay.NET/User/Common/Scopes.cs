@@ -8,7 +8,7 @@ namespace WePayApi.User.Common
     /// </summary>
     public class Scopes : WePayValues<Scopes>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             ManageAccounts,
             CollectPayments,

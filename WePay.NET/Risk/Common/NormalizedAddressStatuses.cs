@@ -7,7 +7,7 @@ namespace WePayApi.Risk.Common
     /// </summary>
     public class NormalizedAddressStatuses : WePayValues<NormalizedAddressStatuses>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             UserConfirmed,
             UserDenied,

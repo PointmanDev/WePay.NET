@@ -7,7 +7,7 @@ namespace WePayApi.Order.Common
     /// </summary>
     public class OrderTypes : WePayValues<OrderTypes>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             CardReader = 0
         }

@@ -7,7 +7,7 @@ namespace WePayApi.Risk.Common
     /// </summary>
     public class BusinessNameTypes : WePayValues<BusinessNameTypes>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Legal,
             Dba

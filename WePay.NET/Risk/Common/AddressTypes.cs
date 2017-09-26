@@ -7,7 +7,7 @@ namespace WePayApi.Risk.Common
     /// </summary>
     public class AddressTypes : WePayValues<AddressTypes>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Incorporation,
             Headquarters,

@@ -7,7 +7,7 @@ namespace WePayApi.FileUpload.Common
     /// </summary>
     public class RejectReasons : WePayValues<RejectReasons>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Illegible,
             CorruptFile,

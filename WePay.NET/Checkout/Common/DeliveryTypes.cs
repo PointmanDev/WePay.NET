@@ -7,7 +7,7 @@ namespace WePayApi.Checkout.Common
     /// </summary>
     public class DeliveryTypes : WePayValues<DeliveryTypes>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             None,
             FullyDelivered,

@@ -7,7 +7,7 @@ namespace WePayApi.KnowYourCustomer.Common
     /// </summary>
     public class LegalForms : WePayValues<LegalForms>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             SoleTrader = 0,
             Partnership,

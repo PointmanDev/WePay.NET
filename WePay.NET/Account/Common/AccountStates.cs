@@ -1,13 +1,17 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.Account.Common
 {
     /// <summary>
     /// All possible account states
     /// </summary>
-    public class AccountStates : WePayValues<AccountStates>
+    public static class AccountStates
     {
-        public enum Choices : int
+        /// <summary>
+        /// Indices for the Values property for iteration
+        /// </summary>
+        public enum Indices : int
         {
             ActionRequired,
             Pending,
@@ -42,5 +46,15 @@ namespace WePayApi.Account.Common
         /// The account has been deleted.
         /// </summary>
         public const string Deleted = "deleted";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static AccountStates()
+        {
+            WePayValues.FillValuesList(typeof(AccountStates), Values);
+        }
     }
 }

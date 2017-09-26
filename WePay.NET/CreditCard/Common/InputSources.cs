@@ -7,7 +7,7 @@ namespace WePayApi.CreditCard.Common
         /// <summary>
         /// All possible methods of accepting CreditCard information
         /// </summary>
-        public enum Choices : int
+        public enum Indices : int
         {
             CardKeyed,
             CardSwiped,

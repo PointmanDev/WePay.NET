@@ -4,51 +4,29 @@ using System.Reflection;
 
 namespace WePayApi.Shared
 {
-    public abstract class WePayValues
+    /// <summary>
+    /// Utitlties class for building out static classes that store WePay specific values that may need to be referenced in application code
+    /// </summary>
+    public static class WePayValues
     {
-        public readonly List<string> Values = new List<string>();
-
-        public int? GetIndexOfWePayValue(string value)
+        /// <summary>
+        /// Used to iterate through a static class and fill a List of strings with each static member that is a string
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="values"></param>
+        public static void FillValuesList(Type type,
+                                           List<string> values)
         {
-            if (value != null)
-            {
-                int index = Values.IndexOf(value);
+            values.Clear();
 
-                if (index > -1)
-                {
-                    return index;
-                }
-            }
-
-            return null;
-        }
-    }
-
-    public abstract class WePayValues<T> : WePayValues where T: class
-    {
-        public string GetWePayValue(int i)
-        {
-            return Values[i];
-        }
-
-        public string GetWePayValue(T choice)
-        {
-            return Values[Convert.ToInt32(choice)];
-        }
-
-        public int ToInt(T choice)
-        {
-            return Convert.ToInt32(choice);
-        }
-
-        public WePayValues()
-        {
-            Values.Clear();
-
-            foreach (var p in typeof(T).GetFields(BindingFlags.Static | BindingFlags.Public))
+            foreach (var p in type.GetFields(BindingFlags.Static | BindingFlags.Public))
             {
                 var value = p.GetValue(null);
-                Values.Add((string)value);
+
+                if (value is string valueAsString)
+                {
+                    values.Add(valueAsString);
+                }
             }
         }
     }

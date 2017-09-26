@@ -7,7 +7,7 @@ namespace WePayApi.Risk.Common
     /// </summary>
     public class PhoneTypes : WePayValues<PhoneTypes>
     {
-        public enum Choices : int
+        public enum Indices : int
         {
             Home,
             Mobile,
