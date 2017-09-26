@@ -3,291 +3,291 @@
     /// <summary>
     /// All possible Error Codes which WePay can return with an Error response.
     /// </summary>
-    public enum Choices : int
+    public enum ErrorCodes : int
     {
         /// <summary>
         /// You try to make an API call that doesn’t exist like /user/robots.
         /// </summary>
-        Generic_ApiEndPointDoesNotExist = 1001,
+        GenericApiEndPointDoesNotExist = 1001,
         /// <summary>
         /// You are missing a required header such as User-Agent, Content-Type, or Authorization.
         /// </summary>
-        Generic_MissingRequiredHeader,
+        GenericMissingRequiredHeader,
         /// <summary>
         /// You passed an invalid parameter value such “robot” for the “fee_payer” parameter.
         /// </summary>
-        Generic_PassedInvalidParameter,
+        GenericPassedInvalidParameter,
         /// <summary>
         /// You did not pass a required parameter.
         /// </summary>
-        Generic_FailedToPassRequiredParameter,
+        GenericFailedToPassRequiredParameter,
         /// <summary>
         /// We were unable to parse the parameters you passed (ie your JSON is malformed).
         /// </summary>
-        Generic_MalformedJson,
+        GenericMalformedJson,
         /// <summary>
         /// We were completely unable to authenticate your request (probably your access_token doesn’t exist).
         /// </summary>
-        Generic_UnableToAuthenticate,
+        GenericUnableToAuthenticate,
         /// <summary>
         /// You have made too many requests in a short time period. See our throttling documentation for more details.
         /// </summary>
-        Generic_TooManyRequests,
+        GenericTooManyRequests,
         /// <summary>
         /// WePay encountered an unexpected error. Contact api@wepay.com.
         /// </summary>
-        Generic_UnexpectedError,
+        GenericUnexpectedError,
         /// <summary>
         /// This error can be displayed to the user and generally relates to user data - long term this code will be replaced by more specific error codes.
         /// </summary>
-        Generic_UserDisplayable,
+        GenericUserDisplayable,
         /// <summary>
         /// You do not have sufficient permissions to perform the requested action.
         /// </summary>
-        Generic_InsufficientPermissions,
+        GenericInsufficientPermissions,
         /// <summary>
         /// The AccessToken you passed has been revoked.
         /// </summary>
-        Generic_AccessTokenRevoked,
+        GenericAccessTokenRevoked,
         /// <summary>
         /// The code parameter (OAuth2) has expired.
         /// </summary>
-        Generic_OAuth2Expired,
+        GenericOAuth2Expired,
         /// <summary>
         /// The ClientId you passed does not match the code parameter.
         /// </summary>
-        Generic_ClientIdDoesNotMatchCodeParameter,
+        GenericClientIdDoesNotMatchCodeParameter,
         /// <summary>
         /// IP address you are making API calls from is not on the IP whitelist for your app.
         /// </summary>
-        Generic_IpAddressNotOnWhitelist,
+        GenericIpAddressNotOnWhitelist,
         /// <summary>
         /// API Version is invalid or expired.
         /// </summary>
-        Generic_ApiVersionInvalidOrExpired,
+        GenericApiVersionInvalidOrExpired,
         /// <summary>
         /// The API version specified in the ‘Api-Version’ header used in the request is not valid for the app.
         /// </summary>
-        Generic_InvalidApiVersionForApp,
+        GenericInvalidApiVersionForApp,
         /// <summary>
         /// The AVS check on the payment failed (invalid billing address).
         /// </summary>
-        Payment_AvsCheckOnPaymentFailed = 2001,
+        PaymentAvsCheckOnPaymentFailed = 2001,
         /// <summary>
         /// The card type is not supported (i.e. not Visa, MasterCard, American Express, Discover, JCB, or Diners Club).
         /// </summary>
-        Payment_CardTypeUnsupported,
+        PaymentCardTypeUnsupported,
         /// <summary>
         /// The issuing bank indicated that the card is not supported.
         /// </summary>
-        Payment_BankIndicatedCardUnsupported,
+        PaymentBankIndicatedCardUnsupported,
         /// <summary>
         /// The issuing bank declined the charge but did not tell us why (generally due to a fraud check on their side).
         /// </summary>
-        Payment_BankUnspecifiedChargeDeclined,
+        PaymentBankUnspecifiedChargeDeclined,
         /// <summary>
         /// The payment method does not have sufficient funds to make the payment.
         /// </summary>
-        Payment_InsufficientFunds,
+        PaymentInsufficientFunds,
         /// <summary>
         /// The card has been lost or stolen.
         /// </summary>
-        Payment_CardLostOrStolen,
+        PaymentCardLostOrStolen,
         /// <summary>
         /// The card has expired (some issuing banks don’t care though and we only care if they do).
         /// </summary>
-        Payment_CardExpired,
+        PaymentCardExpired,
         /// <summary>
         /// Some of the card data was invalid (CVV, expiration date, card number, name on card).
         /// </summary>
-        Payment_InvalidCardData,
+        PaymentInvalidCardData,
         /// <summary>
         /// The CreditCard object is in an invalid state for that action.
         /// </summary>
-        Payment_InvalidStateForAction,
+        PaymentInvalidStateForAction,
         /// <summary>
         /// The account you are trying to access does not exist.
         /// </summary>
-        Account_DoesNotExist = 3001,
+        AccountDoesNotExist = 3001,
         /// <summary>
         /// The AccessToken you have passed belongs to a user that does not have permission to view/modify that account.
         /// </summary>
-        Account_InsufficientPermissions,
+        AccountInsufficientPermissions,
         /// <summary>
         /// The account has been deleted.
         /// </summary>
-        Account_Deleted,
+        AccountDeleted,
         /// <summary>
         /// The account cannot transact.
         /// </summary>
-        Account_CannotTransact,
+        AccountCannotTransact,
         /// <summary>
         /// The account lacks sufficient funds for the action requested.
         /// </summary>
-        Account_InsufficientFunds,
+        AccountInsufficientFunds,
         /// <summary>
         /// The account already provided KYC information.
         /// </summary>
-        Account_KycAlreadyProvided,
+        AccountKycAlreadyProvided,
         /// <summary>
         /// The account must go through KYC before this call can be made.
         /// </summary>
-        Account_RequiresKycForCall,
+        AccountRequiresKycForCall,
         /// <summary>
         /// The account must complete settlement information before requesting account review.
         /// </summary>
-        Account_MustCompleteSettlementInformation,
+        AccountMustCompleteSettlementInformation,
         /// <summary>
         /// The account must supply a 9-digit social security number when completing KYC.
         /// </summary>
-        Account_MustSupplySocialSecurityNumberForKyc,
+        AccountMustSupplySocialSecurityNumberForKyc,
         /// <summary>
         /// The account KYC state must be in state 'RequireDocs' when calling KnowYourCustomer Modify.
         /// </summary>
-        Account_KycMustBeInStateRequireDocs,
+        AccountKycMustBeInStateRequireDocs,
         /// <summary>
         /// The account does not own the files specified when calling KnowYourCustomer Modify.
         /// </summary>
-        Account_KycFilesNotFound,
+        AccountKycFilesNotFound,
         /// <summary>
         /// The account is required to supply the AccountOwner KYC field, however, KYC was attempted to be completed without it.
         /// </summary>
-        Account_RequiresAccountOwnerKycField,
+        AccountRequiresAccountOwnerKycField,
         /// <summary>
         /// You must use the financial administrator’s access token.
         /// </summary>
-        Membership_MustUseFinancialAdmisitratorAccessToken = 3302,
+        MembershipMustUseFinancialAdmisitratorAccessToken = 3302,
         /// <summary>
         /// Cannot change financial administrator once withdrawals have started.
         /// </summary>
-        Membership_CannotChangeFinancialAdministrator = 3306,
+        MembershipCannotChangeFinancialAdministrator = 3306,
         /// <summary>
         /// The checkout you are trying to view/edit does not exist.
         /// </summary>
-        Checkout_DoesNotExist = 4001,
+        CheckoutDoesNotExist = 4001,
         /// <summary>
         /// The AccessToken you have passed belongs to a user that does not have permission to view/modify that checkout.
         /// </summary>
-        Checkout_InsufficientPermissions,
+        CheckoutInsufficientPermissions,
         /// <summary>
         /// The payment method you passed does not exist or does not belong to the user/app you are authenticated as.
         /// </summary>
-        Checkout_PaymentMethodDoesNotExist,
+        CheckoutPaymentMethodDoesNotExist,
         /// <summary>
         /// The checkout is in an invalid state for that action.
         /// </summary>
-        Checkout_InvalidStateForAction,
+        CheckoutInvalidStateForAction,
         /// <summary>
         /// Cannot add signature to this checkout.
         /// </summary>
-        Checkout_CannotAddSignature,
+        CheckoutCannotAddSignature,
         /// <summary>
         /// The preapproval does not exist.
         /// </summary>
-        Preapproval_DoesNotExist = 5001,
+        PreapprovalDoesNotExist = 5001,
         /// <summary>
         /// The access_token you have passed belongs to a user that does not have permission to view/modify that checkout.
         /// </summary>
-        Preapproval_InsufficientPermissions,
+        PreapprovalInsufficientPermissions,
         /// <summary>
         /// If you authenticated with a ClientId/ClientSecret (for app-level preapprovals) then your app cannot access that preapproval.
         /// </summary>
-        Preapproval_CannotAccess,
+        PreapprovalCannotAccess,
         /// <summary>
         /// You are trying to execute a preapproval where the StartTime has not passed.
         /// </summary>
-        Preapproval_StartTimeNotYetPassed,
+        PreapprovalStartTimeNotYetPassed,
         /// <summary>
         /// You are trying to execute a preapproval where the EndTime has already passed.
         /// </summary>
-        Preapproval_EndTimeAlreadyPassed,
+        PreapprovalEndTimeAlreadyPassed,
         /// <summary>
         /// The preapproval is in the incorrect state for that action.
         /// </summary>
-        Preapproval_InvalidStateForAction,
+        PreapprovalInvalidStateForAction,
         /// <summary>
         /// You have tried to authorize the payment method unsuccessfully too many times with this preapproval
         /// </summary>
-        Preapproval_TooManyUnsuccessfulAuthorizationAttempts,
+        PreapprovalTooManyUnsuccessfulAuthorizationAttempts,
         /// <summary>
         /// You are trying to make a payment to an account that this preapproval is not tied to.
         /// </summary>
-        Preapproval_AccountPreapprovalMismatch,
+        PreapprovalAccountPreapprovalMismatch,
         /// <summary>
         /// You have already executed as many checkouts on this period as you are allowed to based on the frequency parameter you set.
         /// </summary>
-        Preapproval_CheckoutFrequencyExceeded,
+        PreapprovalCheckoutFrequencyExceeded,
         /// <summary>
         /// You have already reached the amount per period limit you set for this preapproval.
         /// </summary>
-        Preapproval_AmountPerPeriodExceeded,
+        PreapprovalAmountPerPeriodExceeded,
         /// <summary>
         /// You tried to execute two simultaenous payments on a single preapproval.
         /// </summary>
-        Preapproval_SimultaneousPaymentExecution,
+        PreapprovalSimultaneousPaymentExecution,
         /// <summary>
         /// The withdrawal you are trying to access does not exist.
         /// </summary>
-        Withdrawal_DoesNotExist = 6001,
+        WithdrawalDoesNotExist = 6001,
         /// <summary>
         /// The AccessToken you have passed belongs to a user that does not have permission to view/modify that withdrawal.
         /// </summary>
-        Withdrawal_InsufficientPermissions,
+        WithdrawalInsufficientPermissions,
         /// <summary>
         /// You are trying to access a user that does not exist or that you do not have permission to access.
         /// </summary>
-        User_InsufficientPermissions = 7001,
+        UserInsufficientPermissions = 7001,
         /// <summary>
         /// The user is an invalid state for that action.
         /// </summary>
-        User_InvalidStateForAction,
+        UserInvalidStateForAction,
         /// <summary>
         /// The user has been deleted.
         /// </summary>
-        User_Deleted,
+        UserDeleted,
         /// <summary>
         /// The subscription plan you are trying to view/modify does not exist.
         /// </summary>
-        Settlement_DoesNotExist = 8001,
+        SettlementDoesNotExist = 8001,
         /// <summary>
         /// The AccessToken you have passed belongs to a user that does not have permission to view/modify that subscription plan.
         /// </summary>
-        Settlement_InsufficientPermissionsToAccessOrModifySubscriptionPlan,
+        SettlementInsufficientPermissionsToAccessOrModifySubscriptionPlan,
         /// <summary>
         /// The app cannot access the subscription plan.
         /// </summary>
-        Settlement_AppCannotAccessSubscriptionPlan,
+        SettlementAppCannotAccessSubscriptionPlan,
         /// <summary>
         /// The subscription plan has been deleted.
         /// </summary>
-        Settlement_SubscriptionPlanDeleted,
+        SettlementSubscriptionPlanDeleted,
         /// <summary>
         /// The subscription you are trying to view/modify does not exist
         /// </summary>
-        Settlement_SubscriptionPlanDoesNotExist,
+        SettlementSubscriptionPlanDoesNotExist,
         /// <summary>
         /// The AccessToken you have passed belongs to a user that does not have permission to view/modify that subscription.
         /// </summary>
-        Settlement_InsufficientPermissionsToAccessOrModifySubscription,
+        SettlementInsufficientPermissionsToAccessOrModifySubscription,
         /// <summary>
         /// The app cannot access the subscription.
         /// </summary>
-        Settlement_AppCannotAccessSubscription,
+        SettlementAppCannotAccessSubscription,
         /// <summary>
         /// The subscription you are trying to view/modify has expired.
         /// </summary>
-        Settlement_SubscriptionExpired,
+        SettlementSubscriptionExpired,
         /// <summary>
         /// The subscription charge you are trying to view/modify does not exist.
         /// </summary>
-        Settlement_SubscriptionChangeDoesNotExist,
+        SettlementSubscriptionChangeDoesNotExist,
         /// <summary>
         /// The AccessToken you have passed belongs to a user that does not have permission to view/modify that subscription charge.
         /// </summary>
-        Settlement_InsufficientPermissionsToAccessOrModifySubscriptionChange,
+        SettlementInsufficientPermissionsToAccessOrModifySubscriptionChange,
         /// <summary>
         /// The app cannot access that subscription charge.
         /// </summary>
-        Settlement_AppCannotAccessSubscriptionCharge
+        SettlementAppCannotAccessSubscriptionCharge
     }
 }

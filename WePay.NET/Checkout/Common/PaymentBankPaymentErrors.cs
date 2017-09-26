@@ -23,7 +23,7 @@
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string InvalidAccountNumber = "R04";
+        public const string InvalidBankAccountNumber = "R04";
 
         /// <summary>
         /// Bank rejected payment request, no follow-up suggested.
@@ -58,243 +58,243 @@
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R11 = "Check truncation return";
+        public const string CheckTruncationReturn = "R11";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R12 = "Account sold to another financial institution";
+        public const string AccountSoldToAnotherFinancialInstitution = "R12";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R13 = "Invalid ACH routing number";
+        public const string InvalidAchRoutingNumber = "R13";
 
         /// <summary>
         /// Bank rejected payment request, no follow-up suggested.
         /// </summary>
-        public const string R14 = "Payee is deceased";
+        public const string PayeeIsDeceased = "R14";
 
         /// <summary>
         /// Bank rejected payment request, no follow-up suggested.
         /// </summary>
-        public const string R15 = "Account holder is deceased";
+        public const string AccountHolderIsDeceased = "R15";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R16 = "Account funds have been frozen";
+        public const string AccountFundsHaveBeenFrozen = "R16";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R17 = "Item returned because of invalid data";
+        public const string ItemReturnedBecauseOfInvalidData = "R17";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R18 = "Improper effective date";
+        public const string ImproperEffectiveDate = "R18";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R19 = "Amount error";
+        public const string AmountError = "R19";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R20 = "Account does not allow ACH transactions or limit has been exceeded";
+        public const string AccountDoesNotAllowAchTransactionsOrLimitHasBeenExceeded = "R20";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R21 = "Invalid company identification";
+        public const string InvalidCompanyIdentification = "R21";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R22 = "Invalid individual ID";
+        public const string InvalidIndividualId = "R22";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R23 = "Credit entry refused by receiver";
+        public const string CreditEntryRefusedByReceiver = "R23";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R24 = "Duplicate entry";
+        public const string DuplicateEntry = "R24";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R25 = "Addenda record error";
+        public const string AddendaRecordError = "R25";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R26 = "Mandatory field error";
+        public const string MandatoryFieldError = "R26";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R27 = "Trace number error";
+        public const string TraceNumberError = "R27";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R28 = "Routing/transit number check digit error";
+        public const string TransitRoutingNumberCheckDigitError = "R28";
 
         /// <summary>
         /// Bank rejected payment request, no follow-up suggested.
         /// </summary>
-        public const string R29 = "Corporate customer advised not authorized";
+        public const string CorporateCustomerAdvisedNotAuthorized = "R29";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R30 = "RDFI not participant in check truncation program";
+        public const string RdfiNotParticipantInCheckTruncationProgram = "R30";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R31 = "Permissible return entry";
+        public const string PermissibleReturnEntry = "R31";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R32 = "Receiving bank non-settlement";
+        public const string ReceivingBankNonSettlement = "R32";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R33 = "Return of item";
+        public const string ReturnOfItem = "R33";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R34 = "Limited participation originating bank";
+        public const string LimitedParticipationOriginatingBank = "R34";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R35 = "Return of improper debit entry";
+        public const string ReturnOfImproperDebitEntry = "R35";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R36 = "Return of improper credit entry";
+        public const string ReturnOfImproperCreditEntry = "R36";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R37 = "Source document presented for payment";
+        public const string SourceDocumentPresentedForPayment = "R37";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R38 = "Stop payment on source document";
+        public const string StopPaymentOnSourceDocument = "R38";
 
         /// <summary>
         /// Bank system error.
         /// Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R39 = "Improper source document";
+        public const string ImproperSourceDocument = "R39";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R40 = "Return of item by government agency";
+        public const string ReturnOfItemByGovernmentAgency = "R40";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R41 = "Invalid Transaction Code";
+        public const string InvalidTransactionCode = "R41";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R42 = "Routing/transit number check digit error";
+        public const string RoutingOrTransitNumberCheckDigitError = "R42";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R43 = "Invalid account number";
+        public const string InvalidDfiAccountNumber = "R43";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R44 = "Invalid individual ID";
+        public const string InvalidIndividualIdNumber = "R44";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R45 = "Invalid individual or company name";
+        public const string InvalidIndividualOrCompanyName = "R45";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R46 = "Invalid payee indicator code";
+        public const string InvalidPayeeIndicatorCode = "R46";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account
         /// </summary>
-        public const string R47 = "Duplicate enrollment";
+        public const string DuplicateEnrollment = "R47";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R50 = "State law affecting RCK acceptance";
+        public const string StateLawAffectingRckAcceptance = "R50";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R51 = "Item is ineligible, notice not provided, signature not genuine, or original item altered for adjustment entry";
+        public const string ItemIneligibleNoticeNotProvidedSignatureNotGenuineOrOriginalItemAlteredForAdjustmentEntry = "R51";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R52 = "Stop payment on item";
+        public const string StopPaymentOnItem = "R52";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R53 = "Item and ACH entry presented for payment";
+        public const string ItemAndAchEntryPresentedForPayment = "R53";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R61 = "Misrouted return - RDFI has placed incorrect routing/transit # in RDFI id field";
+        public const string MisroutedReturnRdfiHasPlacedIncorrectRoutingOrTransitNumberInRdfiIdField = "R61";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R67 = "Duplicate return";
+        public const string DuplicateReturn = "R67";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R68 = "Untimely return - the return was not sent within the established timeframe";
+        public const string UntimelyReturnTheReturnWasNotSentWithinTheEstablishedTimeframe = "R68";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R69 = "Field errors";
+        public const string FieldErrors = "R69";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R70 = "Permissible return entry not accepted";
+        public const string PermissibleReturnEntryNotAccepted = "R70";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R71 = "Misrouted dishonored return - incorrect routing/transit # in RDFI id field";
+        public const string MisroutedDishonoredReturnIncorrectRoutingOrTransitNumberInRdfiIdField = "R71";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R72 = "Untimely return - dishonored return was not sent within the established timeframe";
+        public const string UntimelyReturnDishonoredReturnWasNotSentWithinTheEstablishedTimeframe = "R72";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
@@ -304,66 +304,66 @@
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R74 = "Corrected return - RDFI is correcting a previous return entry that was dishonored because it contained incomplete or incorrect information";
+        public const string CorrectedReturnRdfiIsCorrectingAPreviousReturnEntryThatWasDishonoredBecauseItContainedIncompleteOrIncorrectInformation = "R74";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R75 = "Original return not a duplicate";
+        public const string OriginalReturnNotADuplicate = "R75";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R76 = "No errors found";
+        public const string NoErrorsFound = "R76";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R80 = "Cross-border payment coding error";
+        public const string CrossBorderPaymentCodingError = "R80";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R81 = "Non-participant in cross-border program";
+        public const string NonParticipantInCrossBorderProgram = "R81";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R82 = "Invalid foreign RDFI identification";
+        public const string InvalidForeignRdfiIdentification = "R82";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R83 = "Foreign RDFI unable to settle";
+        public const string ForeignRdfiUnableToSettle = "R83";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R84 = "Cross-border entry not processed by originating gateway operator";
+        public const string CrossBorderEntryNotProcessedByOriginatingGatewayOperator = "R84";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R94 = "Administrative return item was processed and resubmitted as a photocopy";
+        public const string AdministrativeReturnItemWasProcessedAndResubmittedAsAPhotocopy = "R94";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R95 = "Administrative return item was processed and resubmitted as a MICR-Split";
+        public const string AdministrativeReturnItemWasProcessedAndResubmittedAsAMicrSplit = "R95";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R97 = "Administrative return item was processed and resubmitted with corrected dollar amount";
+        public const string AdministrativeReturnItemWasProcessedAndResubmittedWithCorrectedDollarAmount = "R97";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R98 = "Indicates a return PAC (pre-authorized check); RDFI provides a text reason and indicated a new account number on the PAC itself";
+        public const string IndicatesAReturnPreAuthorizedCheckRdfiProvidesATextReasonAndIndicatedANewAccountNumberOnThePacItself = "R98";
 
         /// <summary>
         /// Bank system error. Customer needs to use a different bank account, preferably at a different bank.
         /// </summary>
-        public const string R99 = "Indicates a return PAC (pre-authorized check); RDFI provides a text reason on the PAC itself for which there is no equivalent return reason code";
+        public const string IndicatesAReturnPreAuthorizedCheckRdfiProvidesATextReasonOnThePacItselfForWhichThereIsNoEquivalentReturnReasonCode = "R99";
     }
 }
