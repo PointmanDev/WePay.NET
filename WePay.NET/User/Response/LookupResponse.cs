@@ -7,7 +7,7 @@ namespace WePayApi.User.Response
         /// <summary>
         /// The unique ID of the user.
         /// </summary>
-        public string UserId { get; set; }
+        public long? UserId { get; set; }
 
         /// <summary>
         /// The full name of the user.

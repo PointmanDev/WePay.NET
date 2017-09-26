@@ -30,7 +30,7 @@ namespace WePayApi.Account.Response
         /// <summary>
         /// The unique ID of the user who is the current financial owner of this account.
         /// </summary>
-        public string OwnerUserId { get; set; }
+        public long? OwnerUserId { get; set; }
 
         /// <summary>
         /// The unique reference ID of the account (this is set by the application in the Create or Modify call).

@@ -1,137 +1,59 @@
-﻿using WePayApi.Shared;
-
-namespace WePayApi.Checkout.Common
+﻿namespace WePayApi.Checkout.Common
 {
     /// <summary>
     /// All recognized Banking Error Codes
     /// </summary>
-    public class PaymentBankPaymentErrors : WePayValues<PaymentBankPaymentErrors>
+    public static class PaymentBankPaymentErrors
     {
-        public enum Choices : int
-        {
-            R01,
-            R02,
-            R03,
-            R04,
-            R05,
-            R06,
-            R07,
-            R08,
-            R09,
-            R10,
-            R11,
-            R12,
-            R13,
-            R14,
-            R15,
-            R16,
-            R17,
-            R18,
-            R19,
-            R20,
-            R21,
-            R22,
-            R23,
-            R24,
-            R25,
-            R26,
-            R27,
-            R28,
-            R29,
-            R30,
-            R31,
-            R32,
-            R33,
-            R34,
-            R35,
-            R36,
-            R37,
-            R38,
-            R39,
-            R40,
-            R41,
-            R42,
-            R43,
-            R44,
-            R45,
-            R46,
-            R47,
-            R50,
-            R51,
-            R52,
-            R53,
-            R61,
-            R67,
-            R68,
-            R69,
-            R70,
-            R71,
-            R72,
-            R73,
-            R74,
-            R75,
-            R76,
-            R80,
-            R81,
-            R82,
-            R83,
-            R84,
-            R94,
-            R95,
-            R97,
-            R98,
-            R99
-        }
+        /// <summary>
+        /// Payer needs to resubmit payment with updated account information or a new account.
+        /// </summary>
+        public const string InsufficientFundsInAccount = "R01";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R01 = "Insufficient funds in account";
+        public const string AccountIsClosed = "R02";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R02 = "Account is closed";
+        public const string NoAccountOnFile = "R03";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R03 = "No account on file";
-
-        /// <summary>
-        /// Payer needs to resubmit payment with updated account information or a new account.
-        /// </summary>
-        public const string R04 = "Invalid account number";
+        public const string InvalidAccountNumber = "R04";
 
         /// <summary>
         /// Bank rejected payment request, no follow-up suggested.
         /// </summary>
-        public const string R05 = "Unauthorized debit to consumer account";
+        public const string UnauthorizedDebitToConsumerAccount = "R05";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R06 = "Returned at request of originating bank";
+        public const string ReturnedAtRequestOfOriginatingBank = "R06";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R07 = "Authorization revoked by customer";
+        public const string AuthorizationRevokedByCustomer = "R07";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R08 = "Payment stopped";
+        public const string PaymentStopped = "R08";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.
         /// </summary>
-        public const string R09 = "Insufficient collected funds in account being charged";
+        public const string InsufficientCollectedFundsInAccountBeingCharged = "R09";
 
         /// <summary>
         /// Bank rejected payment request, no follow-up suggested.
         /// </summary>
-        public const string R10 = "Customer advises not authorized or amount incorrect";
+        public const string CustomerAdvisesNotAuthorizedOrAmountIncorrect = "R10";
 
         /// <summary>
         /// Payer needs to resubmit payment with updated account information or a new account.

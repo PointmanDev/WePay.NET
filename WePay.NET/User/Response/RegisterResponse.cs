@@ -7,7 +7,7 @@ namespace WePayApi.User.Response
         /// <summary>
         /// The unique integer user ID of the user.
         /// </summary>
-        public string UserId { get; set; }
+        public long? UserId { get; set; }
 
         /// <summary>
         /// The string access token that you can use to make calls on behalf of the user.
