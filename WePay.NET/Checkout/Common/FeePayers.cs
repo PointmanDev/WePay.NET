@@ -1,9 +1,13 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.Checkout.Common
 {
-    public class FeePayers : WePayValues<FeePayers>
+    public static class FeePayers
     {
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
         public enum Indices : int
         {
             Payer,
@@ -33,5 +37,15 @@ namespace WePayApi.Checkout.Common
         /// Note that if the application's account goes negative, WePay will recover funds from bank account.
         /// </summary>
         public const string PayeeFromApp = "payee_from_app";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static FeePayers()
+        {
+            WePayValues.FillValuesList(typeof(FeePayers), Values);
+        }
     }
 }

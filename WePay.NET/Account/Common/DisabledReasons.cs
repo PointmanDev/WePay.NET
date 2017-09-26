@@ -6,7 +6,7 @@ namespace WePayApi.Account.Common
     /// <summary>
     /// All reasons for why an account was disabled
     /// </summary>
-    public class DisabledReasons
+    public static class DisabledReasons
     {
         /// <summary>
         /// Indices for Values property for iteration

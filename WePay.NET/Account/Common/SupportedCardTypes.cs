@@ -6,7 +6,7 @@ namespace WePayApi.Account.Common
     /// <summary>
     /// All possible supported card types currently supported by WePay
     /// </summary>
-    public class SupportedCardTypes
+    public static class SupportedCardTypes
     {
         /// <summary>
         /// Indices for Values property for iteration

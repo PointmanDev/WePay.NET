@@ -6,7 +6,7 @@ namespace WePayApi.Account.Common
     /// <summary>
     /// All Incoming and Outgoing Payments statuses
     /// </summary>
-    public class PaymentsStatuses
+    public static class PaymentsStatuses
     {
         /// <summary>
         /// Indices for Values property for iteration

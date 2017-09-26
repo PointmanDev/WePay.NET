@@ -6,7 +6,7 @@ namespace WePayApi.Account.Common
     /// <summary>
     /// All possible account types
     /// </summary>
-    public class AccountTypes
+    public static class AccountTypes
     {
         /// <summary>
         /// Indices for Values property for iteration

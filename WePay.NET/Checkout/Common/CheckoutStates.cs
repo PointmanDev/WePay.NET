@@ -1,4 +1,5 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.Checkout.Common
 {
@@ -7,8 +8,11 @@ namespace WePayApi.Checkout.Common
     ///  (you can receive callback notifications when the checkout changes state,
     ///  please read our Instant Payment Notification (IPN) Tutorial (https://www.wepay.com/developer/reference/ipn) for more details)
     /// </summary>
-    public class CheckoutStates : WePayValues<CheckoutStates>
+    public static class CheckoutStates
     {
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
         public enum Indices : int
         {
             New,
@@ -71,5 +75,15 @@ namespace WePayApi.Checkout.Common
         /// This state only exists for checkouts created in WePay's hosted checkout flow.
         /// </summary>
         public const string Expired = "expired";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static CheckoutStates()
+        {
+            WePayValues.FillValuesList(typeof(CheckoutStates), Values);
+        }
     }
 }

@@ -1,12 +1,16 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.Checkout.Common
 {
     /// <summary>
     /// All possible delivery types
     /// </summary>
-    public class DeliveryTypes : WePayValues<DeliveryTypes>
+    public static class DeliveryTypes
     {
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
         public enum Indices : int
         {
             None,
@@ -27,5 +31,15 @@ namespace WePayApi.Checkout.Common
         public const string Subscription = " subscription";
         public const string PartialPrepayment = "partial_prepayment";
         public const string FullPrepayment = "full_prepayment";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static DeliveryTypes()
+        {
+            WePayValues.FillValuesList(typeof(DeliveryTypes), Values);
+        }
     }
 }

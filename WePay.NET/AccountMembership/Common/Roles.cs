@@ -1,12 +1,16 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.AccountMembership.Common
 {
     /// <summary>
     /// All possible roles
     /// </summary>
-    public class Roles : WePayValues<Roles>
+    public static class Roles
     {
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
         public enum Indices : int
         {
             Moderator,
@@ -28,5 +32,15 @@ namespace WePayApi.AccountMembership.Common
         /// View-only privileges.
         /// </summary>
         public const string Member = "member";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static Roles()
+        {
+            WePayValues.FillValuesList(typeof(Roles), Values);
+        }
     }
 }
