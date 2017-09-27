@@ -1,13 +1,17 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.Risk.Common
 {
     /// <summary>
     /// All possible currently supported Rbit types
     /// </summary>
-    public class RbitTypes : WePayValues<RbitTypes>
+    public static class RbitTypes
     {
-        public enum Indices : int
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
+        public enum ValuesIndices : int
         {
             Address,
             AutoBilling,
@@ -90,5 +94,15 @@ namespace WePayApi.Risk.Common
         /// Information regarding a specific transaction.
         /// </summary>
         public const string TransactionDetails = "transaction_details";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static RbitTypes()
+        {
+            WePayValues.FillValuesList(typeof(RbitTypes), Values);
+        }
     }
 }

@@ -1,13 +1,17 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.Risk.Common
 {
     /// <summary>
     /// All possible Service Period Billing Methods currently supported by WePay
     /// </summary>
-    public class ServiceBillingMethods : WePayValues<ServiceBillingMethods>
+    public static class ServiceBillingMethods
     {
-        public enum Indices : int
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
+        public enum ValuesIndices : int
         {
             FreeFormEntry,
             TimedBillingAtStaffRate,
@@ -58,5 +62,15 @@ namespace WePayApi.Risk.Common
         /// Flat invoicing per project.
         /// </summary>
         public const string FlatProjectAmount = "flat_project_amount";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static ServiceBillingMethods()
+        {
+            WePayValues.FillValuesList(typeof(ServiceBillingMethods), Values);
+        }
     }
 }

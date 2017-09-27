@@ -1,11 +1,16 @@
-﻿namespace WePayApi.Shared.Common
+﻿using System.Collections.Generic;
+
+namespace WePayApi.Shared.Common
 {
     /// <summary>
     /// All possible settlement payment methods currently supported by WePay
     /// </summary>
-    public class SettlementPaymentMethods : WePayValues<SettlementPaymentMethods>
+    public static class SettlementPaymentMethods
     {
-        public enum Indices : int
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
+        public enum ValuesIndices : int
         {
             Ach,
             Check
@@ -13,5 +18,15 @@
 
         public const string Ach = "ach";
         public const string Check = "check";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static SettlementPaymentMethods()
+        {
+            WePayValues.FillValuesList(typeof(SettlementPaymentMethods), Values);
+        }
     }
 }

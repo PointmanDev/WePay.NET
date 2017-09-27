@@ -1,13 +1,17 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.CreditCard.Common
 {
-    public class InputSources : WePayValues<InputSources>
+    /// <summary>
+    /// All possible methods of accepting CreditCard information
+    /// </summary>
+    public static class InputSources
     {
         /// <summary>
-        /// All possible methods of accepting CreditCard information
+        /// Indices for Values property for iteration
         /// </summary>
-        public enum Indices : int
+        public enum ValuesIndices : int
         {
             CardKeyed,
             CardSwiped,
@@ -29,5 +33,15 @@ namespace WePayApi.CreditCard.Common
         public const string CardRecurring = "card_recurring";
         public const string ApplePay = "apple_pay";
         public const string AndroidPay = "android_pay";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static InputSources()
+        {
+            WePayValues.FillValuesList(typeof(InputSources), Values);
+        }
     }
 }

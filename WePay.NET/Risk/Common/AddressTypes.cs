@@ -1,13 +1,17 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.Risk.Common
 {
     /// <summary>
     /// All Address Types currently supported by WePay
     /// </summary>
-    public class AddressTypes : WePayValues<AddressTypes>
+    public static class AddressTypes
     {
-        public enum Indices : int
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
+        public enum ValuesIndices : int
         {
             Incorporation,
             Headquarters,
@@ -40,5 +44,15 @@ namespace WePayApi.Risk.Common
         /// A person's home address
         /// </summary>
         public const string Home = "home";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static AddressTypes()
+        {
+            WePayValues.FillValuesList(typeof(AddressTypes), Values);
+        }
     }
 }

@@ -1,10 +1,17 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.FileUpload.Common
 {
-    public class FileTypes : WePayValues<FileTypes>
+    /// <summary>
+    /// All file/document types currently supported by WePay
+    /// </summary>
+    public static class FileTypes
     {
-        public enum Indices : int
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
+        public enum ValuesIndices : int
         {
             Passport = 0,
             DriversLicense,
@@ -50,5 +57,15 @@ namespace WePayApi.FileUpload.Common
         public const string CurrentLocalTaxBill = "current_local_tax_bill";
         public const string MortgageStatement = "mortgage_statement";
         public const string ElectoralRegisterEntry = "electoral_register_entry";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static FileTypes()
+        {
+            WePayValues.FillValuesList(typeof(FileTypes), Values);
+        }
     }
 }

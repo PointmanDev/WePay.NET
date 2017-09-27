@@ -52,9 +52,24 @@
             All possible reasons for WePayApi.AccountMembership.Structure.AdminContext Reason field
             </summary>
         </member>
+        <member name="T:WePayApi.AccountMembership.Common.Reasons.Choices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.AccountMembership.Common.Reasons.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.AccountMembership.Common.Roles">
             <summary>
             All possible roles
+            </summary>
+        </member>
+        <member name="T:WePayApi.AccountMembership.Common.Roles.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
             </summary>
         </member>
         <member name="F:WePayApi.AccountMembership.Common.Roles.Moderator">
@@ -70,6 +85,11 @@
         <member name="F:WePayApi.AccountMembership.Common.Roles.Member">
             <summary>
             View-only privileges.
+            </summary>
+        </member>
+        <member name="F:WePayApi.AccountMembership.Common.Roles.Values">
+            <summary>
+            Holds all values for iteration
             </summary>
         </member>
         <member name="P:WePayApi.AccountMembership.Request.CreateRequest.AccountId">
@@ -233,9 +253,24 @@
             All possible account review statuses
             </summary>
         </member>
+        <member name="T:WePayApi.Account.Common.AccountReviewStatuses.ValuesIndices">
+            <summary>
+            Indices for the Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.Account.Common.AccountReviewStatuses.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Account.Common.AccountStates">
             <summary>
             All possible account states
+            </summary>
+        </member>
+        <member name="T:WePayApi.Account.Common.AccountStates.ValuesIndices">
+            <summary>
+            Indices for the Values property for iteration
             </summary>
         </member>
         <member name="F:WePayApi.Account.Common.AccountStates.ActionRequired">
@@ -265,9 +300,24 @@
             The account has been deleted.
             </summary>
         </member>
+        <member name="F:WePayApi.Account.Common.AccountStates.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Account.Common.AccountTypes">
             <summary>
             All possible account types
+            </summary>
+        </member>
+        <member name="T:WePayApi.Account.Common.AccountTypes.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.Account.Common.AccountTypes.Values">
+            <summary>
+            Holds all values for iteration
             </summary>
         </member>
         <member name="T:WePayApi.Account.Common.ActionReasons">
@@ -275,9 +325,24 @@
             All actions that are required to make this account active
             </summary>
         </member>
+        <member name="T:WePayApi.Account.Common.ActionReasons.ValuesIndices">
+            <summary>
+            Indices for Values property for iterations
+            </summary>
+        </member>
+        <member name="F:WePayApi.Account.Common.ActionReasons.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Account.Common.DisabledReasons">
             <summary>
             All reasons for why an account was disabled
+            </summary>
+        </member>
+        <member name="T:WePayApi.Account.Common.DisabledReasons.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
             </summary>
         </member>
         <member name="F:WePayApi.Account.Common.DisabledReasons.Fraud">
@@ -315,14 +380,39 @@
             Occurs when more than 30 days have elapsed after the merchant accepts their first payment and no settlement path has been established. This is remediated by adding a settlement method (e.g., a bank account) and completing the KYC process.
             </summary>
         </member>
+        <member name="F:WePayApi.Account.Common.DisabledReasons.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Account.Common.PaymentsStatuses">
             <summary>
             All Incoming and Outgoing Payments statuses
             </summary>
         </member>
+        <member name="T:WePayApi.Account.Common.PaymentsStatuses.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.Account.Common.PaymentsStatuses.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Account.Common.SupportedCardTypes">
             <summary>
             All possible supported card types currently supported by WePay
+            </summary>
+        </member>
+        <member name="T:WePayApi.Account.Common.SupportedCardTypes.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.Account.Common.SupportedCardTypes.Values">
+            <summary>
+            Holds all values for iteration
             </summary>
         </member>
         <member name="P:WePayApi.Account.Request.CreateRequest.Name">
@@ -1142,6 +1232,11 @@
              please read our Instant Payment Notification (IPN) Tutorial (https://www.wepay.com/developer/reference/ipn) for more details)
             </summary>
         </member>
+        <member name="T:WePayApi.Checkout.Common.CheckoutStates.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
         <member name="F:WePayApi.Checkout.Common.CheckoutStates.New">
             <summary>
             The checkout was created by the application. 
@@ -1192,14 +1287,44 @@
             This state only exists for checkouts created in WePay's hosted checkout flow.
             </summary>
         </member>
+        <member name="F:WePayApi.Checkout.Common.CheckoutStates.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Checkout.Common.CheckoutTypes">
             <summary>
             All possible checkout types
             </summary>
         </member>
+        <member name="T:WePayApi.Checkout.Common.CheckoutTypes.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.Checkout.Common.CheckoutTypes.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Checkout.Common.DeliveryTypes">
             <summary>
             All possible delivery types
+            </summary>
+        </member>
+        <member name="T:WePayApi.Checkout.Common.DeliveryTypes.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.Checkout.Common.DeliveryTypes.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
+        <member name="T:WePayApi.Checkout.Common.FeePayers.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
             </summary>
         </member>
         <member name="F:WePayApi.Checkout.Common.FeePayers.Payer">
@@ -1224,9 +1349,19 @@
             Note that if the application's account goes negative, WePay will recover funds from bank account.
             </summary>
         </member>
+        <member name="F:WePayApi.Checkout.Common.FeePayers.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Checkout.Common.FundingSources">
             <summary>
             All possible payment methods which can be accepted for a check out
+            </summary>
+        </member>
+        <member name="T:WePayApi.Checkout.Common.FundingSources.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
             </summary>
         </member>
         <member name="F:WePayApi.Checkout.Common.FundingSources.CreditCard">
@@ -1237,6 +1372,11 @@
         <member name="F:WePayApi.Checkout.Common.FundingSources.PaymentBank">
             <summary>
             Accept only payment bank payments.
+            </summary>
+        </member>
+        <member name="F:WePayApi.Checkout.Common.FundingSources.Values">
+            <summary>
+            Holds all values for iteration
             </summary>
         </member>
         <member name="T:WePayApi.Checkout.Common.PaymentBankPaymentErrors">
@@ -1259,7 +1399,7 @@
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.InvalidAccountNumber">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.InvalidBankAccountNumber">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
@@ -1294,243 +1434,243 @@
             Bank rejected payment request, no follow-up suggested.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R11">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.CheckTruncationReturn">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R12">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.AccountSoldToAnotherFinancialInstitution">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R13">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.InvalidAchRoutingNumber">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R14">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.PayeeIsDeceased">
             <summary>
             Bank rejected payment request, no follow-up suggested.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R15">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.AccountHolderIsDeceased">
             <summary>
             Bank rejected payment request, no follow-up suggested.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R16">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.AccountFundsHaveBeenFrozen">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R17">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.ItemReturnedBecauseOfInvalidData">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R18">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.ImproperEffectiveDate">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R19">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.AmountError">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R20">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.AccountDoesNotAllowAchTransactionsOrLimitHasBeenExceeded">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R21">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.InvalidCompanyIdentification">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R22">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.InvalidIndividualId">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R23">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.CreditEntryRefusedByReceiver">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R24">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.DuplicateEntry">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R25">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.AddendaRecordError">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R26">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.MandatoryFieldError">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R27">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.TraceNumberError">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R28">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.TransitRoutingNumberCheckDigitError">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R29">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.CorporateCustomerAdvisedNotAuthorized">
             <summary>
             Bank rejected payment request, no follow-up suggested.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R30">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.RdfiNotParticipantInCheckTruncationProgram">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R31">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.PermissibleReturnEntry">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R32">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.ReceivingBankNonSettlement">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R33">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.ReturnOfItem">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R34">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.LimitedParticipationOriginatingBank">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R35">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.ReturnOfImproperDebitEntry">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R36">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.ReturnOfImproperCreditEntry">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R37">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.SourceDocumentPresentedForPayment">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R38">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.StopPaymentOnSourceDocument">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R39">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.ImproperSourceDocument">
             <summary>
             Bank system error.
             Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R40">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.ReturnOfItemByGovernmentAgency">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R41">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.InvalidTransactionCode">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R42">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.RoutingOrTransitNumberCheckDigitError">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R43">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.InvalidDfiAccountNumber">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R44">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.InvalidIndividualIdNumber">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R45">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.InvalidIndividualOrCompanyName">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R46">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.InvalidPayeeIndicatorCode">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R47">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.DuplicateEnrollment">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R50">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.StateLawAffectingRckAcceptance">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R51">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.ItemIneligibleNoticeNotProvidedSignatureNotGenuineOrOriginalItemAlteredForAdjustmentEntry">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R52">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.StopPaymentOnItem">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R53">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.ItemAndAchEntryPresentedForPayment">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R61">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.MisroutedReturnRdfiHasPlacedIncorrectRoutingOrTransitNumberInRdfiIdField">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R67">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.DuplicateReturn">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R68">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.UntimelyReturnTheReturnWasNotSentWithinTheEstablishedTimeframe">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R69">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.FieldErrors">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R70">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.PermissibleReturnEntryNotAccepted">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R71">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.MisroutedDishonoredReturnIncorrectRoutingOrTransitNumberInRdfiIdField">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R72">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.UntimelyReturnDishonoredReturnWasNotSentWithinTheEstablishedTimeframe">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
@@ -1540,69 +1680,84 @@
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R74">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.CorrectedReturnRdfiIsCorrectingAPreviousReturnEntryThatWasDishonoredBecauseItContainedIncompleteOrIncorrectInformation">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R75">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.OriginalReturnNotADuplicate">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R76">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.NoErrorsFound">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R80">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.CrossBorderPaymentCodingError">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R81">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.NonParticipantInCrossBorderProgram">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R82">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.InvalidForeignRdfiIdentification">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R83">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.ForeignRdfiUnableToSettle">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R84">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.CrossBorderEntryNotProcessedByOriginatingGatewayOperator">
             <summary>
             Payer needs to resubmit payment with updated account information or a new account.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R94">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.AdministrativeReturnItemWasProcessedAndResubmittedAsAPhotocopy">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R95">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.AdministrativeReturnItemWasProcessedAndResubmittedAsAMicrSplit">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R97">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.AdministrativeReturnItemWasProcessedAndResubmittedWithCorrectedDollarAmount">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R98">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.IndicatesAReturnPreAuthorizedCheckRdfiProvidesATextReasonAndIndicatedANewAccountNumberOnThePacItself">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
             </summary>
         </member>
-        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.R99">
+        <member name="F:WePayApi.Checkout.Common.PaymentBankPaymentErrors.IndicatesAReturnPreAuthorizedCheckRdfiProvidesATextReasonOnThePacItselfForWhichThereIsNoEquivalentReturnReasonCode">
             <summary>
             Bank system error. Customer needs to use a different bank account, preferably at a different bank.
+            </summary>
+        </member>
+        <member name="T:WePayApi.Checkout.Common.PaymentTypes">
+            <summary>
+            All Payment Types currently supported by WePay
+            </summary>
+        </member>
+        <member name="T:WePayApi.Checkout.Common.PaymentTypes.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.Checkout.Common.PaymentTypes.Values">
+            <summary>
+            Holds all values for iteration
             </summary>
         </member>
         <member name="P:WePayApi.Checkout.Request.CancelRequest.CheckoutId">
@@ -2340,9 +2495,14 @@
             A short message that will be included in the payment confirmation email to the payer.
             </summary>
         </member>
-        <member name="T:WePayApi.CreditCard.Common.CreditCardStates.Choices">
+        <member name="T:WePayApi.CreditCard.Common.CreditCardStates">
             <summary>
             All possible Credit Card states recognized by WePay
+            </summary>
+        </member>
+        <member name="T:WePayApi.CreditCard.Common.CreditCardStates.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
             </summary>
         </member>
         <member name="F:WePayApi.CreditCard.Common.CreditCardStates.New">
@@ -2372,14 +2532,39 @@
             (e.g., AVS mismatch, also known as a billing address check failure).
             </summary>
         </member>
-        <member name="T:WePayApi.CreditCard.Common.InputSources.Choices">
+        <member name="F:WePayApi.CreditCard.Common.CreditCardStates.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
+        <member name="T:WePayApi.CreditCard.Common.InputSources">
             <summary>
             All possible methods of accepting CreditCard information
             </summary>
         </member>
-        <member name="T:WePayApi.CreditCard.Common.VirtualTerminalModes.Choices">
+        <member name="T:WePayApi.CreditCard.Common.InputSources.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.CreditCard.Common.InputSources.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
+        <member name="T:WePayApi.CreditCard.Common.VirtualTerminalModes">
             <summary>
             All possible virtual terminal modes
+            </summary>
+        </member>
+        <member name="T:WePayApi.CreditCard.Common.VirtualTerminalModes.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.CreditCard.Common.VirtualTerminalModes.Values">
+            <summary>
+            Holds all values for iteration
             </summary>
         </member>
         <member name="T:WePayApi.CreditCard.CreditCardService">
@@ -2944,9 +3129,44 @@
             All possible File Statuses currently recognized by WePay
             </summary>
         </member>
+        <member name="T:WePayApi.FileUpload.Common.FileStatuses.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.FileUpload.Common.FileStatuses.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
+        <member name="T:WePayApi.FileUpload.Common.FileTypes">
+            <summary>
+            All file/document types currently supported by WePay
+            </summary>
+        </member>
+        <member name="T:WePayApi.FileUpload.Common.FileTypes.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.FileUpload.Common.FileTypes.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.FileUpload.Common.RejectReasons">
             <summary>
             All possible reasons that a document is rejected by WePay
+            </summary>
+        </member>
+        <member name="T:WePayApi.FileUpload.Common.RejectReasons.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.FileUpload.Common.RejectReasons.Values">
+            <summary>
+            Holds all values for iteration
             </summary>
         </member>
         <member name="T:WePayApi.FileUpload.FileUploadService">
@@ -3007,9 +3227,34 @@
             The unique ID of the uploaded document.
             </summary>
         </member>
+        <member name="T:WePayApi.KnowYourCustomer.Common.KnowYourCustomerStates">
+            <summary>
+            All possible Know Your Customer States currently supported by WePay
+            </summary>
+        </member>
+        <member name="T:WePayApi.KnowYourCustomer.Common.KnowYourCustomerStates.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.KnowYourCustomer.Common.KnowYourCustomerStates.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.KnowYourCustomer.Common.LegalForms">
             <summary>
             All possible Legal Forms currently recognized by WePay
+            </summary>
+        </member>
+        <member name="T:WePayApi.KnowYourCustomer.Common.LegalForms.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.KnowYourCustomer.Common.LegalForms.Values">
+            <summary>
+            Holds all values for iteration
             </summary>
         </member>
         <member name="M:WePayApi.KnowYourCustomer.KnowYourCustomerService.LookupAsync(WePayApi.KnowYourCustomer.Request.LookupRequest,System.String,System.Nullable{System.Boolean})">
@@ -3618,14 +3863,44 @@
             All possible Order Statuses currently recognized by WePay
             </summary>
         </member>
+        <member name="T:WePayApi.Order.Common.OrderStatuses.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.Order.Common.OrderStatuses.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Order.Common.OrderTypes">
             <summary>
             All possible Order Types currently recognized by WePay
             </summary>
         </member>
+        <member name="T:WePayApi.Order.Common.OrderTypes.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.Order.Common.OrderTypes.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Order.Common.TrackingInformationStatuses">
             <summary>
             All possible statuses for tracking information pertaining to a given order
+            </summary>
+        </member>
+        <member name="T:WePayApi.Order.Common.TrackingInformationStatuses.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.Order.Common.TrackingInformationStatuses.Values">
+            <summary>
+            Holds all values for iteration
             </summary>
         </member>
         <member name="T:WePayApi.Order.OrderService">
@@ -3842,6 +4117,11 @@
             All possible Payment Bank States currently recognized by WePay
             </summary>
         </member>
+        <member name="T:WePayApi.PaymentBank.Common.PaymentBankStates.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
         <member name="F:WePayApi.PaymentBank.Common.PaymentBankStates.New">
             <summary>
             The payment bank was just created by the application.
@@ -3861,6 +4141,11 @@
         <member name="F:WePayApi.PaymentBank.Common.PaymentBankStates.Disabled">
             <summary>
             The payment bank has been disabled.
+            </summary>
+        </member>
+        <member name="F:WePayApi.PaymentBank.Common.PaymentBankStates.Values">
+            <summary>
+            Holds all values for iteration
             </summary>
         </member>
         <member name="T:WePayApi.PaymentBank.PaymentBankService">
@@ -3940,9 +4225,24 @@
             All possible object types
             </summary>
         </member>
+        <member name="T:WePayApi.Report.Common.ObjectTypes.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.Report.Common.ObjectTypes.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Report.Common.ReportStates">
             <summary>
             All possible report states
+            </summary>
+        </member>
+        <member name="T:WePayApi.Report.Common.ReportStates.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
             </summary>
         </member>
         <member name="F:WePayApi.Report.Common.ReportStates.New">
@@ -3973,9 +4273,24 @@
             You can still retrieve the metadata for the report using the Report Lookup call and passing the ReportId.
             </summary>
         </member>
+        <member name="F:WePayApi.Report.Common.ReportStates.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Report.Common.ReportTypes">
             <summary>
             All possible report types
+            </summary>
+        </member>
+        <member name="T:WePayApi.Report.Common.ReportTypes.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.Report.Common.ReportTypes.Values">
+            <summary>
+            Holds all values for iteration
             </summary>
         </member>
         <member name="T:WePayApi.Report.ReportService">
@@ -4152,6 +4467,11 @@
             All Address Types currently supported by WePay
             </summary>
         </member>
+        <member name="T:WePayApi.Risk.Common.AddressTypes.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
         <member name="F:WePayApi.Risk.Common.AddressTypes.Incorporation">
             <summary>
             Address associated with business' incorporation
@@ -4177,9 +4497,19 @@
             A person's home address
             </summary>
         </member>
+        <member name="F:WePayApi.Risk.Common.AddressTypes.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Risk.Common.AssociatedObjectTypes">
             <summary>
             All possible WePay types for which an Rbit can be associated with
+            </summary>
+        </member>
+        <member name="T:WePayApi.Risk.Common.AssociatedObjectTypes.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
             </summary>
         </member>
         <member name="F:WePayApi.Risk.Common.AssociatedObjectTypes.Account">
@@ -4207,9 +4537,19 @@
             For information about the owner of a credit card.
             </summary>
         </member>
+        <member name="F:WePayApi.Risk.Common.AssociatedObjectTypes.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Risk.Common.AutoBillingCreators">
             <summary>
             All possible Creators for an AutoBilling Rbit
+            </summary>
+        </member>
+        <member name="T:WePayApi.Risk.Common.AutoBillingCreators.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
             </summary>
         </member>
         <member name="F:WePayApi.Risk.Common.AutoBillingCreators.Payer">
@@ -4222,9 +4562,19 @@
             The merchant set-up auto-billing on the payer's behalf
             </summary>
         </member>
+        <member name="F:WePayApi.Risk.Common.AutoBillingCreators.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Risk.Common.BusinessNameTypes">
             <summary>
             All possible Business Name Types currently supported by WePay
+            </summary>
+        </member>
+        <member name="T:WePayApi.Risk.Common.BusinessNameTypes.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
             </summary>
         </member>
         <member name="F:WePayApi.Risk.Common.BusinessNameTypes.Legal">
@@ -4237,9 +4587,24 @@
             This is the Also Known As or Doing Business As name of the company
             </summary>
         </member>
+        <member name="F:WePayApi.Risk.Common.BusinessNameTypes.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Risk.Common.ExternalAccountTypes">
             <summary>
             All possible external account types currently supported by WePay
+            </summary>
+        </member>
+        <member name="T:WePayApi.Risk.Common.ExternalAccountTypes.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.Risk.Common.ExternalAccountTypes.Values">
+            <summary>
+            Holds all values for iteration
             </summary>
         </member>
         <member name="T:WePayApi.Risk.Common.IndustryCodeTypes">
@@ -4247,9 +4612,24 @@
             All possible Industry Code Types currently supported by WePay
             </summary>
         </member>
+        <member name="T:WePayApi.Risk.Common.IndustryCodeTypes.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.Risk.Common.IndustryCodeTypes.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Risk.Common.IsPartnerAccountOptions">
             <summary>
             All possible optionns for IsPartnerAccount field on ExternalAccountProperties (yes WePay made this a string not boolean value)
+            </summary>
+        </member>
+        <member name="T:WePayApi.Risk.Common.IsPartnerAccountOptions.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
             </summary>
         </member>
         <member name="F:WePayApi.Risk.Common.IsPartnerAccountOptions.Yes">
@@ -4262,9 +4642,19 @@
             This is not an account controlled by you, the WePay partner.
             </summary>
         </member>
+        <member name="F:WePayApi.Risk.Common.IsPartnerAccountOptions.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Risk.Common.NormalizedAddressStatuses">
             <summary>
             All possible Normalized Address Statuses currently supported by WePay
+            </summary>
+        </member>
+        <member name="T:WePayApi.Risk.Common.NormalizedAddressStatuses.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
             </summary>
         </member>
         <member name="F:WePayApi.Risk.Common.NormalizedAddressStatuses.UserConfirmed">
@@ -4282,9 +4672,34 @@
             User was not shown the normalized address and asked to confirm or deny
             </summary>
         </member>
+        <member name="F:WePayApi.Risk.Common.NormalizedAddressStatuses.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
+        <member name="T:WePayApi.Risk.Common.PaymentFrequencies.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.Risk.Common.PaymentFrequencies.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Risk.Common.PersonRoles">
             <summary>
             All possible roles for which a person can have in the Person Rbit
+            </summary>
+        </member>
+        <member name="T:WePayApi.Risk.Common.PersonRoles.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.Risk.Common.PersonRoles.Values">
+            <summary>
+            Holds all values for iteration
             </summary>
         </member>
         <member name="T:WePayApi.Risk.Common.PhoneTypes">
@@ -4292,9 +4707,24 @@
             All possible Phone Types currently supported by WePay
             </summary>
         </member>
+        <member name="T:WePayApi.Risk.Common.PhoneTypes.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.Risk.Common.PhoneTypes.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Risk.Common.RbitTypes">
             <summary>
             All possible currently supported Rbit types
+            </summary>
+        </member>
+        <member name="T:WePayApi.Risk.Common.RbitTypes.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
             </summary>
         </member>
         <member name="F:WePayApi.Risk.Common.RbitTypes.Address">
@@ -4365,9 +4795,19 @@
             Information regarding a specific transaction.
             </summary>
         </member>
+        <member name="F:WePayApi.Risk.Common.RbitTypes.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Risk.Common.ServiceBillingMethods">
             <summary>
             All possible Service Period Billing Methods currently supported by WePay
+            </summary>
+        </member>
+        <member name="T:WePayApi.Risk.Common.ServiceBillingMethods.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
             </summary>
         </member>
         <member name="F:WePayApi.Risk.Common.ServiceBillingMethods.FreeFormEntry">
@@ -4410,9 +4850,19 @@
             Flat invoicing per project.
             </summary>
         </member>
+        <member name="F:WePayApi.Risk.Common.ServiceBillingMethods.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Risk.Common.Sources">
             <summary>
             The source parameter (see Rbit Create API call) can be set to any one of values found here
+            </summary>
+        </member>
+        <member name="T:WePayApi.Risk.Common.Sources.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
             </summary>
         </member>
         <member name="F:WePayApi.Risk.Common.Sources.User">
@@ -4473,6 +4923,11 @@
         <member name="F:WePayApi.Risk.Common.Sources.GenericWebsite">
             <summary>
             Data gathered from a website other than a major data provider.
+            </summary>
+        </member>
+        <member name="F:WePayApi.Risk.Common.Sources.Values">
+            <summary>
+            Holds all values for iteration
             </summary>
         </member>
         <member name="P:WePayApi.Risk.Request.CreateRequest.AssociatedObjectType">
@@ -5432,9 +5887,24 @@
             All possible bank account types currently supported by WePay
             </summary>
         </member>
+        <member name="T:WePayApi.Shared.Common.BankAccountTypes.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.Shared.Common.BankAccountTypes.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Shared.Common.Countries">
             <summary>
             All countries currently supported by WePay
+            </summary>
+        </member>
+        <member name="T:WePayApi.Shared.Common.Countries.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
             </summary>
         </member>
         <member name="F:WePayApi.Shared.Common.Countries.US">
@@ -5452,9 +5922,19 @@
             Great Britain
             </summary>
         </member>
+        <member name="F:WePayApi.Shared.Common.Countries.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Shared.Common.Currencies">
             <summary>
             All currencies currently supported by WePay
+            </summary>
+        </member>
+        <member name="T:WePayApi.Shared.Common.Currencies.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
             </summary>
         </member>
         <member name="F:WePayApi.Shared.Common.Currencies.USD">
@@ -5472,9 +5952,19 @@
             Great British Pound
             </summary>
         </member>
+        <member name="F:WePayApi.Shared.Common.Currencies.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Shared.Common.ErrorCategories">
             <summary>
             All possible types of errors which can be returned from WePay
+            </summary>
+        </member>
+        <member name="T:WePayApi.Shared.Common.ErrorCategories.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
             </summary>
         </member>
         <member name="F:WePayApi.Shared.Common.ErrorCategories.InvalidRequest">
@@ -5503,362 +5993,367 @@
             If you receive this message, please contact api@wepay.com (https://developer.wepay.com/api/general/api@wepay.com). 
             </summary>
         </member>
-        <member name="T:WePayApi.Shared.Common.Choices">
+        <member name="F:WePayApi.Shared.Common.ErrorCategories.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
+        <member name="T:WePayApi.Shared.Common.ErrorCodes">
             <summary>
             All possible Error Codes which WePay can return with an Error response.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Generic_ApiEndPointDoesNotExist">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.GenericApiEndPointDoesNotExist">
             <summary>
             You try to make an API call that doesn’t exist like /user/robots.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Generic_MissingRequiredHeader">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.GenericMissingRequiredHeader">
             <summary>
             You are missing a required header such as User-Agent, Content-Type, or Authorization.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Generic_PassedInvalidParameter">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.GenericPassedInvalidParameter">
             <summary>
             You passed an invalid parameter value such “robot” for the “fee_payer” parameter.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Generic_FailedToPassRequiredParameter">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.GenericFailedToPassRequiredParameter">
             <summary>
             You did not pass a required parameter.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Generic_MalformedJson">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.GenericMalformedJson">
             <summary>
             We were unable to parse the parameters you passed (ie your JSON is malformed).
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Generic_UnableToAuthenticate">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.GenericUnableToAuthenticate">
             <summary>
             We were completely unable to authenticate your request (probably your access_token doesn’t exist).
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Generic_TooManyRequests">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.GenericTooManyRequests">
             <summary>
             You have made too many requests in a short time period. See our throttling documentation for more details.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Generic_UnexpectedError">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.GenericUnexpectedError">
             <summary>
             WePay encountered an unexpected error. Contact api@wepay.com.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Generic_UserDisplayable">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.GenericUserDisplayable">
             <summary>
             This error can be displayed to the user and generally relates to user data - long term this code will be replaced by more specific error codes.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Generic_InsufficientPermissions">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.GenericInsufficientPermissions">
             <summary>
             You do not have sufficient permissions to perform the requested action.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Generic_AccessTokenRevoked">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.GenericAccessTokenRevoked">
             <summary>
             The AccessToken you passed has been revoked.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Generic_OAuth2Expired">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.GenericOAuth2Expired">
             <summary>
             The code parameter (OAuth2) has expired.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Generic_ClientIdDoesNotMatchCodeParameter">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.GenericClientIdDoesNotMatchCodeParameter">
             <summary>
             The ClientId you passed does not match the code parameter.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Generic_IpAddressNotOnWhitelist">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.GenericIpAddressNotOnWhitelist">
             <summary>
             IP address you are making API calls from is not on the IP whitelist for your app.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Generic_ApiVersionInvalidOrExpired">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.GenericApiVersionInvalidOrExpired">
             <summary>
             API Version is invalid or expired.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Generic_InvalidApiVersionForApp">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.GenericInvalidApiVersionForApp">
             <summary>
             The API version specified in the ‘Api-Version’ header used in the request is not valid for the app.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Payment_AvsCheckOnPaymentFailed">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.PaymentAvsCheckOnPaymentFailed">
             <summary>
             The AVS check on the payment failed (invalid billing address).
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Payment_CardTypeUnsupported">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.PaymentCardTypeUnsupported">
             <summary>
             The card type is not supported (i.e. not Visa, MasterCard, American Express, Discover, JCB, or Diners Club).
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Payment_BankIndicatedCardUnsupported">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.PaymentBankIndicatedCardUnsupported">
             <summary>
             The issuing bank indicated that the card is not supported.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Payment_BankUnspecifiedChargeDeclined">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.PaymentBankUnspecifiedChargeDeclined">
             <summary>
             The issuing bank declined the charge but did not tell us why (generally due to a fraud check on their side).
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Payment_InsufficientFunds">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.PaymentInsufficientFunds">
             <summary>
             The payment method does not have sufficient funds to make the payment.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Payment_CardLostOrStolen">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.PaymentCardLostOrStolen">
             <summary>
             The card has been lost or stolen.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Payment_CardExpired">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.PaymentCardExpired">
             <summary>
             The card has expired (some issuing banks don’t care though and we only care if they do).
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Payment_InvalidCardData">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.PaymentInvalidCardData">
             <summary>
             Some of the card data was invalid (CVV, expiration date, card number, name on card).
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Payment_InvalidStateForAction">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.PaymentInvalidStateForAction">
             <summary>
             The CreditCard object is in an invalid state for that action.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Account_DoesNotExist">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.AccountDoesNotExist">
             <summary>
             The account you are trying to access does not exist.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Account_InsufficientPermissions">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.AccountInsufficientPermissions">
             <summary>
             The AccessToken you have passed belongs to a user that does not have permission to view/modify that account.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Account_Deleted">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.AccountDeleted">
             <summary>
             The account has been deleted.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Account_CannotTransact">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.AccountCannotTransact">
             <summary>
             The account cannot transact.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Account_InsufficientFunds">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.AccountInsufficientFunds">
             <summary>
             The account lacks sufficient funds for the action requested.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Account_KycAlreadyProvided">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.AccountKycAlreadyProvided">
             <summary>
             The account already provided KYC information.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Account_RequiresKycForCall">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.AccountRequiresKycForCall">
             <summary>
             The account must go through KYC before this call can be made.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Account_MustCompleteSettlementInformation">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.AccountMustCompleteSettlementInformation">
             <summary>
             The account must complete settlement information before requesting account review.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Account_MustSupplySocialSecurityNumberForKyc">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.AccountMustSupplySocialSecurityNumberForKyc">
             <summary>
             The account must supply a 9-digit social security number when completing KYC.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Account_KycMustBeInStateRequireDocs">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.AccountKycMustBeInStateRequireDocs">
             <summary>
             The account KYC state must be in state 'RequireDocs' when calling KnowYourCustomer Modify.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Account_KycFilesNotFound">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.AccountKycFilesNotFound">
             <summary>
             The account does not own the files specified when calling KnowYourCustomer Modify.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Account_RequiresAccountOwnerKycField">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.AccountRequiresAccountOwnerKycField">
             <summary>
             The account is required to supply the AccountOwner KYC field, however, KYC was attempted to be completed without it.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Membership_MustUseFinancialAdmisitratorAccessToken">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.MembershipMustUseFinancialAdmisitratorAccessToken">
             <summary>
             You must use the financial administrator’s access token.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Membership_CannotChangeFinancialAdministrator">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.MembershipCannotChangeFinancialAdministrator">
             <summary>
             Cannot change financial administrator once withdrawals have started.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Checkout_DoesNotExist">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.CheckoutDoesNotExist">
             <summary>
             The checkout you are trying to view/edit does not exist.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Checkout_InsufficientPermissions">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.CheckoutInsufficientPermissions">
             <summary>
             The AccessToken you have passed belongs to a user that does not have permission to view/modify that checkout.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Checkout_PaymentMethodDoesNotExist">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.CheckoutPaymentMethodDoesNotExist">
             <summary>
             The payment method you passed does not exist or does not belong to the user/app you are authenticated as.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Checkout_InvalidStateForAction">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.CheckoutInvalidStateForAction">
             <summary>
             The checkout is in an invalid state for that action.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Checkout_CannotAddSignature">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.CheckoutCannotAddSignature">
             <summary>
             Cannot add signature to this checkout.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Preapproval_DoesNotExist">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.PreapprovalDoesNotExist">
             <summary>
             The preapproval does not exist.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Preapproval_InsufficientPermissions">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.PreapprovalInsufficientPermissions">
             <summary>
             The access_token you have passed belongs to a user that does not have permission to view/modify that checkout.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Preapproval_CannotAccess">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.PreapprovalCannotAccess">
             <summary>
             If you authenticated with a ClientId/ClientSecret (for app-level preapprovals) then your app cannot access that preapproval.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Preapproval_StartTimeNotYetPassed">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.PreapprovalStartTimeNotYetPassed">
             <summary>
             You are trying to execute a preapproval where the StartTime has not passed.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Preapproval_EndTimeAlreadyPassed">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.PreapprovalEndTimeAlreadyPassed">
             <summary>
             You are trying to execute a preapproval where the EndTime has already passed.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Preapproval_InvalidStateForAction">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.PreapprovalInvalidStateForAction">
             <summary>
             The preapproval is in the incorrect state for that action.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Preapproval_TooManyUnsuccessfulAuthorizationAttempts">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.PreapprovalTooManyUnsuccessfulAuthorizationAttempts">
             <summary>
             You have tried to authorize the payment method unsuccessfully too many times with this preapproval
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Preapproval_AccountPreapprovalMismatch">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.PreapprovalAccountPreapprovalMismatch">
             <summary>
             You are trying to make a payment to an account that this preapproval is not tied to.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Preapproval_CheckoutFrequencyExceeded">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.PreapprovalCheckoutFrequencyExceeded">
             <summary>
             You have already executed as many checkouts on this period as you are allowed to based on the frequency parameter you set.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Preapproval_AmountPerPeriodExceeded">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.PreapprovalAmountPerPeriodExceeded">
             <summary>
             You have already reached the amount per period limit you set for this preapproval.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Preapproval_SimultaneousPaymentExecution">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.PreapprovalSimultaneousPaymentExecution">
             <summary>
             You tried to execute two simultaenous payments on a single preapproval.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Withdrawal_DoesNotExist">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.WithdrawalDoesNotExist">
             <summary>
             The withdrawal you are trying to access does not exist.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Withdrawal_InsufficientPermissions">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.WithdrawalInsufficientPermissions">
             <summary>
             The AccessToken you have passed belongs to a user that does not have permission to view/modify that withdrawal.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.User_InsufficientPermissions">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.UserInsufficientPermissions">
             <summary>
             You are trying to access a user that does not exist or that you do not have permission to access.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.User_InvalidStateForAction">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.UserInvalidStateForAction">
             <summary>
             The user is an invalid state for that action.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.User_Deleted">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.UserDeleted">
             <summary>
             The user has been deleted.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Settlement_DoesNotExist">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.SettlementDoesNotExist">
             <summary>
             The subscription plan you are trying to view/modify does not exist.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Settlement_InsufficientPermissionsToAccessOrModifySubscriptionPlan">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.SettlementInsufficientPermissionsToAccessOrModifySubscriptionPlan">
             <summary>
             The AccessToken you have passed belongs to a user that does not have permission to view/modify that subscription plan.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Settlement_AppCannotAccessSubscriptionPlan">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.SettlementAppCannotAccessSubscriptionPlan">
             <summary>
             The app cannot access the subscription plan.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Settlement_SubscriptionPlanDeleted">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.SettlementSubscriptionPlanDeleted">
             <summary>
             The subscription plan has been deleted.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Settlement_SubscriptionPlanDoesNotExist">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.SettlementSubscriptionPlanDoesNotExist">
             <summary>
             The subscription you are trying to view/modify does not exist
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Settlement_InsufficientPermissionsToAccessOrModifySubscription">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.SettlementInsufficientPermissionsToAccessOrModifySubscription">
             <summary>
             The AccessToken you have passed belongs to a user that does not have permission to view/modify that subscription.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Settlement_AppCannotAccessSubscription">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.SettlementAppCannotAccessSubscription">
             <summary>
             The app cannot access the subscription.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Settlement_SubscriptionExpired">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.SettlementSubscriptionExpired">
             <summary>
             The subscription you are trying to view/modify has expired.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Settlement_SubscriptionChangeDoesNotExist">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.SettlementSubscriptionChangeDoesNotExist">
             <summary>
             The subscription charge you are trying to view/modify does not exist.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Settlement_InsufficientPermissionsToAccessOrModifySubscriptionChange">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.SettlementInsufficientPermissionsToAccessOrModifySubscriptionChange">
             <summary>
             The AccessToken you have passed belongs to a user that does not have permission to view/modify that subscription charge.
             </summary>
         </member>
-        <member name="F:WePayApi.Shared.Common.Choices.Settlement_AppCannotAccessSubscriptionCharge">
+        <member name="F:WePayApi.Shared.Common.ErrorCodes.SettlementAppCannotAccessSubscriptionCharge">
             <summary>
             The app cannot access that subscription charge.
             </summary>
@@ -5868,10 +6363,30 @@
             All possible frequencies supported by WePay
             </summary>
         </member>
+        <member name="T:WePayApi.Shared.Common.Frequencies.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.Shared.Common.Frequencies.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Shared.Common.ProcessModes">
             <summary>
             All possible modes the process will be displayed in.
             Choose iframe if you would like to frame the process on your site.
+            </summary>
+        </member>
+        <member name="T:WePayApi.Shared.Common.ProcessModes.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.Shared.Common.ProcessModes.Values">
+            <summary>
+            Holds all values for iteration
             </summary>
         </member>
         <member name="T:WePayApi.Shared.Common.SettlementPaymentMethods">
@@ -5879,9 +6394,29 @@
             All possible settlement payment methods currently supported by WePay
             </summary>
         </member>
+        <member name="T:WePayApi.Shared.Common.SettlementPaymentMethods.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.Shared.Common.SettlementPaymentMethods.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.Shared.Common.SortOrders">
             <summary>
             All possible sort orders
+            </summary>
+        </member>
+        <member name="T:WePayApi.Shared.Common.SortOrders.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="F:WePayApi.Shared.Common.SortOrders.Values">
+            <summary>
+            Holds all values for iteration
             </summary>
         </member>
         <member name="T:WePayApi.Shared.Structure.Address">
@@ -6025,14 +6560,47 @@
             (Enumeration of these values can be found in WePayApi.Shared.Common.ErrorCodes)
             </summary>
         </member>
+        <member name="T:WePayApi.Shared.WePayValues">
+            <summary>
+            Utitlties class for building out static classes that store WePay specific values that may need to be referenced in application code
+            </summary>
+        </member>
+        <member name="M:WePayApi.Shared.WePayValues.FillValuesList(System.Type,System.Collections.Generic.List{System.String})">
+            <summary>
+            Used to iterate through a static class and fill a List of strings with each static member that is a string
+            </summary>
+            <param name="type"></param>
+            <param name="values"></param>
+        </member>
         <member name="T:WePayApi.User.Common.Scopes">
             <summary>
             All possible Scopes currently recognized by WePay (PROTIP: These are just permissions a user can hold)
             </summary>
         </member>
+        <member name="T:WePayApi.User.Common.Scopes.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
+        <member name="M:WePayApi.User.Common.Scopes.AllowAllScopes">
+            <summary>
+            Produces comma separated list of all scopes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:WePayApi.User.Common.Scopes.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
         <member name="T:WePayApi.User.Common.UserStates">
             <summary>
             All possible UserStates currently recognized by WePay
+            </summary>
+        </member>
+        <member name="T:WePayApi.User.Common.UserStates.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
             </summary>
         </member>
         <member name="F:WePayApi.User.Common.UserStates.Pending">
@@ -6058,9 +6626,24 @@
             A user may delete their account themselves, or an account may be deleted by WePay customer support.
             </summary>
         </member>
+        <member name="F:WePayApi.User.Common.UserStates.Values">
+            <summary>
+            Holds all values for iteration
+            </summary>
+        </member>
+        <member name="T:WePayApi.User.Common.UserTypes.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
         <member name="F:WePayApi.User.Common.UserTypes.Sso">
             <summary>
             To create an SSO user, set the value to sso.
+            </summary>
+        </member>
+        <member name="F:WePayApi.User.Common.UserTypes.Values">
+            <summary>
+            Holds all values for iteration
             </summary>
         </member>
         <member name="P:WePayApi.User.Request.ChangeEmailRequest.Email">
@@ -6339,6 +6922,11 @@
             All possible Withdrawal states
             </summary>
         </member>
+        <member name="T:WePayApi.Withdrawal.Common.WithdrawalStates.ValuesIndices">
+            <summary>
+            Indices for Values property for iteration
+            </summary>
+        </member>
         <member name="F:WePayApi.Withdrawal.Common.WithdrawalStates.Started">
             <summary>
             The withdrawal has started processing.
@@ -6352,6 +6940,11 @@
         <member name="F:WePayApi.Withdrawal.Common.WithdrawalStates.Failed">
             <summary>
             The withdrawal has failed.
+            </summary>
+        </member>
+        <member name="F:WePayApi.Withdrawal.Common.WithdrawalStates.Values">
+            <summary>
+            Holds all values for iteration
             </summary>
         </member>
         <member name="P:WePayApi.Withdrawal.Request.FindRequest.AccountId">

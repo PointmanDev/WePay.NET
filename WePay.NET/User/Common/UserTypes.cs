@@ -1,11 +1,15 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.User.Common
 {
     // All possible User Types currently recognized by WePay
-    public class UserTypes : WePayValues<UserTypes>
+    public static class UserTypes
     {
-        public enum Indices : int
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
+        public enum ValuesIndices : int
         {
             Sso
         }
@@ -14,5 +18,15 @@ namespace WePayApi.User.Common
         /// To create an SSO user, set the value to sso.
         /// </summary>
         public const string Sso = "sso";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static UserTypes()
+        {
+            WePayValues.FillValuesList(typeof(UserTypes), Values);
+        }
     }
 }

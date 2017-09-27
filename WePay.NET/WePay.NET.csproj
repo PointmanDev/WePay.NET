@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <PackageId>WePay.NET</PackageId>
-    <PackageVersion>1.0.1.0</PackageVersion>
+    <PackageVersion>1.0.2.0</PackageVersion>
     <Authors>Leonardo DiBella</Authors>
     <Description>Class Library for integrating with WePay's API</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -11,9 +11,9 @@
     <Copyright></Copyright>
     <PackageTags>WePay WePay.NET WePayDotNet WePayNET</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.1.0</Version>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
+    <Version>1.0.2.0</Version>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
     <PackageProjectUrl>https://github.com/leosdibella/WePay.NET</PackageProjectUrl>
     <RepositoryUrl>https://github.com/leosdibella/WePay.NET</RepositoryUrl>
   </PropertyGroup>

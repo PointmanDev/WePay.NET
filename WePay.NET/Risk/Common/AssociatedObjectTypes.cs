@@ -1,13 +1,17 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.Risk.Common
 {
     /// <summary>
     /// All possible WePay types for which an Rbit can be associated with
     /// </summary>
-    public class AssociatedObjectTypes : WePayValues<AssociatedObjectTypes>
+    public static class AssociatedObjectTypes
     {
-        public enum Indices : int
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
+        public enum ValuesIndices : int
         {
             Account,
             User,
@@ -40,5 +44,15 @@ namespace WePayApi.Risk.Common
         /// For information about the owner of a credit card.
         /// </summary>
         public const string CreditCard = "credit_card";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static AssociatedObjectTypes()
+        {
+            WePayValues.FillValuesList(typeof(AssociatedObjectTypes), Values);
+        }
     }
 }

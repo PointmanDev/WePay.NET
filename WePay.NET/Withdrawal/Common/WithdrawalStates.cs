@@ -1,13 +1,17 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.Withdrawal.Common
 {
     /// <summary>
     /// All possible Withdrawal states
     /// </summary>
-    public class WithdrawalStates : WePayValues<WithdrawalStates>
+    public static class WithdrawalStates
     {
-        public enum Indices : int
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
+        public enum ValuesIndices : int
         {
             Started,
             Captured,
@@ -28,5 +32,15 @@ namespace WePayApi.Withdrawal.Common
         /// The withdrawal has failed.
         /// </summary>
         public const string Failed = "failed";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static WithdrawalStates()
+        {
+            WePayValues.FillValuesList(typeof(WithdrawalStates), Values);
+        }
     }
 }

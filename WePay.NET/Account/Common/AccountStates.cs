@@ -11,7 +11,7 @@ namespace WePayApi.Account.Common
         /// <summary>
         /// Indices for the Values property for iteration
         /// </summary>
-        public enum Indices : int
+        public enum ValuesIndices : int
         {
             ActionRequired,
             Pending,

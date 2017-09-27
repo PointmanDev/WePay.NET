@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Reflection;
 using System.Text.RegularExpressions;
 
 namespace WePayApi.Shared
@@ -12,11 +14,11 @@ namespace WePayApi.Shared
         public string RegularExpression { get; set; }
 
         private bool IsValidString(string value,
-                                   WePayValues wePayValues)
+                                   List<string> wePayValues)
         {
-            int? index = wePayValues.GetIndexOfWePayValue(value);
+            int index = wePayValues.IndexOf(value);
 
-            if (index != null)
+            if (index > -1)
             {
                 return true;
             }
@@ -30,7 +32,7 @@ namespace WePayApi.Shared
         }
 
         private bool IsValidStringArray(string[] values,
-                                        WePayValues wePayValues)
+                                        List<string> wePayValues)
         {
             foreach (var stringValue in values)
             {
@@ -46,12 +48,17 @@ namespace WePayApi.Shared
         protected override ValidationResult IsValid(object value,
                                                     ValidationContext validationContext)
         {
-            WePayValues wePayValues = null;
+            List<string> wePayValues = null;
 
             if (WePayValuesClassName != null && WePayValuesClassName != "")
             {
                 Type type = Type.GetType(WePayValuesClassName);
-                wePayValues = (WePayValues)Activator.CreateInstance(type);
+                PropertyInfo propertyInfo = type.GetProperty("Values");
+
+                if (propertyInfo != null)
+                {
+                    wePayValues = (List<string>)propertyInfo.GetValue(type, null);
+                }
             }
 
             if (IsRequired && value == null) {

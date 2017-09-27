@@ -1,13 +1,17 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.Risk.Common
 {
     /// <summary>
     /// All possible Normalized Address Statuses currently supported by WePay
     /// </summary>
-    public class NormalizedAddressStatuses : WePayValues<NormalizedAddressStatuses>
+    public static class NormalizedAddressStatuses
     {
-        public enum Indices : int
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
+        public enum ValuesIndices : int
         {
             UserConfirmed,
             UserDenied,
@@ -28,5 +32,15 @@ namespace WePayApi.Risk.Common
         /// User was not shown the normalized address and asked to confirm or deny
         /// </summary>
         public const string UserDidNotReview = "user_did_not_review";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static NormalizedAddressStatuses()
+        {
+            WePayValues.FillValuesList(typeof(NormalizedAddressStatuses), Values);
+        }
     }
 }

@@ -1,13 +1,17 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.Risk.Common
 {
     /// <summary>
     /// The source parameter (see Rbit Create API call) can be set to any one of values found here
     /// </summary>
-    public class Sources : WePayValues<Sources>
+    public static class Sources
     {
-        public enum Indices : int
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
+        public enum ValuesIndices : int
         {
             User,
             Guidestar,
@@ -82,5 +86,15 @@ namespace WePayApi.Risk.Common
         /// Data gathered from a website other than a major data provider.
         /// </summary>
         public const string GenericWebsite = "generic_website";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static Sources()
+        {
+            WePayValues.FillValuesList(typeof(Sources), Values);
+        }
     }
 }

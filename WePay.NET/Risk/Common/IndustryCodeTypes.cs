@@ -1,13 +1,17 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.Risk.Common
 {
     /// <summary>
     /// All possible Industry Code Types currently supported by WePay
     /// </summary>
-    public class IndustryCodeTypes : WePayValues<IndustryCodeTypes>
+    public static class IndustryCodeTypes
     {
-        public enum Indices : int
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
+        public enum ValuesIndices : int
         {
             Mcc,
             Sic,
@@ -17,5 +21,15 @@ namespace WePayApi.Risk.Common
         public const string Mcc = "mcc";
         public const string Sic = "sic";
         public const string Naics = "naics";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static IndustryCodeTypes()
+        {
+            WePayValues.FillValuesList(typeof(IndustryCodeTypes), Values);
+        }
     }
 }

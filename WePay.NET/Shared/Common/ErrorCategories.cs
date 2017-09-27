@@ -1,11 +1,16 @@
-﻿namespace WePayApi.Shared.Common
+﻿using System.Collections.Generic;
+
+namespace WePayApi.Shared.Common
 {
     /// <summary>
     /// All possible types of errors which can be returned from WePay
     /// </summary>
-    public class ErrorCategories : WePayValues<ErrorCategories>
+    public static class ErrorCategories
     {
-        public enum Indices : int
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
+        public enum ValuesIndices : int
         {
             InvalidRequest,
             AccessDenied,
@@ -39,5 +44,15 @@
         /// If you receive this message, please contact api@wepay.com (https://developer.wepay.com/api/general/api@wepay.com). 
         /// </summary>
         public const string ProcessingError = "processing_error";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static ErrorCategories()
+        {
+            WePayValues.FillValuesList(typeof(ErrorCategories), Values);
+        }
     }
 }

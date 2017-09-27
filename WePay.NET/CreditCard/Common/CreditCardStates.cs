@@ -1,13 +1,17 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.CreditCard.Common
 {
-    public class CreditCardStates : WePayValues<CreditCardStates>
+    /// <summary>
+    /// All possible Credit Card states recognized by WePay
+    /// </summary>
+    public static class CreditCardStates
     {
         /// <summary>
-        /// All possible Credit Card states recognized by WePay
+        /// Indices for Values property for iteration
         /// </summary>
-        public enum Indices : int
+        public enum ValuesIndices : int
         {
             New,
             Authorized,
@@ -42,5 +46,15 @@ namespace WePayApi.CreditCard.Common
         /// (e.g., AVS mismatch, also known as a billing address check failure).
         /// </summary>
         public const string Invalid = "invalid";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static CreditCardStates()
+        {
+            WePayValues.FillValuesList(typeof(CreditCardStates), Values);
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Collections.Generic;
+using System.Reflection;
 using WePayApi.Shared;
 
 namespace WePayApi.User.Common
@@ -6,9 +7,12 @@ namespace WePayApi.User.Common
     /// <summary>
     /// All possible Scopes currently recognized by WePay (PROTIP: These are just permissions a user can hold)
     /// </summary>
-    public class Scopes : WePayValues<Scopes>
+    public static class Scopes
     {
-        public enum Indices : int
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
+        public enum ValuesIndices : int
         {
             ManageAccounts,
             CollectPayments,
@@ -23,6 +27,10 @@ namespace WePayApi.User.Common
         public const string PreApprovePayments = "preapprove_payments";
         public const string SendMoney = "send_money";
 
+        /// <summary>
+        /// Produces comma separated list of all scopes
+        /// </summary>
+        /// <returns></returns>
         public static string AllowAllScopes()
         {
             string scopes = "";
@@ -34,6 +42,16 @@ namespace WePayApi.User.Common
             }
 
             return scopes.Substring(0, scopes.Length - 1);
+        }
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static Scopes()
+        {
+            WePayValues.FillValuesList(typeof(Scopes), Values);
         }
     }
 }

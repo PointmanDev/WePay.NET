@@ -1,11 +1,16 @@
-﻿namespace WePayApi.Shared.Common
+﻿using System.Collections.Generic;
+
+namespace WePayApi.Shared.Common
 {
     /// <summary>
     /// All countries currently supported by WePay
     /// </summary>
-    public class Countries : WePayValues<Countries>
+    public static class Countries
     {
-        public enum Indices : int
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
+        public enum ValuesIndices : int
         {
             US,
             CA,
@@ -26,5 +31,15 @@
         /// Great Britain
         /// </summary>
         public const string GB = "GB";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static Countries()
+        {
+            WePayValues.FillValuesList(typeof(Countries), Values);
+        }
     }
 }

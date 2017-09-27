@@ -3,12 +3,15 @@ using WePayApi.Shared;
 
 namespace WePayApi.Checkout.Common
 {
+    /// <summary>
+    /// All Payment Types currently supported by WePay
+    /// </summary>
     public static class PaymentTypes
     {
         /// <summary>
         /// Indices for Values property for iteration
         /// </summary>
-        public enum Indices : int
+        public enum ValuesIndices : int
         {
             CreditCard,
             PaymentBank,

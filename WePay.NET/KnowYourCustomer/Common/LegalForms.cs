@@ -1,13 +1,17 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.KnowYourCustomer.Common
 {
     /// <summary>
     /// All possible Legal Forms currently recognized by WePay
     /// </summary>
-    public class LegalForms : WePayValues<LegalForms>
+    public static class LegalForms
     {
-        public enum Indices : int
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
+        public enum ValuesIndices : int
         {
             SoleTrader = 0,
             Partnership,
@@ -23,5 +27,15 @@ namespace WePayApi.KnowYourCustomer.Common
         public const string PublicLimitedCompany = "public_limited_company";
         public const string LimitedLiabilityPartnership = "limited_liability_partnership";
         public const string Charity = "charity";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static LegalForms()
+        {
+            WePayValues.FillValuesList(typeof(LegalForms), Values);
+        }
     }
 }

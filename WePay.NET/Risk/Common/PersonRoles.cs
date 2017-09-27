@@ -1,13 +1,17 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.Risk.Common
 {
     /// <summary>
     /// All possible roles for which a person can have in the Person Rbit
     /// </summary>
-    public class PersonRoles : WePayValues<PersonRoles>
+    public static class PersonRoles
     {
-        public enum Indices : int
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
+        public enum ValuesIndices : int
         {
             Employee,
             Fundraiser,
@@ -19,5 +23,15 @@ namespace WePayApi.Risk.Common
         public const string Fundraiser = "fundraiser";
         public const string FundraisingTeamCaptain = "fundraising_team_captain";
         public const string OtherThirdParty = "other_third_party";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static PersonRoles()
+        {
+            WePayValues.FillValuesList(typeof(PersonRoles), Values);
+        }
     }
 }

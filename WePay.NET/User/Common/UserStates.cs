@@ -1,13 +1,17 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.User.Common
 {
     /// <summary>
     /// All possible UserStates currently recognized by WePay
     /// </summary>
-    public class UserStates : WePayValues<UserStates>
+    public static class UserStates
     {
-        public enum Indices : int
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
+        public enum ValuesIndices : int
         {
             Pending,
             Registered,
@@ -36,5 +40,15 @@ namespace WePayApi.User.Common
         /// A user may delete their account themselves, or an account may be deleted by WePay customer support.
         /// </summary>
         public const string Deleted = "deleted";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static UserStates()
+        {
+            WePayValues.FillValuesList(typeof(UserStates), Values);
+        }
     }
 }

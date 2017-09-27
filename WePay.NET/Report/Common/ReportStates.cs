@@ -1,13 +1,17 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.Report.Common
 {
     /// <summary>
     /// All possible report states
     /// </summary>
-    public class ReportStates : WePayValues<ReportStates>
+    public static class ReportStates 
     {
-        public enum Indices : int
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
+        public enum ValuesIndices : int
         {
             New,
             Processing,
@@ -43,5 +47,15 @@ namespace WePayApi.Report.Common
         /// You can still retrieve the metadata for the report using the Report Lookup call and passing the ReportId.
         /// </summary>
         public const string Failed = "failed";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static ReportStates()
+        {
+            WePayValues.FillValuesList(typeof(ReportStates), Values);
+        }
     }
 }

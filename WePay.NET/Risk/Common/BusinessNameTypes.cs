@@ -1,13 +1,17 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.Risk.Common
 {
     /// <summary>
     /// All possible Business Name Types currently supported by WePay
     /// </summary>
-    public class BusinessNameTypes : WePayValues<BusinessNameTypes>
+    public static class BusinessNameTypes
     {
-        public enum Indices : int
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
+        public enum ValuesIndices : int
         {
             Legal,
             Dba
@@ -22,5 +26,15 @@ namespace WePayApi.Risk.Common
         /// This is the Also Known As or Doing Business As name of the company
         /// </summary>
         public const string Dba = "dba";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static BusinessNameTypes()
+        {
+            WePayValues.FillValuesList(typeof(BusinessNameTypes), Values);
+        }
     }
 }

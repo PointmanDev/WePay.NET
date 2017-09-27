@@ -11,7 +11,7 @@ namespace WePayApi.Checkout.Common
         /// <summary>
         /// Indices for Values property for iteration
         /// </summary>
-        public enum Indices : int
+        public enum ValuesIndices : int
         {
             CreditCard,
             PaymentBank

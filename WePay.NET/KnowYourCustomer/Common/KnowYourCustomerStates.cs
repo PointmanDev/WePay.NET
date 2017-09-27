@@ -1,10 +1,17 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.KnowYourCustomer.Common
 {
-    public class KnowYourCustomerStates : WePayValues<KnowYourCustomerStates>
+    /// <summary>
+    /// All possible Know Your Customer States currently supported by WePay
+    /// </summary>
+    public static class KnowYourCustomerStates
     {
-        public enum Indices : int
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
+        public enum ValuesIndices : int
         {
             Unsubmitted,
             Unverified,
@@ -18,5 +25,15 @@ namespace WePayApi.KnowYourCustomer.Common
         public const string RequireDocs = "require_docs";
         public const string InReview = "in_review";
         public const string Verified = "verified";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static KnowYourCustomerStates()
+        {
+            WePayValues.FillValuesList(typeof(KnowYourCustomerStates), Values);
+        }
     }
 }

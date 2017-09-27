@@ -1,13 +1,17 @@
-﻿using WePayApi.Shared;
+﻿using System.Collections.Generic;
+using WePayApi.Shared;
 
 namespace WePayApi.Risk.Common
 {
     /// <summary>
     /// All possible optionns for IsPartnerAccount field on ExternalAccountProperties (yes WePay made this a string not boolean value)
     /// </summary>
-    public class IsPartnerAccountOptions : WePayValues<IsPartnerAccountOptions>
+    public static class IsPartnerAccountOptions
     {
-        public enum Indices : int
+        /// <summary>
+        /// Indices for Values property for iteration
+        /// </summary>
+        public enum ValuesIndices : int
         {
             Yes,
             No
@@ -22,5 +26,15 @@ namespace WePayApi.Risk.Common
         /// This is not an account controlled by you, the WePay partner.
         /// </summary>
         public const string No = "no";
+
+        /// <summary>
+        /// Holds all values for iteration
+        /// </summary>
+        public static readonly List<string> Values = new List<string>();
+
+        static IsPartnerAccountOptions()
+        {
+            WePayValues.FillValuesList(typeof(IsPartnerAccountOptions), Values);
+        }
     }
 }

@@ -126,7 +126,7 @@ namespace WePayApi.CreditCard.Request
 
             if (Address != null)
             {
-                if (new Countries().GetIndexOfWePayValue(Address.Country) != null)
+                if (Countries.Values.IndexOf(Address.Country) == -1)
                 {
                     error += " Address requires Country.";
                 }
