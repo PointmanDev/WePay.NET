@@ -1,7 +1,7 @@
-﻿using WePayApi.Account.Structure;
-using WePayApi.Shared.Structure;
+﻿using WePay.Account.Structure;
+using WePay.Shared.Structure;
 
-namespace WePayApi.Account.Response
+namespace WePay.Account.Response
 {
     public class LookupResponse : Shared.WePayResponse
     {
@@ -17,7 +17,7 @@ namespace WePayApi.Account.Response
 
         /// <summary>
         /// The state of the account.
-        /// (Enumeration of these values can be found in WePayApi.Account.Common.AccountStates)
+        /// (Enumeration of these values can be found in WePay.Account.Common.AccountStates)
         /// </summary>
         public string State { get; set; }
 
@@ -46,7 +46,7 @@ namespace WePayApi.Account.Response
 
         /// <summary>
         /// The account type.
-        /// (Enumeration of these values can be found in WePayApi.Account.Common.AccountTypes)
+        /// (Enumeration of these values can be found in WePay.Account.Common.AccountTypes)
         /// </summary>
         public string Type { get; set; }
 
@@ -68,13 +68,13 @@ namespace WePayApi.Account.Response
         /// <summary>
         /// Array of action strings explaining all the actions that are required to make this account active.
         /// It will be empty if no action is required.
-        /// (Enumeration of these values can be found in WePayApi.Account.Common.ActionReasons)
+        /// (Enumeration of these values can be found in WePay.Account.Common.ActionReasons)
         /// </summary>
         public string[] ActionReasons { get; set; }
 
         /// <summary>
         /// Array of strings explaining all reasons for why an account was disabled. It will be empty if the account is enabled.
-        /// (Enumeration of these values can be found in WePayApi.Account.Common.DisabledReasons)
+        /// (Enumeration of these values can be found in WePay.Account.Common.DisabledReasons)
         /// </summary>
         public string[] DisabledReasons { get; set; }
 
@@ -86,13 +86,13 @@ namespace WePayApi.Account.Response
 
         /// <summary>
         /// The account's country of origin 2-letter ISO code
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.Countries)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.Countries)
         /// </summary>
         public string Country { get; set; }
 
         /// <summary>
         /// Array of supported currency strings for this account. Only one currency is allowed per account at this time.
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.Currencies)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.Currencies)
         /// </summary>
         public string[] Currencies { get; set; }
 
@@ -110,7 +110,7 @@ namespace WePayApi.Account.Response
 
         /// <summary>
         /// Array of supported card type strings for this account.
-        /// (Enumeration of these values can be found in WePayApi.Account.Common.SupportedCardTypes)
+        /// (Enumeration of these values can be found in WePay.Account.Common.SupportedCardTypes)
         /// </summary>
         public string[] SupportedCardTypes { get; set; }
 

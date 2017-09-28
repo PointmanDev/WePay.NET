@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.Account.Structure
+namespace WePay.Account.Structure
 {
     /// <summary>
     /// The account currency status structure contains information about an account’s ability to process
@@ -10,34 +10,34 @@ namespace WePayApi.Account.Structure
     public class AccountCurrencyStatus
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Account.Structure.AccountCurrencyStatus";
+        private const string Identifier = "WePay.Account.Structure.AccountCurrencyStatus";
 
         /// <summary>
         /// The ISO 4217 currency code.
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.Currencies)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.Currencies)
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Shared.Common.Currencies")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Shared.Common.Currencies")]
         public string Currency { get; set; }
 
         /// <summary>
         /// Ability to process incoming payments for this currency.
-        /// (Enumeration of these values can be found in WePayApi.Account.Common.PaymentsStatuses)
+        /// (Enumeration of these values can be found in WePay.Account.Common.PaymentsStatuses)
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Account.Common.PaymentsStatuses")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Account.Common.PaymentsStatuses")]
         public string IncomingPaymentsStatus { get; set; }
 
         /// <summary>
         /// Ability to process outgoing payments for this currency.
-        /// (Enumeration of these values can be found in WePayApi.Account.Common.PaymentsStatuses)
+        /// (Enumeration of these values can be found in WePay.Account.Common.PaymentsStatuses)
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Account.Common.PaymentsStatuses")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Account.Common.PaymentsStatuses")]
         public string OutgoingPaymentsStatus { get; set; }
 
         /// <summary>
         /// Review status of an account for this currency.
-        /// (Enumeration of these values can be found in WePayApi.Account.Common.AccountReviewStatuses)
+        /// (Enumeration of these values can be found in WePay.Account.Common.AccountReviewStatuses)
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Account.Common.AccountReviewStatuses")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Account.Common.AccountReviewStatuses")]
         public string AccountReviewStatus { get; set; }
     }
 }

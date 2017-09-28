@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.AccountMembership.Common;
-using WePayApi.Shared;
+using WePay.AccountMembership.Common;
+using WePay.Shared;
 
-namespace WePayApi.AccountMembership.Structure
+namespace WePay.AccountMembership.Structure
 {
     /// <summary>
     /// Describes the context of an account administrator.
@@ -11,13 +11,13 @@ namespace WePayApi.AccountMembership.Structure
     public class AdminContext : IRequiresAdditonalValidation
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.AccountMembership.Structure.AdminContext";
+        private const string Identifier = "WePay.AccountMembership.Structure.AdminContext";
 
         /// <summary>
         /// The reason the person is an administrator (role).
-        /// (Enumeration of these values can be found in WePayApi.AccountMembership.Common.Reasons)
+        /// (Enumeration of these values can be found in WePay.AccountMembership.Common.Reasons)
         /// </summary>
-        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.AccountMembership.Common.Reasons")]
+        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePay.AccountMembership.Common.Reasons")]
         public string Reason { get; set; }
 
         /// <summary>

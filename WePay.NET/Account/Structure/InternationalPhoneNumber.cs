@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.Account.Structure
+namespace WePay.Account.Structure
 {
     /// <summary>
     /// The international phone number structure contains information to construct a valid E164 formatted phone number.
@@ -9,7 +9,7 @@ namespace WePayApi.Account.Structure
     public class InternationalPhoneNumber
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Account.Structure.InternationalPhoneNumber";
+        private const string Identifier = "WePay.Account.Structure.InternationalPhoneNumber";
 
         /// <summary>
         /// Numeric country code. Optional +, followed by 1-3 digits.

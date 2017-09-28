@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.CreditCard.Structure
+namespace WePay.CreditCard.Structure
 {
     /// <summary>
     /// Object that specifies additional credit card data.
@@ -10,7 +10,7 @@ namespace WePayApi.CreditCard.Structure
     public class CreditCardAdditionalData
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.CreditCard.Structure.CreditCardAdditionalData";
+        private const string Identifier = "WePay.CreditCard.Structure.CreditCardAdditionalData";
 
         /// <summary>
         /// Used for making a checkout call if the credit card was EMV enabled.

@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.PaymentBank.Structure
+namespace WePay.PaymentBank.Structure
 {
     /// <summary>
     /// The payment bank structure object contains the unique ID for a payment bank.
@@ -9,7 +9,7 @@ namespace WePayApi.PaymentBank.Structure
     public class PaymentBank
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.PaymentBank.Structure.PaymentBank";
+        private const string Identifier = "WePay.PaymentBank.Structure.PaymentBank";
 
         /// <summary>
         /// The payment bank ID.

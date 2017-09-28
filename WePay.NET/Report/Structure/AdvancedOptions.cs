@@ -1,4 +1,4 @@
-﻿namespace WePayApi.Report.Structure
+﻿namespace WePay.Report.Structure
 {
     /// <summary>
     /// Contains the Unix timestamps (UTC) for the date range of the report.

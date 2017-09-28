@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
-using WePayApi.Shared.Structure;
+using WePay.Shared;
+using WePay.Shared.Structure;
 
-namespace WePayApi.Risk.Structure.Rbit.RbitProperties
+namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
     /// <summary>
     /// Information regarding a specific transaction.
@@ -11,7 +11,7 @@ namespace WePayApi.Risk.Structure.Rbit.RbitProperties
     public class TransactionDetailsProperties : RbitProperties
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Risk.Structure.Rbit.RbitProperties.TransactionDetailsProperties";
+        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsProperties";
 
         [JsonIgnore]
         public override string RbitType

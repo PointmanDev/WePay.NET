@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.KnowYourCustomer.Structure
+namespace WePay.KnowYourCustomer.Structure
 {
     /// <summary>
     /// This structure is used for U.S. entities only.
@@ -9,7 +9,7 @@ namespace WePayApi.KnowYourCustomer.Structure
     public class UsEntityCompliance
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.KnowYourCustomer.Structure.UsEntityCompliance";
+        private const string Identifier = "WePay.KnowYourCustomer.Structure.UsEntityCompliance";
 
         /// <summary>
         /// The EIN used to validate a legal business or nonprofit organization in the US.

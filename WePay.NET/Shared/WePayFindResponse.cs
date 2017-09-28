@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace WePayApi.Shared
+namespace WePay.Shared
 {
     public class WePayFindResponse<T> : WePayResponse where T : WePayResponse
     {

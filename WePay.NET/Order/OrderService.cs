@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
-using WePayApi.Shared;
-using WePayApi.Order.Request;
-using WePayApi.Order.Response;
+using WePay.Shared;
+using WePay.Order.Request;
+using WePay.Order.Response;
 
-namespace WePayApi.Order
+namespace WePay.Order
 {
     /// <summary>
     /// The order resource is used as part of WePay’s mPOS program. An order is a request by a partner to have WePay ship a card reader to a merchant.

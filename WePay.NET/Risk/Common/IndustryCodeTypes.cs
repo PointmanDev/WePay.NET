@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.Risk.Common
+namespace WePay.Risk.Common
 {
     /// <summary>
     /// All possible Industry Code Types currently supported by WePay

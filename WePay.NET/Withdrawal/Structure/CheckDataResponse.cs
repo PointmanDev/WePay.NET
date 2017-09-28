@@ -1,4 +1,4 @@
-﻿namespace WePayApi.Withdrawal.Structure
+﻿namespace WePay.Withdrawal.Structure
 {
     /// <summary>
     /// The check data structure contains information about a check issued for a withdrawal.
@@ -27,7 +27,7 @@
 
         /// <summary>
         /// The 2-letter ISO-3166-1 country code.
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.Countries)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.Countries)
         /// </summary>
         public string Country { get; set; }
 

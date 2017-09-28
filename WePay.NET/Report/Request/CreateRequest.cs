@@ -1,21 +1,21 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Report.Response;
-using WePayApi.Report.Structure;
-using WePayApi.Shared;
+using WePay.Report.Response;
+using WePay.Report.Structure;
+using WePay.Shared;
 
-namespace WePayApi.Report.Request
+namespace WePay.Report.Request
 {
     public class CreateRequest : WePayRequest<LookupResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Report.Request.CreateRequest";
+        private const string Identifier = "WePay.Report.Request.CreateRequest";
 
         /// <summary>
         /// The type of report.
-        /// (Enumeration of these values can be found in WePayApi.Report.Common.ReportTypes)
+        /// (Enumeration of these values can be found in WePay.Report.Common.ReportTypes)
         /// </summary>
-        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Report.Common.ReportTypes")]
+        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePay.Report.Common.ReportTypes")]
         public string Type { get; set; }
 
         /// <summary>

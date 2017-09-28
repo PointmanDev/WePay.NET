@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.Checkout.Structure
+namespace WePay.Checkout.Structure
 {
     /// <summary>
     /// Contains information about the App Fee, processing fee paid to WePay, and Fee Payer.
@@ -21,7 +21,7 @@ namespace WePayApi.Checkout.Structure
 
         /// <summary>
         /// Who will pay the fees(WePay's fees and any app fees).
-        /// (Enumeration of these values can be found in WePayApi.Checkout.Common.FeePayers)
+        /// (Enumeration of these values can be found in WePay.Checkout.Common.FeePayers)
         /// </summary>
         public string FeePayer { get; set; }
     }

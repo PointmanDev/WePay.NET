@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
-using WePayApi.Shared;
-using WePayApi.Risk.Request;
-using WePayApi.Risk.Response;
+using WePay.Shared;
+using WePay.Risk.Request;
+using WePay.Risk.Response;
 
-namespace WePayApi.Risk
+namespace WePay.Risk
 {
     /// <summary>
     /// The Risk API provides a way to communicate risk-related account and transaction level information between an application and WePay.

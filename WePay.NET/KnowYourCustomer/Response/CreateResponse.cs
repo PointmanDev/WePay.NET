@@ -1,4 +1,4 @@
-﻿namespace WePayApi.KnowYourCustomer.Response
+﻿namespace WePay.KnowYourCustomer.Response
 {
     public class CreateResponse : Shared.WePayResponse
     {

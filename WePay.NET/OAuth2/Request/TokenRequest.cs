@@ -1,14 +1,14 @@
-﻿using WePayApi.Shared;
-using WePayApi.OAuth2.Response;
+﻿using WePay.Shared;
+using WePay.OAuth2.Response;
 using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.OAuth2.Request
+namespace WePay.OAuth2.Request
 {
     public class TokenRequest : WePayRequest<TokenResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.OAuth2.Request.TokenRequest";
+        private const string Identifier = "WePay.OAuth2.Request.TokenRequest";
 
         /// <summary>
         /// The client id issued to the app, found on your application's dashboard.

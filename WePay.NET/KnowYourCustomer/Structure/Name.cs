@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.KnowYourCustomer.Structure
+namespace WePay.KnowYourCustomer.Structure
 {
     /// <summary>
     /// Contains the full name of the user.
@@ -10,7 +10,7 @@ namespace WePayApi.KnowYourCustomer.Structure
     public class Name
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.KnowYourCustomer.Structure.Name";
+        private const string Identifier = "WePay.KnowYourCustomer.Structure.Name";
 
         /// <summary>
         /// The user's first name.

@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.Risk.Structure.Rbit.RbitProperties
+namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
     /// <summary>
     /// Rbts of type 'BusinessDescription” should be sent as a top-level rbit for an account.
@@ -9,7 +9,7 @@ namespace WePayApi.Risk.Structure.Rbit.RbitProperties
     public class BusinessDescriptionProperties : RbitProperties
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Risk.Structure.Rbit.RbitProperties.BusinessDescriptionProperties";
+        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.BusinessDescriptionProperties";
 
         [JsonIgnore]
         public override string RbitType

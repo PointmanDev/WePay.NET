@@ -1,14 +1,14 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.CreditCard.Response;
-using WePayApi.Shared;
+using WePay.CreditCard.Response;
+using WePay.Shared;
 
-namespace WePayApi.CreditCard
+namespace WePay.CreditCard
 {
     public class ModifyRequest : Shared.WePayRequest<LookupResponse>, IRequiresAdditonalValidation
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.CreditCard.Request.ModifyRequest";
+        private const string Identifier = "WePay.CreditCard.Request.ModifyRequest";
 
         /// <summary>
         /// The ID for your API application.

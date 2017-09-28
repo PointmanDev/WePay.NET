@@ -1,14 +1,14 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
-using WePayApi.Order.Response;
+using WePay.Shared;
+using WePay.Order.Response;
 
-namespace WePayApi.Order.Request
+namespace WePay.Order.Request
 {
     public class LookupRequest : WePayRequest<LookupResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Order.Request.LookupRequest";
+        private const string Identifier = "WePay.Order.Request.LookupRequest";
 
         /// <summary>
         /// The unique ID of the order you want to look up.

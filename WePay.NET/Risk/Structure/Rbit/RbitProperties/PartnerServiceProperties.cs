@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.Risk.Structure.Rbit.RbitProperties
+namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
     /// <summary>
     /// This type describes one type of service or product the user has signed up for on the partner site.
@@ -12,7 +12,7 @@ namespace WePayApi.Risk.Structure.Rbit.RbitProperties
     public class PartnerServiceProperties : RbitProperties
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Risk.Structure.Rbit.RbitProperties.PartnerServiceProperties";
+        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.PartnerServiceProperties";
 
         [JsonIgnore]
         public override string RbitType
@@ -42,9 +42,9 @@ namespace WePayApi.Risk.Structure.Rbit.RbitProperties
 
         /// <summary>
         /// The currency used.
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.Currencies)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.Currencies)
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Shared.Common.Currencies")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Shared.Common.Currencies")]
         public string Currency { get; set; }
 
         /// <summary>

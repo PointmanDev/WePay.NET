@@ -1,14 +1,14 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
-using WePayApi.User.Response;
+using WePay.Shared;
+using WePay.User.Response;
 
-namespace WePayApi.User.Request
+namespace WePay.User.Request
 {
     public class ModifyRequest : WePayRequest<LookupResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.User.Request.ModifyRequest";
+        private const string Identifier = "WePay.User.Request.ModifyRequest";
 
         /// <summary>
         /// The callback URI where you want to receive IPNs. Must be a full URI.

@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using WePayApi.Batch.Request;
-using WePayApi.Batch.Response;
-using WePayApi.Shared;
+using WePay.Batch.Request;
+using WePay.Batch.Response;
+using WePay.Shared;
 
-namespace WePayApi.Batch
+namespace WePay.Batch
 {
     /// <summary>
     /// Use the following call to make multiple API calls with one HTTP request.

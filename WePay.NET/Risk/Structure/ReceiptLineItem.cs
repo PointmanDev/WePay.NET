@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.Risk.Structure
+namespace WePay.Risk.Structure
 {
     /// <summary>
     /// Contains details about a specific line item on a receipt.
@@ -22,7 +22,7 @@ namespace WePayApi.Risk.Structure
         }
 
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Risk.Structure.ReceiptLineItem";
+        private const string Identifier = "WePay.Risk.Structure.ReceiptLineItem";
 
         /// <summary>
         /// Line item description.
@@ -68,10 +68,10 @@ namespace WePayApi.Risk.Structure
 
         /// <summary>
         /// The currency used.
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.Currencies)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.Currencies)
         /// Default: US
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Shared.Common.Currencies")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Shared.Common.Currencies")]
         public string Currency { get; set; }
 
         /// <summary>
@@ -90,9 +90,9 @@ namespace WePayApi.Risk.Structure
 
         /// <summary>
         /// The service billing method used.
-        /// (Enumeration of these values can be found in WePayApi.Risk.Common.ServiceBillingMethods)
+        /// (Enumeration of these values can be found in WePay.Risk.Common.ServiceBillingMethods)
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Risk.Common.ServiceBillingMethods")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Risk.Common.ServiceBillingMethods")]
         public string ServiceBillingMethod { get; set; }
 
         public string GetAdditonalValidationErrorMessage()

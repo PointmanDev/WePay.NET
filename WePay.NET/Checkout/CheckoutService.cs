@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
-using WePayApi.Shared;
-using WePayApi.Checkout.Request;
-using WePayApi.Checkout.Response;
+using WePay.Shared;
+using WePay.Checkout.Request;
+using WePay.Checkout.Response;
 
-namespace WePayApi.Checkout
+namespace WePay.Checkout
 {
     /// <summary>
     /// The checkout object represents a single payment and defines the amount, the destination account, the application fee, etc

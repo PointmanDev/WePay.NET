@@ -1,6 +1,6 @@
-﻿using WePayApi.Checkout.Structure;
+﻿using WePay.Checkout.Structure;
 
-namespace WePayApi.Checkout.Response
+namespace WePay.Checkout.Response
 {
     public class LookupResponse : Shared.WePayResponse
     {
@@ -16,7 +16,7 @@ namespace WePayApi.Checkout.Response
 
         /// <summary>
         /// The checkout type.
-        /// (Enumeration of these values can be found in WePayApi.Checkout.Common.CheckoutTypes)
+        /// (Enumeration of these values can be found in WePay.Checkout.Common.CheckoutTypes)
         /// </summary>
         public string Type { get; set; }
 
@@ -27,7 +27,7 @@ namespace WePayApi.Checkout.Response
 
         /// <summary>
         /// The state the checkout is in.
-        /// (Enumeration of these values can be found in WePayApi.Checkout.Common.CheckoutStates)
+        /// (Enumeration of these values can be found in WePay.Checkout.Common.CheckoutStates)
         /// </summary>
         public string State { get; set; }
 
@@ -53,7 +53,7 @@ namespace WePayApi.Checkout.Response
 
         /// <summary>
         /// The currency used.
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.Currencies)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.Currencies)
         /// </summary>
         public string Currency { get; set; }
 
@@ -121,7 +121,7 @@ namespace WePayApi.Checkout.Response
 
         /// <summary>
         /// Delivery type for checkout.
-        /// (Enumeration of these values can be found in WePayApi.Checkout.Common.DeliveryTypes)
+        /// (Enumeration of these values can be found in WePay.Checkout.Common.DeliveryTypes)
         /// </summary>
         public string DeliveryType { get; set; }
 

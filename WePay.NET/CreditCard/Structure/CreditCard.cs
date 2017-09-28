@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.CreditCard.Structure
+namespace WePay.CreditCard.Structure
 {
     /// <summary>
     /// The Credit Card Structure object specifies the credit card ID used for tokenization.
@@ -10,7 +10,7 @@ namespace WePayApi.CreditCard.Structure
     public class CreditCard
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.CreditCard.Structure.CreditCard";
+        private const string Identifier = "WePay.CreditCard.Structure.CreditCard";
 
         /// <summary>
         /// Credit card ID from CreditCard Create.

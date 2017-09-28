@@ -1,4 +1,4 @@
-﻿namespace WePayApi.Checkout.Structure
+﻿namespace WePay.Checkout.Structure
 {
     /// <summary>
     /// This structure contains additional information about a payment error that occurred on a checkout.
@@ -9,7 +9,7 @@
         /// <summary>
         /// The error type.
         /// This is set to payment_bank and matches the corresponding object type below.
-        /// (Enumeration of these values can be found in WePayApi.Checkout.Common.PaymentTypes)
+        /// (Enumeration of these values can be found in WePay.Checkout.Common.PaymentTypes)
         /// </summary>
         public string Type { get; set; }
 

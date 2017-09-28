@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace WePayApi.Shared.Common
+namespace WePay.Shared.Common
 {
     /// <summary>
     /// All possible frequencies supported by WePay

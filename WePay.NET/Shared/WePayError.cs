@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WePayApi.Shared
+namespace WePay.Shared
 {
     /// <summary>
     /// When an error occurs the API will respond with this
@@ -10,7 +10,7 @@ namespace WePayApi.Shared
     {
         /// <summary>
         /// A generic “error” category.
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.ErrorCategories)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.ErrorCategories)
         /// </summary>
         public string Error { get; set; }
 
@@ -22,7 +22,7 @@ namespace WePayApi.Shared
 
         /// <summary>
         /// A specific error code that you can use to program responses to errors.
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.ErrorCodes)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.ErrorCodes)
         /// </summary>
         public int? ErrorCode { get; set; }
     }

@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
-using WePayApi.Shared;
-using WePayApi.User.Request;
-using WePayApi.User.Response;
+using WePay.Shared;
+using WePay.User.Request;
+using WePay.User.Response;
 
-namespace WePayApi.User
+namespace WePay.User
 {
     /// <summary>
     /// The user object represents a single user registered on WePay.

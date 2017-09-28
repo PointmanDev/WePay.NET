@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.KnowYourCustomer.Structure
+namespace WePay.KnowYourCustomer.Structure
 {
     /// <summary>
     /// This structure is used for Canadian entities only.
@@ -9,7 +9,7 @@ namespace WePayApi.KnowYourCustomer.Structure
     public class CaEntityCompliance
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.KnowYourCustomer.Structure.CaEntityCompliance";
+        private const string Identifier = "WePay.KnowYourCustomer.Structure.CaEntityCompliance";
 
         /// <summary>
         /// The GST/HST number used to validate a legal business or nonprofit organization in Canada.

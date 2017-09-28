@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
-using WePayApi.Shared.Structure;
+using WePay.Shared;
+using WePay.Shared.Structure;
 
-namespace WePayApi.Checkout.Structure
+namespace WePay.Checkout.Structure
 {
     /// <summary>
     /// Specifies prefill information for checkout, preapprovals, and subscription flows.
@@ -11,7 +11,7 @@ namespace WePayApi.Checkout.Structure
     public class PaymentsPrefillInfo
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Checkout.Structure.PaymentsPrefillInfo";
+        private const string Identifier = "WePay.Checkout.Structure.PaymentsPrefillInfo";
 
         /// <summary>
         /// The name of the person.

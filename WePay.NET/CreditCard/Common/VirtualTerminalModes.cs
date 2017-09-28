@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.CreditCard.Common
+namespace WePay.CreditCard.Common
 {
     /// <summary>
     /// All possible virtual terminal modes

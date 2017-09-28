@@ -1,20 +1,20 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
-using WePayApi.User.Response;
+using WePay.Shared;
+using WePay.User.Response;
 
-namespace WePayApi.User.Request
+namespace WePay.User.Request
 {
     public class ChangeEmailRequest : WePayRequest<LookupResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.User.Request.ChangeEmailRequest";
+        private const string Identifier = "WePay.User.Request.ChangeEmailRequest";
 
         /// <summary>
         /// The new email address of this user.
         /// </summary>
         [Required(AllowEmptyStrings = false, ErrorMessage = Identifier + " - Requires Email"),
-         StringLength(255, ErrorMessage = "WePayApi.User.ChangeEmailRequest - Email cannot exceed 255 characters")]
+         StringLength(255, ErrorMessage = "WePay.User.ChangeEmailRequest - Email cannot exceed 255 characters")]
         public string Email { get; set; }
 
         /// <summary>

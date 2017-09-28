@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
-using WePayApi.Shared;
-using WePayApi.OAuth2.Request;
-using WePayApi.OAuth2.Response;
+using WePay.Shared;
+using WePay.OAuth2.Request;
+using WePay.OAuth2.Response;
 
-namespace WePayApi.OAuth2
+namespace WePay.OAuth2
 {
     /// <summary>
     /// Create users using the OAuth2 API calls.

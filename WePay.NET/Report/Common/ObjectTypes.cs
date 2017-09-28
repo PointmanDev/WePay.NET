@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.Report.Common
+namespace WePay.Report.Common
 {
     /// <summary>
     /// All possible object types

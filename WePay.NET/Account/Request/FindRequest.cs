@@ -1,14 +1,14 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Account.Response;
-using WePayApi.Shared;
+using WePay.Account.Response;
+using WePay.Shared;
 
-namespace WePayApi.Account.Request
+namespace WePay.Account.Request
 {
     public class FindRequest : Shared.WePayRequest<WePayFindResponse<LookupResponse>>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Account.Request.FindRequest";
+        private const string Identifier = "WePay.Account.Request.FindRequest";
 
         /// <summary>
         /// The name of the account for which you are searching.
@@ -26,10 +26,10 @@ namespace WePayApi.Account.Request
         /// Sort the results of the search by time created.
         /// Use desc for most recent to least recent.
         /// Use asc for least recent to most recent.
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.SortOrders)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.SortOrders)
         /// Default: desc
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Shared.Common.SortOrders")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Shared.Common.SortOrders")]
         public string SortOrder { get; set; }
     }
 }

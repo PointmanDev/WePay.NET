@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.Risk.Common
+namespace WePay.Risk.Common
 {
     /// <summary>
     /// All possible optionns for IsPartnerAccount field on ExternalAccountProperties (yes WePay made this a string not boolean value)

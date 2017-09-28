@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.KnowYourCustomer.Structure
+namespace WePay.KnowYourCustomer.Structure
 {
     /// <summary>
     /// Contains information identifying a US Owner as a valid person.
@@ -12,7 +12,7 @@ namespace WePayApi.KnowYourCustomer.Structure
     public class UsOwnerCompliance : IRequiresAdditonalValidation
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.KnowYourCustomer.Structure.AccountOwner";
+        private const string Identifier = "WePay.KnowYourCustomer.Structure.AccountOwner";
 
         /// <summary>
         /// The user's government issued Social Security Number (SSN), used for identification.

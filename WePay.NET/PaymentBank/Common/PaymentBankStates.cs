@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.PaymentBank.Common
+namespace WePay.PaymentBank.Common
 {
     /// <summary>
     /// All possible Payment Bank States currently recognized by WePay

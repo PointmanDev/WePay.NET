@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.Risk.Structure.Rbit.RbitProperties
+namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
     /// <summary>
     /// The user’s external accounts, such as Facebook or Twitter.
@@ -10,7 +10,7 @@ namespace WePayApi.Risk.Structure.Rbit.RbitProperties
     public class ExternalAccountProperties : RbitProperties
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Risk.Structure.Rbit.RbitProperties.ExternalAccountProperties";
+        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountProperties";
 
         [JsonIgnore]
         public override string RbitType
@@ -27,17 +27,17 @@ namespace WePayApi.Risk.Structure.Rbit.RbitProperties
 
 
         /// <summary>
-        /// (Enumeration of these values can be found in WePayApi.Risk.Common.IsPartnerAccountOptions)
+        /// (Enumeration of these values can be found in WePay.Risk.Common.IsPartnerAccountOptions)
         /// </summary>
-        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Risk.Common.IsPartnerAccountOptions")]
+        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePay.Risk.Common.IsPartnerAccountOptions")]
         public string IsPartnerAccount { get; set; }
 
         /// <summary>
         /// Name of the provider of the account.
         /// If this is an account controlled by you, set this parameter to the name of the company where the account was created
-        /// (Enumeration of these values can be found in WePayApi.Risk.Common.ExternalAccountTypes)
+        /// (Enumeration of these values can be found in WePay.Risk.Common.ExternalAccountTypes)
         /// </summary>
-        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Risk.Common.ExternalAccountTypes")]
+        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePay.Risk.Common.ExternalAccountTypes")]
         public string AccountType { get; set; }
 
         /// <summary>

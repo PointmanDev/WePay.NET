@@ -1,16 +1,16 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
-using WePayApi.Shared.Structure;
-using WePayApi.CreditCard.Response;
-using WePayApi.Shared.Common;
+using WePay.Shared;
+using WePay.Shared.Structure;
+using WePay.CreditCard.Response;
+using WePay.Shared.Common;
 
-namespace WePayApi.CreditCard.Request
+namespace WePay.CreditCard.Request
 {
     public class TransferRequest : Shared.WePayRequest<StateResponse>, IRequiresAdditonalValidation
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.CreditCard.Request.TransferRequest";
+        private const string Identifier = "WePay.CreditCard.Request.TransferRequest";
 
         /// <summary>
         /// The ID for your API application. You can find it on your app dashboard.
@@ -50,7 +50,7 @@ namespace WePayApi.CreditCard.Request
         /// The full name of the user to whom the card belongs.
         /// </summary>
         [Required(AllowEmptyStrings = false, ErrorMessage = Identifier + " - Requires UserName"),
-         StringLength(255, ErrorMessage = "WePayApi.CreditCard.TransferRequest - UserName cannot exceed 255 characters")]
+         StringLength(255, ErrorMessage = "WePay.CreditCard.TransferRequest - UserName cannot exceed 255 characters")]
         public string UserName { get; set; }
 
         /// <summary>

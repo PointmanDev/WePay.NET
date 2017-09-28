@@ -1,4 +1,4 @@
-﻿namespace WePayApi.Shared
+﻿namespace WePay.Shared
 {
     public interface IRequiresAdditonalValidation
     {

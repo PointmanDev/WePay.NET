@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.Risk.Structure.Rbit.RbitProperties
+namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
     /// <summary>
     /// A phone number associated with a user or account.
@@ -11,7 +11,7 @@ namespace WePayApi.Risk.Structure.Rbit.RbitProperties
     public class PhoneProperties : RbitProperties
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Risk.Structure.Rbit.RbitProperties.PhoneProperties";
+        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.PhoneProperties";
 
         [JsonIgnore]
         public override string RbitType
@@ -35,9 +35,9 @@ namespace WePayApi.Risk.Structure.Rbit.RbitProperties
 
         /// <summary>
         /// The type of phone number.
-        /// (Enumeration of these values can be found in WePayApi.Risk.Common.PhoneTypes)
+        /// (Enumeration of these values can be found in WePay.Risk.Common.PhoneTypes)
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Risk.Common.PhoneTypes")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Risk.Common.PhoneTypes")]
         public string PhoneType { get; set; }
     }
 }

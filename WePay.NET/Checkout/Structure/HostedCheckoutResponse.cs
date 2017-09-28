@@ -1,6 +1,6 @@
-﻿using WePayApi.Shared.Structure;
+﻿using WePay.Shared.Structure;
 
-namespace WePayApi.Checkout.Structure
+namespace WePay.Checkout.Structure
 {
     public class HostedCheckoutResponse
     {
@@ -11,7 +11,7 @@ namespace WePayApi.Checkout.Structure
 
         /// <summary>
         /// What mode the checkout was displayed in.
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.ProcessModes)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.ProcessModes)
         /// </summary>
         public string Mode { get; set; }
 

@@ -1,15 +1,15 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Account.Response;
-using WePayApi.Shared;
-using WePayApi.Account.Structure;
+using WePay.Account.Response;
+using WePay.Shared;
+using WePay.Account.Structure;
 
-namespace WePayApi.Account.Request
+namespace WePay.Account.Request
 {
     public class GetUpdateUriRequest : Shared.WePayRequest<GetUpdateUriResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Account.Request.GetUpdateUriRequest";
+        private const string Identifier = "WePay.Account.Request.GetUpdateUriRequest";
 
         /// <summary>
         /// The unique ID of the account you want to add or update info for.
@@ -19,11 +19,11 @@ namespace WePayApi.Account.Request
 
         /// <summary>
         /// What mode the process will be displayed in.
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.ProcessModes)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.ProcessModes)
         /// The options are iframe or regular. Choose iframe if you would like to frame the process on your site.
         /// Default: regular
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Shared.Common.ProcessModes")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Shared.Common.ProcessModes")]
         public string Mode { get; set; }
 
         /// <summary>

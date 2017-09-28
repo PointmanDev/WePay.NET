@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.KnowYourCustomer.Structure;
-using WePayApi.Shared;
+using WePay.KnowYourCustomer.Structure;
+using WePay.Shared;
 
-namespace WePayApi.Account.Structure
+namespace WePay.Account.Structure
 {
     /// <summary>
     /// Contains information about a merchant that can be used to prefill fields in the Know Your Customer (KYC) form.
@@ -11,7 +11,7 @@ namespace WePayApi.Account.Structure
     public class KycPrefillInfo
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Account.Structure.KycPrefillInfo";
+        private const string Identifier = "WePay.Account.Structure.KycPrefillInfo";
 
         /// <summary>
         /// The legal name of the account owner.

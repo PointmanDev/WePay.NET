@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
-using WePayApi.Shared;
-using WePayApi.CreditCard.Request;
-using WePayApi.CreditCard.Response;
+using WePay.Shared;
+using WePay.CreditCard.Request;
+using WePay.CreditCard.Response;
 
-namespace WePayApi.CreditCard
+namespace WePay.CreditCard
 {
     /// <summary>
     /// The CreditCard object represents a user’s credit card and can be used to tokenize credit cards

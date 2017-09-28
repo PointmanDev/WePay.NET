@@ -1,15 +1,15 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
-using WePayApi.Shared.Structure;
-using WePayApi.CreditCard.Response;
+using WePay.Shared;
+using WePay.Shared.Structure;
+using WePay.CreditCard.Response;
 
-namespace WePayApi.CreditCard.Request
+namespace WePay.CreditCard.Request
 {
     public class EnableRecurringRequest : Shared.WePayRequest<SimpleResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.CreditCard.Request.EnableRecurringRequest";
+        private const string Identifier = "WePay.CreditCard.Request.EnableRecurringRequest";
 
         /// <summary>
         /// The ID for your API application.

@@ -1,6 +1,6 @@
-﻿using WePayApi.Shared.Structure;
+﻿using WePay.Shared.Structure;
 
-namespace WePayApi.Checkout.Structure
+namespace WePay.Checkout.Structure
 {
     /// <summary>
     /// Contains information about the payer such as their name, email, and home address.

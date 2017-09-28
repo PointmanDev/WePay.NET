@@ -1,4 +1,4 @@
-﻿namespace WePayApi.Withdrawal.Structure
+﻿namespace WePay.Withdrawal.Structure
 {
     /// <summary>
     /// The withdrawal data structure contains information about a withdrawal.

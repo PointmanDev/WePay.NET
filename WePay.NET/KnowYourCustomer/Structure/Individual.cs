@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.KnowYourCustomer.Structure
+namespace WePay.KnowYourCustomer.Structure
 {
     /// <summary>
     /// The KYC Individual Structure contains information about an account owner who is an individual (as opposed to a business or an organization).
@@ -10,7 +10,7 @@ namespace WePayApi.KnowYourCustomer.Structure
     public class Individual
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.KnowYourCustomer.Structure.Individual";
+        private const string Identifier = "WePay.KnowYourCustomer.Structure.Individual";
 
         /// <summary>
         /// /The individual owner.

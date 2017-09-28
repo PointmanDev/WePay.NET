@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.KnowYourCustomer.Structure
+namespace WePay.KnowYourCustomer.Structure
 {
     /// <summary>
     /// Contains information used to identify a user in Canada.
@@ -9,7 +9,7 @@ namespace WePayApi.KnowYourCustomer.Structure
     public class CaOwnerCompliance
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.KnowYourCustomer.Structure.CaOwnerCompliance";
+        private const string Identifier = "WePay.KnowYourCustomer.Structure.CaOwnerCompliance";
 
         /// <summary>
         /// The Social Insurance Number (SIN) number used to identify an individual in Canada.

@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.Batch.Structure
+namespace WePay.Batch.Structure
 {
     /// <summary>
     /// Contains API calls and their associated arguments.
@@ -10,10 +10,10 @@ namespace WePayApi.Batch.Structure
     public class ApiCall
     {
         [JsonIgnore]
-        protected const string Identifier = "WePayApi.Batch.Structure.ApiCall";
+        protected const string Identifier = "WePay.Batch.Structure.ApiCall";
 
         /// <summary>
-        /// The name of the call you want to make (e.g. WePayApi.Checkout.CheckoutService.EndPointUrls.Create)
+        /// The name of the call you want to make (e.g. WePay.Checkout.CheckoutService.EndPointUrls.Create)
         /// </summary>
         [Required(AllowEmptyStrings = false, ErrorMessage = Identifier + " - Requires Call"),
          StringLength(255, ErrorMessage = Identifier + " - Call cannot exceed 255 characters")]

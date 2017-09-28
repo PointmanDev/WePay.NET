@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.CreditCard.Structure
+namespace WePay.CreditCard.Structure
 {
     /// <summary>
     /// Structure containing receipt information for EMV transactions.
@@ -9,7 +9,7 @@ namespace WePayApi.CreditCard.Structure
     public class EmvReceipt
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.CreditCard.Structure.EmvReceipt";
+        private const string Identifier = "WePay.CreditCard.Structure.EmvReceipt";
 
         /// <summary>
         /// The label of the EMV Application.

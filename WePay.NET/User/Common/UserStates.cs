@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.User.Common
+namespace WePay.User.Common
 {
     /// <summary>
     /// All possible UserStates currently recognized by WePay

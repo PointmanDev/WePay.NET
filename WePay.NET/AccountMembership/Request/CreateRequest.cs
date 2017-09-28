@@ -1,16 +1,16 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.AccountMembership.Response;
-using WePayApi.AccountMembership.Common;
-using WePayApi.AccountMembership.Structure;
-using WePayApi.Shared;
+using WePay.AccountMembership.Response;
+using WePay.AccountMembership.Common;
+using WePay.AccountMembership.Structure;
+using WePay.Shared;
 
-namespace WePayApi.AccountMembership.Request
+namespace WePay.AccountMembership.Request
 {
     public class CreateRequest : WePayRequest<LookupResponse>, IRequiresAdditonalValidation
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Account.Request.CreateRequest";
+        private const string Identifier = "WePay.Account.Request.CreateRequest";
 
         /// <summary>
         /// The unique ID of the account for which you want to add a user.
@@ -27,10 +27,10 @@ namespace WePayApi.AccountMembership.Request
 
         /// <summary>
         /// The role assigned to the new user.
-        /// (Enumeration of these values can be found in WePayApi.AccountMembership.Common.Roles)
+        /// (Enumeration of these values can be found in WePay.AccountMembership.Common.Roles)
         /// Default: moderator
         /// </summary>
-        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.AccountMembership.Common.Roles")]
+        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePay.AccountMembership.Common.Roles")]
         public string Role { get; set; }
 
         /// <summary>

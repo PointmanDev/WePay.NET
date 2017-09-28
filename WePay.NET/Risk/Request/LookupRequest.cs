@@ -1,14 +1,14 @@
-﻿using WePayApi.Shared;
+﻿using WePay.Shared;
 using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Risk.Response;
+using WePay.Risk.Response;
 
-namespace WePayApi.Risk.Request
+namespace WePay.Risk.Request
 {
     public class LookupRequest : WePayRequest<LookupResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Risk.Request.LookupRequest";
+        private const string Identifier = "WePay.Risk.Request.LookupRequest";
 
         /// <summary>
         /// The unique ID of the rbit you want to look up.

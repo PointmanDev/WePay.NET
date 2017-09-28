@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.Settlement.Structure
+namespace WePay.Settlement.Structure
 {
     /// <summary>
     /// Contains information about a UK financial Institution.
@@ -9,7 +9,7 @@ namespace WePayApi.Settlement.Structure
     public class GbInstitution
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Settlement.Structure.GbInstitution";
+        private const string Identifier = "WePay.Settlement.Structure.GbInstitution";
 
         /// <summary>
         /// The name of the financial institution.

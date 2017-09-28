@@ -1,13 +1,13 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.CreditCard.Response;
+using WePay.CreditCard.Response;
 
-namespace WePayApi.CreditCard.Request
+namespace WePay.CreditCard.Request
 {
     public class DeleteRequest : Shared.WePayRequest<StateResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.CreditCard.Request.DeleteRequest";
+        private const string Identifier = "WePay.CreditCard.Request.DeleteRequest";
 
         /// <summary>
         /// The ID for your API application.

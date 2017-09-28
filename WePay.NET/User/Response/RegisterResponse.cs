@@ -1,6 +1,6 @@
-﻿using WePayApi.Shared;
+﻿using WePay.Shared;
 
-namespace WePayApi.User.Response
+namespace WePay.User.Response
 {
     public class RegisterResponse : WePayResponse
     {

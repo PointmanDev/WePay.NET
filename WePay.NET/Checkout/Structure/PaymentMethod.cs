@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
-using WePayApi.Checkout.Common;
-using WePayApi.Shared;
+using WePay.Checkout.Common;
+using WePay.Shared;
 
-namespace WePayApi.Checkout.Structure
+namespace WePay.Checkout.Structure
 {
     /// <summary>
     /// Send the payment method object to pay for a checkout using previously acquired payment information,
@@ -13,13 +13,13 @@ namespace WePayApi.Checkout.Structure
     public class PaymentMethod : IRequiresAdditonalValidation
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Checkout.Structure.PaymentMethod";
+        private const string Identifier = "WePay.Checkout.Structure.PaymentMethod";
 
         /// <summary>
         /// Payment Method type.
-        /// (Enumeration of these values can be found in WePayApi.Checkout.Common.PaymentTypes)
+        /// (Enumeration of these values can be found in WePay.Checkout.Common.PaymentTypes)
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, IsRequired = true, WePayValuesClassName = "WePayApi.Checkout.Common.PaymentTypes")]
+        [ValidateWePayValue(ErrorMessage = Identifier, IsRequired = true, WePayValuesClassName = "WePay.Checkout.Common.PaymentTypes")]
         public string Type { get; set; }
 
         /// <summary>

@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
-using WePayApi.Shared.Structure;
+using WePay.Shared;
+using WePay.Shared.Structure;
 
-namespace WePayApi.Risk.Structure.Rbit.RbitProperties
+namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
     /// <summary>
     /// The business name associated with an account.
@@ -11,7 +11,7 @@ namespace WePayApi.Risk.Structure.Rbit.RbitProperties
     public class BusinessNameProperties : RbitProperties
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Risk.Structure.Rbit.RbitProperties.BusinessNameProperties";
+        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.BusinessNameProperties";
 
         [JsonIgnore]
         public override string RbitType
@@ -35,9 +35,9 @@ namespace WePayApi.Risk.Structure.Rbit.RbitProperties
 
         /// <summary>
         /// The kind of name used for the business.
-        /// (Enumeration of these values can be found in WePayApi.Risk.Common.BusinessNameTypes)
+        /// (Enumeration of these values can be found in WePay.Risk.Common.BusinessNameTypes)
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Risk.Common.BusinessNameTypes")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Risk.Common.BusinessNameTypes")]
         public string NameType { get; set; }
     }
 }

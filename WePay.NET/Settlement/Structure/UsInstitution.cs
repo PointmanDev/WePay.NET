@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.Settlement.Structure
+namespace WePay.Settlement.Structure
 {
     /// <summary>
     /// Contains information about a US financial institution.
@@ -10,7 +10,7 @@ namespace WePayApi.Settlement.Structure
     public class UsInstitution
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Settlement.Structure.UsInstitution";
+        private const string Identifier = "WePay.Settlement.Structure.UsInstitution";
 
         /// <summary>
         /// The name of the institution.
@@ -35,9 +35,9 @@ namespace WePayApi.Settlement.Structure
 
         /// <summary>
         /// The type of account to which funds are transmitted.
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.BankAccountTypes)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.BankAccountTypes)
         /// </summary>
-        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Shared.Common.BankAccountTypes")]
+        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePay.Shared.Common.BankAccountTypes")]
         public string AccountType { get; set; }
     }
 }

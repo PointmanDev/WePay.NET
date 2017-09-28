@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.Risk.Common
+namespace WePay.Risk.Common
 {
     /// <summary>
     /// All possible currently supported Rbit types
@@ -24,7 +24,8 @@ namespace WePayApi.Risk.Common
             PartnerService,
             Person,
             Phone,
-            TransactionDetails
+            TransactionDetails,
+            WebSiteUri
         }
 
         /// <summary>
@@ -94,6 +95,11 @@ namespace WePayApi.Risk.Common
         /// Information regarding a specific transaction.
         /// </summary>
         public const string TransactionDetails = "transaction_details";
+
+        /// <summary>
+        /// Information regarding a website
+        /// </summary>
+        public const string WebsiteUri = "website_uri";
 
         /// <summary>
         /// Holds all values for iteration

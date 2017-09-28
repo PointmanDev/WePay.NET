@@ -1,6 +1,6 @@
-﻿using WePayApi.Shared;
+﻿using WePay.Shared;
 
-namespace WePayApi.OAuth2.Response
+namespace WePay.OAuth2.Response
 {
     public class AuthorizeResponse : WePayResponse
     {

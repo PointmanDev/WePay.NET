@@ -1,6 +1,6 @@
-﻿using WePayApi.Shared;
+﻿using WePay.Shared;
 
-namespace WePayApi.Risk.Response
+namespace WePay.Risk.Response
 {
     public class DeleteResponse : WePayResponse
     {

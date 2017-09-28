@@ -1,4 +1,4 @@
-﻿namespace WePayApi.Checkout.Structure
+﻿namespace WePay.Checkout.Structure
 {
     /// <summary>
     /// This structure contains information about a non profit entity

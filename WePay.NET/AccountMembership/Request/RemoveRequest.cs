@@ -1,13 +1,13 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.AccountMembership.Response;
+using WePay.AccountMembership.Response;
 
-namespace WePayApi.AccountMembership.Request
+namespace WePay.AccountMembership.Request
 {
     public class RemoveRequest : Shared.WePayRequest<LookupResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.AccountMembership.Request.RemoveRequest";
+        private const string Identifier = "WePay.AccountMembership.Request.RemoveRequest";
 
         /// <summary>
         /// The unique ID of the account from which the user should be removed.

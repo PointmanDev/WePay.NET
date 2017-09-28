@@ -1,13 +1,13 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Withdrawal.Response;
+using WePay.Withdrawal.Response;
 
-namespace WePayApi.Withdrawal.Request
+namespace WePay.Withdrawal.Request
 {
     public class ModifyRequest : Shared.WePayRequest<LookupResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Withdrawal.Request.ModifyRequest";
+        private const string Identifier = "WePay.Withdrawal.Request.ModifyRequest";
 
         /// <summary>
         /// The unique ID of a withdrawal you want to look up.

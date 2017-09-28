@@ -4,10 +4,10 @@ using WePay.Shared;
 
 namespace WePay.Risk.Structure.Rbit
 {
-    public class ExternalAccount : Rbit
+    public class WebsiteUriRbit : Rbit
     {
         [JsonIgnore]
-        private const string Identifier = "WePay.Risk.Structure.Rbit.ExternalAccount";
+        private const string Identifier = "WePay.Risk.Structure.Rbit.WebsiteUriRbit";
 
         /// <summary>
         /// The value describing the kind of risk information the rbit contains.
@@ -23,13 +23,13 @@ namespace WePay.Risk.Structure.Rbit
             }
             set
             {
-                Type = Common.RbitTypes.ExternalAccount;
+                Type = Common.RbitTypes.WebsiteUri;
             }
         }
 
         /// <summary>
         /// A parameter set to the key value pair of properties for this type.
         /// </summary>
-        public new ExternalAccountProperties Properties { get; set; }
+        public new WebsiteUriProperties Properties { get; set; }
     }
 }

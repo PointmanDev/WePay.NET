@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.KnowYourCustomer.Structure
+namespace WePay.KnowYourCustomer.Structure
 {
     /// <summary>
     /// Contains basis identity and location information about a beneficial owner.
@@ -9,7 +9,7 @@ namespace WePayApi.KnowYourCustomer.Structure
     public class BeneficialOwner
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.KnowYourCustomer.Structure.BeneficialOwner";
+        private const string Identifier = "WePay.KnowYourCustomer.Structure.BeneficialOwner";
 
         /// <summary>
         /// The name of the beneficial owner.

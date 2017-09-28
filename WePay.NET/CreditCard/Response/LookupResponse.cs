@@ -1,4 +1,4 @@
-﻿namespace WePayApi.CreditCard.Response
+﻿namespace WePay.CreditCard.Response
 {
     public class LookupResponse : Shared.WePayResponse
     {
@@ -14,7 +14,7 @@
 
         /// <summary>
         /// The state that the credit card is in.
-        /// (Enumeration of these values can be found in WePayApi.CreditCard.Common.CreditCardStates)
+        /// (Enumeration of these values can be found in WePay.CreditCard.Common.CreditCardStates)
         /// </summary>
         public string State { get; set; }
 
@@ -35,13 +35,13 @@
 
         /// <summary>
         /// The input source of the credit card.
-        /// (Enumeration of these values can be found in WePayApi.CreditCard.Common.InputSources)
+        /// (Enumeration of these values can be found in WePay.CreditCard.Common.InputSources)
         /// </summary>
         public string InputSource { get; set; }
 
         /// <summary>
         /// The virtual terminal mode of the credit card.
-        /// (Enumeration of these values can be found in WePayApi.CreditCard.Common.VirtualTerminalModes)
+        /// (Enumeration of these values can be found in WePay.CreditCard.Common.VirtualTerminalModes)
         /// </summary>
         public string VirtualTerminalMode { get; set; }
 

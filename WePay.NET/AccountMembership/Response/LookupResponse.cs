@@ -1,4 +1,4 @@
-﻿namespace WePayApi.AccountMembership.Response
+﻿namespace WePay.AccountMembership.Response
 {
     public class LookupResponse : Shared.WePayResponse
     {

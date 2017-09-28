@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
-using WePayApi.Shared;
-using WePayApi.FileUpload.Request;
-using WePayApi.FileUpload.Response;
+using WePay.Shared;
+using WePay.FileUpload.Request;
+using WePay.FileUpload.Response;
 
-namespace WePayApi.FileUpload
+namespace WePay.FileUpload
 {
     /// <summary>
     /// The FileUpload API is a single endpoint that allows your application to upload documents on behalf of

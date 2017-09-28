@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.Order.Structure
+namespace WePay.Order.Structure
 {
     /// <summary>
     /// The shipping contact structure contains information about the recipient of an mPOS card reader.
@@ -10,7 +10,7 @@ namespace WePayApi.Order.Structure
     public class ShippingContact
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Order.Structure.ShippingContact";
+        private const string Identifier = "WePay.Order.Structure.ShippingContact";
 
         /// <summary>
         /// The name of the contact for this order.

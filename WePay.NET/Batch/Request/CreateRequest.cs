@@ -1,15 +1,15 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Batch.Response;
-using WePayApi.Batch.Structure;
-using WePayApi.Shared;
+using WePay.Batch.Response;
+using WePay.Batch.Structure;
+using WePay.Shared;
 
-namespace WePayApi.Batch.Request
+namespace WePay.Batch.Request
 {
     public class CreateRequest : WePayRequest<BulkCreateResponse>
     {
         [JsonIgnore]
-        public const string Identifier = "WePayApi.Batch.Request.CreateRequest";
+        public const string Identifier = "WePay.Batch.Request.CreateRequest";
 
         /// <summary>
         /// The ID for your API application. It can found on your application's dashboard.

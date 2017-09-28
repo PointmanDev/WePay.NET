@@ -1,15 +1,15 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Account.Response;
-using WePayApi.Shared;
-using WePayApi.Account.Structure;
+using WePay.Account.Response;
+using WePay.Shared;
+using WePay.Account.Structure;
 
-namespace WePayApi.Account.Request
+namespace WePay.Account.Request
 {
     public class SettlementSetupRequest : WePayRequest<SettlementSetupResponse>, IRequiresAdditonalValidation
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Account.Request.SettlementSetupRequest";
+        private const string Identifier = "WePay.Account.Request.SettlementSetupRequest";
 
         /// <summary>
         /// The account ID for which an auto withdrawal is to be setup.
@@ -26,10 +26,10 @@ namespace WePayApi.Account.Request
 
         /// <summary>
         /// How often funds are sent.
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.Frequencies)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.Frequencies)
         /// Note: Daily is not allowed for SendCheckToAddress settlement method.
         /// </summary>
-        [ValidateWePayValue(IsRequired = true, WePayValuesClassName = "WePayApi.Shared.Common.Frequencies", ErrorMessage = Identifier)]
+        [ValidateWePayValue(IsRequired = true, WePayValuesClassName = "WePay.Shared.Common.Frequencies", ErrorMessage = Identifier)]
         public string Frequency { get; set; }
 
         public string GetAdditonalValidationErrorMessage()

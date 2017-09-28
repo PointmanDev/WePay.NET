@@ -1,13 +1,13 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.KnowYourCustomer.Response;
+using WePay.KnowYourCustomer.Response;
 
-namespace WePayApi.KnowYourCustomer.Request
+namespace WePay.KnowYourCustomer.Request
 {
     public class ModifyRequest : Shared.WePayRequest<LookupResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.KnowYourCustomer.Request.ModifyRequest";
+        private const string Identifier = "WePay.KnowYourCustomer.Request.ModifyRequest";
 
         /// <summary>
         /// The unique ID of the account you want to modify.

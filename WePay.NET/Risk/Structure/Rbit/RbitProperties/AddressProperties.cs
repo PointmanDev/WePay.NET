@@ -1,14 +1,14 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
-using WePayApi.Shared.Structure;
+using WePay.Shared;
+using WePay.Shared.Structure;
 
-namespace WePayApi.Risk.Structure.Rbit.RbitProperties
+namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
     public class AddressProperties : RbitProperties
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Risk.Structure.Rbit.RbitProperties.AddressProperties";
+        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.AddressProperties";
         
         [JsonIgnore]
         public override string RbitType
@@ -31,9 +31,9 @@ namespace WePayApi.Risk.Structure.Rbit.RbitProperties
 
         /// <summary>
         /// The type of Address
-        /// (Enumeration of these values can be found in WePayApi.Risk.Common.AddressTypes)
+        /// (Enumeration of these values can be found in WePay.Risk.Common.AddressTypes)
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Risk.Common.AddressTypes")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Risk.Common.AddressTypes")]
         public string AddressType { get; set; }
 
         /// <summary>
@@ -50,9 +50,9 @@ namespace WePayApi.Risk.Structure.Rbit.RbitProperties
 
         /// <summary>
         /// The normalized address status
-        /// (Enumeration of these values can be found in WePayApi.Risk.Common.NormalizedAddressStatuses)
+        /// (Enumeration of these values can be found in WePay.Risk.Common.NormalizedAddressStatuses)
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Risk.Common.NormalizedAddressStatuses")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Risk.Common.NormalizedAddressStatuses")]
         public string NormalizedAddressStatus { get; set; }
     }
 }

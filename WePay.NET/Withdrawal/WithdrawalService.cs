@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
-using WePayApi.Shared;
-using WePayApi.Withdrawal.Request;
-using WePayApi.Withdrawal.Response;
+using WePay.Shared;
+using WePay.Withdrawal.Request;
+using WePay.Withdrawal.Response;
 
-namespace WePayApi.Withdrawal
+namespace WePay.Withdrawal
 {
     /// <summary>
     /// The withdrawal object represents a single payout to the user’s bank account or a check sent to the user.

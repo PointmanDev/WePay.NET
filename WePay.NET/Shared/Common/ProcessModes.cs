@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace WePayApi.Shared.Common
+namespace WePay.Shared.Common
 {
     /// <summary>
     /// All possible modes the process will be displayed in.

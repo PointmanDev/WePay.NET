@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.Checkout.Structure
+namespace WePay.Checkout.Structure
 {
     /// <summary>
     /// A chargeback occurs when a customer questions your charge with their bank or credit card company.
@@ -12,7 +12,7 @@ namespace WePayApi.Checkout.Structure
     public class ChargebackResponse
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Checkout.Structure.ChargebackResponse";
+        private const string Identifier = "WePay.Checkout.Structure.ChargebackResponse";
 
         /// <summary>
         /// If this checkout has been fully or partially charged back, this is the amount that has been charged back so far.

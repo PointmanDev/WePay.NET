@@ -1,13 +1,13 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Checkout.Response;
+using WePay.Checkout.Response;
 
-namespace WePayApi.Checkout.Request
+namespace WePay.Checkout.Request
 {
     public class RefundRequest : Shared.WePayRequest<StateResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Checkout.Request.RefundRequest";
+        private const string Identifier = "WePay.Checkout.Request.RefundRequest";
 
         /// <summary>
         /// The unique ID of the checkout to be refunded.

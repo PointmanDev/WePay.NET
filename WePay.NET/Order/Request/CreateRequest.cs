@@ -1,16 +1,16 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
-using WePayApi.Order.Response;
-using WePayApi.Shared.Structure;
-using WePayApi.Order.Structure;
+using WePay.Shared;
+using WePay.Order.Response;
+using WePay.Shared.Structure;
+using WePay.Order.Structure;
 
-namespace WePayApi.Order.Request
+namespace WePay.Order.Request
 {
     public class CreateRequest : WePayRequest<LookupResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Order.Request.CreateRequest";
+        private const string Identifier = "WePay.Order.Request.CreateRequest";
 
         /// <summary>
         /// The merchant account to be associated with this order.
@@ -27,9 +27,9 @@ namespace WePayApi.Order.Request
 
         /// <summary>
         /// The type of order.
-        /// (Enumeration of these values can be found in WePayApi.Order.Common.OrderTypes)
+        /// (Enumeration of these values can be found in WePay.Order.Common.OrderTypes)
         /// </summary>
-        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Order.Common.OrderTypes")]
+        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePay.Order.Common.OrderTypes")]
         public string Type { get; set; }
 
         /// <summary>

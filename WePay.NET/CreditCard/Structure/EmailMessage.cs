@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.Checkout.Structure
+namespace WePay.Checkout.Structure
 {
     /// <summary>
     /// Specifies a short message to send to the payee and payer when a checkout is successful.
@@ -9,7 +9,7 @@ namespace WePayApi.Checkout.Structure
     public class EmailMessage
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Checkout.Structure.EmailMessage";
+        private const string Identifier = "WePay.Checkout.Structure.EmailMessage";
 
         /// <summary>
         /// A short message that will be included in the payment confirmation email to the payee.

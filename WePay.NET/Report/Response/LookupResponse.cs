@@ -1,6 +1,6 @@
-﻿using WePayApi.Report.Structure;
+﻿using WePay.Report.Structure;
 
-namespace WePayApi.Report.Response
+namespace WePay.Report.Response
 {
     public class LookupResponse : Shared.WePayResponse
     {
@@ -16,7 +16,7 @@ namespace WePayApi.Report.Response
 
         /// <summary>
         /// The type of merchant report.
-        /// (Enumeration of these values can be found in WePayApi.Report.Common.ReportTypes)
+        /// (Enumeration of these values can be found in WePay.Report.Common.ReportTypes)
         /// </summary>
         public string Type { get; set; }
 
@@ -32,7 +32,7 @@ namespace WePayApi.Report.Response
 
         /// <summary>
         /// The state of the report.
-        /// (Enumeration of these values can be found in WePayApi.Report.Common.ReportStates)
+        /// (Enumeration of these values can be found in WePay.Report.Common.ReportStates)
         /// </summary>
         public string State { get; set; }
 

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.FileUpload.Common
+namespace WePay.FileUpload.Common
 {
     /// <summary>
     /// All file/document types currently supported by WePay

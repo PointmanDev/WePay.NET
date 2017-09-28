@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.KnowYourCustomer.Structure
+namespace WePay.KnowYourCustomer.Structure
 {
     /// <summary>
     /// Contains standard formatted date information about an individual’s date of birth.
@@ -9,7 +9,7 @@ namespace WePayApi.KnowYourCustomer.Structure
     public class Date
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.KnowYourCustomer.Structure.Date";
+        private const string Identifier = "WePay.KnowYourCustomer.Structure.Date";
 
         /// <summary>
         /// The year of the user's birth.

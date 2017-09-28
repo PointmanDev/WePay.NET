@@ -1,20 +1,20 @@
 ﻿using Newtonsoft.Json;
-using WePayApi.Risk.Structure.Rbit.RbitProperties;
-using WePayApi.Shared;
+using WePay.Risk.Structure.Rbit.RbitProperties;
+using WePay.Shared;
 
-namespace WePayApi.Risk.Structure.Rbit
+namespace WePay.Risk.Structure.Rbit
 {
-    class IndustryCodeRbit : Rbit
+    public class IndustryCodeRbit : Rbit
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Risk.Structure.Rbit.IndustryCodeRbit";
+        private const string Identifier = "WePay.Risk.Structure.Rbit.IndustryCodeRbit";
 
         /// <summary>
         /// The value describing the kind of risk information the rbit contains.
-        /// (Enumeration of these values can be found in WePayApi.Risk.Common.RbitTypes)
+        /// (Enumeration of these values can be found in WePay.Risk.Common.RbitTypes)
         /// PROTIP: You don't need to set this, I already did it for you
         /// </summary>
-        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Risk.Common.RbitTypes")]
+        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePay.Risk.Common.RbitTypes")]
         public override string Type
         {
             get

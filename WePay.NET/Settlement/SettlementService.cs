@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
-using WePayApi.Shared;
-using WePayApi.Settlement.Request;
-using WePayApi.Settlement.Response;
+using WePay.Shared;
+using WePay.Settlement.Request;
+using WePay.Settlement.Response;
 
-namespace WePayApi.Settlement
+namespace WePay.Settlement
 {
     public class SettlementService : WePayApiService<SettlementService.EndPointNames>
     {

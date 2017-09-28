@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.KnowYourCustomer.Common
+namespace WePay.KnowYourCustomer.Common
 {
     /// <summary>
     /// All possible Know Your Customer States currently supported by WePay

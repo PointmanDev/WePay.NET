@@ -1,24 +1,24 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Account.Response;
-using WePayApi.Shared;
-using WePayApi.Shared.Structure;
-using WePayApi.Account.Structure;
-using WePayApi.Risk.Structure.Rbit;
+using WePay.Account.Response;
+using WePay.Shared;
+using WePay.Shared.Structure;
+using WePay.Account.Structure;
+using WePay.Risk.Structure.Rbit;
 
-namespace WePayApi.Account.Request
+namespace WePay.Account.Request
 {
     public class CreateRequest : WePayRequest<LookupResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Account.Request.CreateRequest";
+        private const string Identifier = "WePay.Account.Request.CreateRequest";
 
         /// <summary>
         /// The name for the account being created. For security reasons, the word wepay cannot be in the account name. 
         /// Note: Account names cannot contain control characters or non-printable characters, like emojis.
         /// </summary>
         [Required(AllowEmptyStrings = false, ErrorMessage = Identifier + " - Requires Name"),
-         StringLength(255, ErrorMessage = "WePayApi.Account.Request.CreateRequest - Name cannot exceed 255 characters")]
+         StringLength(255, ErrorMessage = "WePay.Account.Request.CreateRequest - Name cannot exceed 255 characters")]
         public string Name { get; set; }
 
         /// <summary>
@@ -37,9 +37,9 @@ namespace WePayApi.Account.Request
 
         /// <summary>
         /// The type of account you are creating.
-        /// (Enumeration of these values can be found in WePayApi.Account.Common.AccountTypes)
+        /// (Enumeration of these values can be found in WePay.Account.Common.AccountTypes)
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Account.Common.AccountTypes")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Account.Common.AccountTypes")]
         public string Type { get; set; }
 
         /// <summary>
@@ -59,19 +59,19 @@ namespace WePayApi.Account.Request
 
         /// <summary>
         /// The account's country of origin 2-letter ISO code.
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.Countries)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.Countries)
         /// Default: US
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Shared.Common.Countries")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Shared.Common.Countries")]
         public string Country { get; set; }
 
         /// <summary>
         /// Array of supported currency strings for this account.
         /// WePay currently supports only one currency per account.
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.Currencies)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.Currencies)
         /// Default: USD
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Shared.Common.Currencies")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Shared.Common.Currencies")]
         public string[] Currencies { get; set; }
 
         /// <summary>

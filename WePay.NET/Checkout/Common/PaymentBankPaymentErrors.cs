@@ -1,4 +1,4 @@
-﻿namespace WePayApi.Checkout.Common
+﻿namespace WePay.Checkout.Common
 {
     /// <summary>
     /// All recognized Banking Error Codes

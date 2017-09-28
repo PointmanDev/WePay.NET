@@ -1,8 +1,8 @@
-﻿using WePayApi.Order.Structure;
-using WePayApi.Shared;
-using WePayApi.Shared.Structure;
+﻿using WePay.Order.Structure;
+using WePay.Shared;
+using WePay.Shared.Structure;
 
-namespace WePayApi.Order.Response
+namespace WePay.Order.Response
 {
     public class LookupResponse : WePayResponse
     {
@@ -24,13 +24,13 @@ namespace WePayApi.Order.Response
 
         /// <summary>
         /// The status of the order.
-        /// (Enumeration of these values can be found in WePayApi.Order.Common.OrderStatuses)
+        /// (Enumeration of these values can be found in WePay.Order.Common.OrderStatuses)
         /// </summary>
         public string Status { get; set; }
 
         /// <summary>
         /// The type of order.
-        /// (Enumeration of these values can be found in WePayApi.Order.Common.OrderTypes)
+        /// (Enumeration of these values can be found in WePay.Order.Common.OrderTypes)
         /// </summary>
         public string Type { get; set; }
 

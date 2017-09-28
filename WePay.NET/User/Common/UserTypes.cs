@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.User.Common
+namespace WePay.User.Common
 {
     // All possible User Types currently recognized by WePay
     public static class UserTypes

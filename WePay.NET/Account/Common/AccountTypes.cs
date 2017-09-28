@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.Account.Common
+namespace WePay.Account.Common
 {
     /// <summary>
     /// All possible account types

@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.KnowYourCustomer.Structure
+namespace WePay.KnowYourCustomer.Structure
 {
     /// <summary>
     /// This structure is used only for entities in Great Britain.
@@ -9,7 +9,7 @@ namespace WePayApi.KnowYourCustomer.Structure
     public class GbEntityCompliance
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.KnowYourCustomer.Structure.GbEntityCompliance";
+        private const string Identifier = "WePay.KnowYourCustomer.Structure.GbEntityCompliance";
 
         /// <summary>
         /// The company number used to validate a legal business in the UK.
@@ -18,9 +18,9 @@ namespace WePayApi.KnowYourCustomer.Structure
 
         /// <summary>
         /// The type of business.
-        /// (Enumeration of these values can be found in WePayApi.KnowYourCustomer.Common.LegalForms)
+        /// (Enumeration of these values can be found in WePay.KnowYourCustomer.Common.LegalForms)
         /// </summary>
-        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.KnowYourCustomer.Common.LegalForms")]
+        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePay.KnowYourCustomer.Common.LegalForms")]
         public string LegalForm { get; set; }
 
         /// <summary>

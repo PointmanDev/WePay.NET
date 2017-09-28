@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
-using WePayApi.Shared;
-using WePayApi.Account.Request;
-using WePayApi.Account.Response;
+using WePay.Shared;
+using WePay.Account.Request;
+using WePay.Account.Response;
 
-namespace WePayApi.Account
+namespace WePay.Account
 {
     public class AccountService : WePayApiService<AccountService.EndPointNames>
     {

@@ -1,4 +1,4 @@
-﻿namespace WePayApi.FileUpload.Response
+﻿namespace WePay.FileUpload.Response
 {
     public class UploadResponse : Shared.WePayResponse
     {

@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.Shared.Structure
+namespace WePay.Shared.Structure
 {
     /// <summary>
     /// The theme structure contains information providing custom look-and-feel for flows and emails.
@@ -9,7 +9,7 @@ namespace WePayApi.Shared.Structure
     public class Theme
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Shared.Structure.Theme";
+        private const string Identifier = "WePay.Shared.Structure.Theme";
 
         /// <summary>
         /// The unique theme ID (assigned by WePay).

@@ -1,13 +1,13 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Checkout.Response;
+using WePay.Checkout.Response;
 
-namespace WePayApi.Checkout.Request
+namespace WePay.Checkout.Request
 {
     public class CancelRequest : Shared.WePayRequest<StateResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Checkout.Request.CancelRequest";
+        private const string Identifier = "WePay.Checkout.Request.CancelRequest";
 
         /// <summary>
         /// The unique ID of the checkout to be canceled.

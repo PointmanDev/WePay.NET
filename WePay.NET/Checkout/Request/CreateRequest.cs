@@ -1,16 +1,16 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Checkout.Response;
-using WePayApi.Shared;
-using WePayApi.Checkout.Structure;
-using WePayApi.Risk.Structure.Rbit;
+using WePay.Checkout.Response;
+using WePay.Shared;
+using WePay.Checkout.Structure;
+using WePay.Risk.Structure.Rbit;
 
-namespace WePayApi.Checkout.Request
+namespace WePay.Checkout.Request
 {
     public class CreateRequest : WePayRequest<LookupResponse>, IRequiresAdditonalValidation
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Checkout.Request.CreateRequest";
+        private const string Identifier = "WePay.Checkout.Request.CreateRequest";
 
         /// <summary>
         /// The unique ID of the account for which you want to create a checkout.
@@ -27,9 +27,9 @@ namespace WePayApi.Checkout.Request
 
         /// <summary>
         /// The checkout type.
-        /// (Enumeration of these values can be found in WePayApi.Checkout.Common.CheckoutTypes)
+        /// (Enumeration of these values can be found in WePay.Checkout.Common.CheckoutTypes)
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, IsRequired = true, WePayValuesClassName = "WePayApi.Checkout.Common.CheckoutTypes")]
+        [ValidateWePayValue(ErrorMessage = Identifier, IsRequired = true, WePayValuesClassName = "WePay.Checkout.Common.CheckoutTypes")]
         public string Type { get; set; }
 
         /// <summary>
@@ -40,9 +40,9 @@ namespace WePayApi.Checkout.Request
 
         /// <summary>
         /// The currency used.
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.Currencies)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.Currencies)
         /// </summary>
-        [ValidateWePayValue(IsRequired = true, WePayValuesClassName = "WePayApi.Shared.Common.Currencies")]
+        [ValidateWePayValue(IsRequired = true, WePayValuesClassName = "WePay.Shared.Common.Currencies")]
         public string Currency { get; set; }
 
         /// <summary>
@@ -112,9 +112,9 @@ namespace WePayApi.Checkout.Request
 
         /// <summary>
         /// Delivery type for checkout.
-        /// (Enumeration of these values can be found in WePayApi.Checkout.Common.DeliveryTypes)
+        /// (Enumeration of these values can be found in WePay.Checkout.Common.DeliveryTypes)
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Checkout.Common.DeliveryTypes")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Checkout.Common.DeliveryTypes")]
         public string DeliveryType { get; set; }
 
         /// <summary>

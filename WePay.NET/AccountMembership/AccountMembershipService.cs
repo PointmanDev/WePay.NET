@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
-using WePayApi.Shared;
-using WePayApi.AccountMembership.Request;
-using WePayApi.AccountMembership.Response;
+using WePay.Shared;
+using WePay.AccountMembership.Request;
+using WePay.AccountMembership.Response;
 
-namespace WePayApi.AccountMembership
+namespace WePay.AccountMembership
 {
     /// <summary>
     /// Using the Account Membership APIs to add or change an account admin requires WePay permission.

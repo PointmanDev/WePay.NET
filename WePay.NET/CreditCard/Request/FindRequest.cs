@@ -1,14 +1,14 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
-using WePayApi.CreditCard.Response;
+using WePay.Shared;
+using WePay.CreditCard.Response;
 
-namespace WePayApi.CreditCard.Request
+namespace WePay.CreditCard.Request
 {
     public class FindRequest : WePayRequest<WePayFindResponse<LookupResponse>>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.CreditCard.Request.FindRequest";
+        private const string Identifier = "WePay.CreditCard.Request.FindRequest";
 
         /// <summary>
         /// The ID for your API application. You can find it on your app dashboard.
@@ -20,7 +20,7 @@ namespace WePayApi.CreditCard.Request
         /// The secret for your API application. You can find it on your app dashboard.
         /// </summary>
         [Required(AllowEmptyStrings = false, ErrorMessage = Identifier + " - Requires ClientSecret"),
-         StringLength(255, ErrorMessage = "WePayApi.CreditCard.FindRequest - ClientSecret cannot exceed 255 characters")]
+         StringLength(255, ErrorMessage = "WePay.CreditCard.FindRequest - ClientSecret cannot exceed 255 characters")]
         public string ClientSecret { get; set; }
 
         /// <summary>
@@ -46,7 +46,7 @@ namespace WePayApi.CreditCard.Request
         /// Use asc for least recent to most recent.
         /// Default: desc
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Shared.Common.SortOrders")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Shared.Common.SortOrders")]
         public string SortOrder { get; set; }
     }
 }

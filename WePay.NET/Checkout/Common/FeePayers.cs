@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.Checkout.Common
+namespace WePay.Checkout.Common
 {
     public static class FeePayers
     {

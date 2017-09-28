@@ -1,11 +1,11 @@
 ﻿using System.Threading.Tasks;
-using WePayApi.Shared;
-using WePayApi.KnowYourCustomer.Response;
-using WePayApi.KnowYourCustomer.Request;
-using WePayApi.KnowYourCustomer.Structure;
-using WePayApi.Shared.Common;
+using WePay.Shared;
+using WePay.KnowYourCustomer.Response;
+using WePay.KnowYourCustomer.Request;
+using WePay.KnowYourCustomer.Structure;
+using WePay.Shared.Common;
 
-namespace WePayApi.KnowYourCustomer
+namespace WePay.KnowYourCustomer
 {
     public class KnowYourCustomerService : WePayApiService<KnowYourCustomerService.EndPointNames>
     {

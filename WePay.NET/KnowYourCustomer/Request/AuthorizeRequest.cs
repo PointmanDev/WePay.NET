@@ -1,13 +1,13 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.KnowYourCustomer.Response;
+using WePay.KnowYourCustomer.Response;
 
-namespace WePayApi.KnowYourCustomer.Request
+namespace WePay.KnowYourCustomer.Request
 {
     public class AuthorizeRequest : Shared.WePayRequest<LookupResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.KnowYourCustomer.Request.AuthorizeRequest";
+        private const string Identifier = "WePay.KnowYourCustomer.Request.AuthorizeRequest";
 
         /// <summary>
         /// A unique KYC ID returned by the /account/kyc/create call.

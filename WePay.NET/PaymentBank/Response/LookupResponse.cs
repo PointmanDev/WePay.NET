@@ -1,6 +1,6 @@
-﻿using WePayApi.Shared;
+﻿using WePay.Shared;
 
-namespace WePayApi.PaymentBank.Response
+namespace WePay.PaymentBank.Response
 {
     public class LookupResponse : WePayResponse
     {

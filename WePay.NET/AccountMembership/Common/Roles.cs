@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.AccountMembership.Common
+namespace WePay.AccountMembership.Common
 {
     /// <summary>
     /// All possible roles

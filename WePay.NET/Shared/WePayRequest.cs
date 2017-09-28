@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.Shared
+namespace WePay.Shared
 {
     public abstract class WePayRequest<T> where T : WePayResponse
     {

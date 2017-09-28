@@ -1,6 +1,6 @@
-﻿using WePayApi.Shared;
+﻿using WePay.Shared;
 
-namespace WePayApi.Batch.Response
+namespace WePay.Batch.Response
 {
     public class IndividualCreateResponse : WePayResponse
     {

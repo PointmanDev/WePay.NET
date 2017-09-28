@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.Shared
+namespace WePay.Shared
 {
     public class ValidateWePayObjectAttribute : ValidationAttribute
     {

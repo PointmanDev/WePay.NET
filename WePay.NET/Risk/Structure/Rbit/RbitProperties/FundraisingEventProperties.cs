@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.Risk.Structure.Rbit.RbitProperties
+namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
     /// <summary>
     /// Information about an event that is the context for a donation transaction or donation account.
@@ -11,7 +11,7 @@ namespace WePayApi.Risk.Structure.Rbit.RbitProperties
     public class FundraisingEventProperties : RbitProperties
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Risk.Structure.Rbit.RbitProperties.FundraisingEventProperties";
+        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.FundraisingEventProperties";
 
         [JsonIgnore]
         public override string RbitType
@@ -50,9 +50,9 @@ namespace WePayApi.Risk.Structure.Rbit.RbitProperties
 
         /// <summary>
         /// The currency used.
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.Currencies)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.Currencies)
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Shared.Common.Currencies")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Shared.Common.Currencies")]
         public string Currency { get; set; }
 
         /// <summary>

@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
-using WePayApi.Shared;
-using WePayApi.Report.Request;
-using WePayApi.Report.Response;
+using WePay.Shared;
+using WePay.Report.Request;
+using WePay.Report.Response;
 
-namespace WePayApi.Report
+namespace WePay.Report
 {
     /// <summary>
     /// Use the the Reports API to request bulk reports for merchants.

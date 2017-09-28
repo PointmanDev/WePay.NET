@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.AccountMembership.Common
+namespace WePay.AccountMembership.Common
 {
     /// <summary>
-    /// All possible reasons for WePayApi.AccountMembership.Structure.AdminContext Reason field
+    /// All possible reasons for WePay.AccountMembership.Structure.AdminContext Reason field
     /// </summary>
     public static class Reasons
     {

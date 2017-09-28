@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.Account.Structure
+namespace WePay.Account.Structure
 {
     /// <summary>
     /// The balances structure contains information on the account balances and automated withdrawals.
@@ -11,13 +11,13 @@ namespace WePayApi.Account.Structure
     public class Balances
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Account.Structure.Balances";
+        private const string Identifier = "WePay.Account.Structure.Balances";
 
         /// <summary>
         /// The ISO 4217 currency code.
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.Currencies)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.Currencies)
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Shared.Common.Currencies")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Shared.Common.Currencies")]
         public string Currency { get; set; }
 
         /// <summary>
@@ -47,15 +47,15 @@ namespace WePayApi.Account.Structure
 
         /// <summary>
         /// How the money will be settled to the merchant.
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.SettlementPaymentMethods)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.SettlementPaymentMethods)
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Shared.Common.SettlementPaymentMethods")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Shared.Common.SettlementPaymentMethods")]
         public string WthdrawlType { get; set; }
 
         /// <summary>
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.Frequencies )
+        /// (Enumeration of these values can be found in WePay.Shared.Common.Frequencies )
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Shared.Common.Frequencies")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Shared.Common.Frequencies")]
         public string WithdrawlPeriod { get; set; }
 
         /// <summary>

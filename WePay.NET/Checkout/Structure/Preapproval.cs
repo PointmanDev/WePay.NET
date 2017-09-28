@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.Checkout.Structure
+namespace WePay.Checkout.Structure
 {
     /// <summary>
     /// Object that specifies unique ID of the preapproval associated with the checkout.
@@ -9,7 +9,7 @@ namespace WePayApi.Checkout.Structure
     public class Preapproval
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Checkout.Structure.Preapproval";
+        private const string Identifier = "WePay.Checkout.Structure.Preapproval";
 
         /// <summary>
         /// Preapproval ID from Preapproval Create.

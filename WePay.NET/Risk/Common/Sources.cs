@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.Risk.Common
+namespace WePay.Risk.Common
 {
     /// <summary>
     /// The source parameter (see Rbit Create API call) can be set to any one of values found here

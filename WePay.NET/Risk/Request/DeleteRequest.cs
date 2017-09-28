@@ -1,14 +1,14 @@
-﻿using WePayApi.Shared;
+﻿using WePay.Shared;
 using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Risk.Response;
+using WePay.Risk.Response;
 
-namespace WePayApi.Risk.Request
+namespace WePay.Risk.Request
 {
     public class DeleteRequest : WePayRequest<DeleteResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Risk.Request.DeleteRequest";
+        private const string Identifier = "WePay.Risk.Request.DeleteRequest";
 
         /// <summary>
         /// The unique ID of the rbit you want to delete.

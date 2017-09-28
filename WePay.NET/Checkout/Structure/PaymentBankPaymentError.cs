@@ -1,4 +1,4 @@
-﻿namespace WePayApi.Checkout.Structure
+﻿namespace WePay.Checkout.Structure
 {
     /// <summary>
     /// This structure contains additional information related to the payment bank payment error that occurred on a checkout.
@@ -7,7 +7,7 @@
     {
         /// <summary>
         /// The bank account code.
-        /// (Enumeration of these values can be found in WePayApi.Checkout.Common.PaymentBankPaymentErrors)
+        /// (Enumeration of these values can be found in WePay.Checkout.Common.PaymentBankPaymentErrors)
         /// </summary>
         public string Code { get; set; }
 

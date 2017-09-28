@@ -1,4 +1,4 @@
-﻿namespace WePayApi.Account.Response
+﻿namespace WePay.Account.Response
 {
     public class GetUpdateUriResponse : Shared.WePayResponse
     {

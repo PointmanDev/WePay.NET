@@ -1,14 +1,14 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.FileUpload.Response;
-using WePayApi.Shared;
+using WePay.FileUpload.Response;
+using WePay.Shared;
 
-namespace WePayApi.FileUpload.Request
+namespace WePay.FileUpload.Request
 {
     public class UploadRequest : WePayRequest<UploadResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.FileUpload.Request.UploadRequest";
+        private const string Identifier = "WePay.FileUpload.Request.UploadRequest";
 
         /// <summary>
         /// The document being uploaded on behalf of the merchant for WePay review.
@@ -19,9 +19,9 @@ namespace WePayApi.FileUpload.Request
 
         /// <summary>
         /// The type of file being uploaded.
-        /// (Enumeration of these values can be found in WePayApi.FileUpload.Common.FileTypes)
+        /// (Enumeration of these values can be found in WePay.FileUpload.Common.FileTypes)
         /// </summary>
-        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.FileUpload.Common.FileTypes")]
+        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePay.FileUpload.Common.FileTypes")]
         public string Type { get; set; }
 
         /// <summary>

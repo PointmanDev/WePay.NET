@@ -1,14 +1,14 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
-using WePayApi.User.Response;
+using WePay.Shared;
+using WePay.User.Response;
 
-namespace WePayApi.User.Request
+namespace WePay.User.Request
 {
     public class RegisterRequest : WePayRequest<RegisterResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.User.Request.RegisterRequest";
+        private const string Identifier = "WePay.User.Request.RegisterRequest";
 
         /// <summary>
         /// The integer client ID issued to the app, found on your application's dashboard.
@@ -33,9 +33,9 @@ namespace WePayApi.User.Request
         /// <summary>
         /// Custom user permission settings are no longer supported.
         /// Please provide a comma-separated list of all Scopes (permissions)
-        /// (Enumeration of these values can be found in WePayApi.User.Common.Scopes)
+        /// (Enumeration of these values can be found in WePay.User.Common.Scopes)
         /// </summary>
-        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.User.Common.Scopes", IsCommaSeparated = true)]
+        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePay.User.Common.Scopes", IsCommaSeparated = true)]
         public string Scope { get; set; }
 
         /// <summary>
@@ -91,10 +91,10 @@ namespace WePayApi.User.Request
         /// This parameter is used to create SSO users.
         /// To create an SSO user, set the value to Sso. 
         /// Otherwise do not include this parameter in the call.
-        /// (Enumeration of these values can be found in WePayApi.User.Common.UserTypes)
+        /// (Enumeration of these values can be found in WePay.User.Common.UserTypes)
         /// PERMISSION REQUIRED
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.User.Common.UserTypes")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.User.Common.UserTypes")]
         public string Type { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace WePayApi.Checkout.Structure
+﻿namespace WePay.Checkout.Structure
 {
     /// <summary>
     /// Contains information about the payment method used.
@@ -8,7 +8,7 @@
         /// <summary>
         /// Payment Method type used in payment.
         /// Can be credit_card or payment_bank.
-        /// (Enumeration of these values can be found in WePayApi.Shared.Checkout.PaymentTypes)
+        /// (Enumeration of these values can be found in WePay.Shared.Checkout.PaymentTypes)
         /// </summary>
         public string Type { get; set; }
 

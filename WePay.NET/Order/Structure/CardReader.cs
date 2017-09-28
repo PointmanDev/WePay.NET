@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.Order.Structure
+namespace WePay.Order.Structure
 {
     /// <summary>
     /// The card reader structure contains details on orders for card readers placed using WePay’s mPOS fulfillment service.
@@ -10,7 +10,7 @@ namespace WePayApi.Order.Structure
     public class CardReader
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Order.Structure.CardReader";
+        private const string Identifier = "WePay.Order.Structure.CardReader";
 
         /// <summary>
         /// Model of card reader (valid options are defined as part of your integration with mPOS.)

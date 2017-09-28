@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.Report.Structure
+namespace WePay.Report.Structure
 {
     /// <summary>
     /// Contains information about the resources about which the report is based.
@@ -10,14 +10,14 @@ namespace WePayApi.Report.Structure
     public class ReportResource
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Report.Structure.ReportResource";
+        private const string Identifier = "WePay.Report.Structure.ReportResource";
 
         /// <summary>
         /// The type of resource upon which the report is based.
-        /// (Enumeration of these values can be found in WePayApi.Report.Common.ObjectTypes)
+        /// (Enumeration of these values can be found in WePay.Report.Common.ObjectTypes)
         /// Note: Use Account for MerchantTransactions reports and Withdrawal for Reconciliation reports.
         /// </summary>
-        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Report.Common.ObjectTypes")]
+        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePay.Report.Common.ObjectTypes")]
         public string ObjectType { get; set; }
 
         /// <summary>

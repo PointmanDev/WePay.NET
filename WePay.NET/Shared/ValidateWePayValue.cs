@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Reflection;
 using System.Text.RegularExpressions;
 
-namespace WePayApi.Shared
+namespace WePay.Shared
 {
     public class ValidateWePayValue : ValidationAttribute
     {

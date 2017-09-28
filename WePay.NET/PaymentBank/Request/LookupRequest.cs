@@ -1,14 +1,14 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
-using WePayApi.PaymentBank.Response;
+using WePay.Shared;
+using WePay.PaymentBank.Response;
 
-namespace WePayApi.PaymentBank.Request
+namespace WePay.PaymentBank.Request
 {
     public class LookupRequest : WePayRequest<LookupResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.PaymentBank.Request.LookupRequest";
+        private const string Identifier = "WePay.PaymentBank.Request.LookupRequest";
 
         /// <summary>
         /// The unique ID for the payment bank you want to look up.

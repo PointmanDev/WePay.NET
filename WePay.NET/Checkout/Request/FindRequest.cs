@@ -1,14 +1,14 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
-using WePayApi.Checkout.Response;
+using WePay.Shared;
+using WePay.Checkout.Response;
 
-namespace WePayApi.Checkout.Request
+namespace WePay.Checkout.Request
 {
     public class FindRequest : WePayRequest<WePayFindResponse<LookupResponse>>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Checkout.Request.FindRequest";
+        private const string Identifier = "WePay.Checkout.Request.FindRequest";
 
         /// <summary>
         /// The unique ID of the account whose checkouts you are searching.
@@ -36,9 +36,9 @@ namespace WePayApi.Checkout.Request
 
         /// <summary>
         /// The current state of the checkout.
-        /// (Enumeration of these values can be found in WePayApi.Checkout.Common.CheckoutStates)
+        /// (Enumeration of these values can be found in WePay.Checkout.Common.CheckoutStates)
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Checkout.Common.CheckoutStates")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Checkout.Common.CheckoutStates")]
         public string State { get; set; }
 
         /// <summary>
@@ -60,10 +60,10 @@ namespace WePayApi.Checkout.Request
         /// <summary>
         /// Sort the results of the search by time created.
         /// Use desc for most recent to least recent. Use asc for least recent to most recent.
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.SortOrders)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.SortOrders)
         /// Default: desc
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Shared.Common.SortOrders")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Shared.Common.SortOrders")]
         public string SortOrder { get; set; }
 
         /// <summary>

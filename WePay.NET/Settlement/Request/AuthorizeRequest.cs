@@ -1,13 +1,13 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Settlement.Response;
+using WePay.Settlement.Response;
 
-namespace WePayApi.Settlement.Request
+namespace WePay.Settlement.Request
 {
     public class AuthorizeRequest : Shared.WePayRequest<AuthorizeResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Settlement.Request.AuthorizeRequest";
+        private const string Identifier = "WePay.Settlement.Request.AuthorizeRequest";
 
         /// <summary>
         /// The unique ID returned by the Settlement Create call.

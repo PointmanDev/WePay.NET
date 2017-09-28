@@ -1,19 +1,19 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.Risk.Structure.Rbit
+namespace WePay.Risk.Structure.Rbit
 {
     public class Rbit : IRequiresAdditonalValidation
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Risk.Structure.Rbit.Rbit";
+        private const string Identifier = "WePay.Risk.Structure.Rbit.Rbit";
 
         /// <summary>
         /// The value describing the kind of risk information the rbit contains.
-        /// (Enumeration of these values can be found in WePayApi.Risk.Common.RbitTypes)
+        /// (Enumeration of these values can be found in WePay.Risk.Common.RbitTypes)
         /// </summary>
-        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Risk.Common.RbitTypes")]
+        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePay.Risk.Common.RbitTypes")]
         public virtual string Type { get; set; }
 
         /// <summary>
@@ -24,9 +24,9 @@ namespace WePayApi.Risk.Structure.Rbit
 
         /// <summary>
         /// The type of object that this rbit is associated with. 
-        /// (Enumeration of these values can be found in WePayApi.Risk.Common.AssociatedObjectTypes)
+        /// (Enumeration of these values can be found in WePay.Risk.Common.AssociatedObjectTypes)
         /// </summary>
-        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Risk.Common.AssociatedObjectTypes")]
+        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePay.Risk.Common.AssociatedObjectTypes")]
         public string AssociatedObjectType { get; set; }
 
         /// <summary>

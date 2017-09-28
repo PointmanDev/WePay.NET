@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
-using WePayApi.Shared;
-using WePayApi.PaymentBank.Request;
-using WePayApi.PaymentBank.Response;
+using WePay.Shared;
+using WePay.PaymentBank.Request;
+using WePay.PaymentBank.Response;
 
-namespace WePayApi.PaymentBank
+namespace WePay.PaymentBank
 {
     /// <summary>
     /// The payment_bank object represents a bank account that is tokenized from the tokenization.3.latest.js library and is used for payments.

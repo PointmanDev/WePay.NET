@@ -1,6 +1,6 @@
-﻿using WePayApi.Shared;
+﻿using WePay.Shared;
 
-namespace WePayApi.User.Response
+namespace WePay.User.Response
 {
     public class LookupResponse : WePayResponse
     {
@@ -31,7 +31,7 @@ namespace WePayApi.User.Response
 
         /// <summary>
         /// The current state of the User
-        /// (Enumeration of these values can be found in WePayApi.User.Common.UserStates)
+        /// (Enumeration of these values can be found in WePay.User.Common.UserStates)
         /// </summary>
         public string State { get; set; }
 

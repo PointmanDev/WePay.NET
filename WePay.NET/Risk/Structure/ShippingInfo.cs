@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.Risk.Structure
+namespace WePay.Risk.Structure
 {
     /// <summary>
     /// Contains details about a shipment of goods or services.
@@ -9,7 +9,7 @@ namespace WePayApi.Risk.Structure
     public class ShippingInfo
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Risk.Structure.ShippingInfo";
+        private const string Identifier = "WePay.Risk.Structure.ShippingInfo";
 
         /// <summary>
         /// The Unix timestamp when goods or services are expected to be delivered (seconds since Jan 1st 1970 UTC).

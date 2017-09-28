@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.KnowYourCustomer.Structure
+namespace WePay.KnowYourCustomer.Structure
 {
     /// <summary>
     /// Contains information about the business owner, the name, address, and website of the business OR
@@ -11,7 +11,7 @@ namespace WePayApi.KnowYourCustomer.Structure
     public class BusinessOrOrganization : IRequiresAdditonalValidation
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.KnowYourCustomer.Structure.BusinessOrOrganization";
+        private const string Identifier = "WePay.KnowYourCustomer.Structure.BusinessOrOrganization";
 
         [JsonIgnore]
         private const string UsComplianceField = "UsEntityCompliance";

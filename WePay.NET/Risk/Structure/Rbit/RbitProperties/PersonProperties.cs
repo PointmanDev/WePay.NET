@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
-using WePayApi.Shared.Structure;
+using WePay.Shared;
+using WePay.Shared.Structure;
 
-namespace WePayApi.Risk.Structure.Rbit.RbitProperties
+namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
     /// <summary>
     /// Information about a person associated with a user or account.
@@ -13,7 +13,7 @@ namespace WePayApi.Risk.Structure.Rbit.RbitProperties
     public class PersonProperties : RbitProperties
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Risk.Structure.Rbit.RbitProperties.PersonProperties";
+        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.PersonProperties";
 
         [JsonIgnore]
         public override string RbitType
@@ -44,9 +44,9 @@ namespace WePayApi.Risk.Structure.Rbit.RbitProperties
 
         /// <summary>
         /// The role the person currently satisfies
-        /// (Enumeration of these values can be found in WePayApi.Risk.Common.PersonRoles)
+        /// (Enumeration of these values can be found in WePay.Risk.Common.PersonRoles)
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Risk.Common.PersonRoles")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Risk.Common.PersonRoles")]
         public string Role { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace WePayApi.Shared.Common
+﻿namespace WePay.Shared.Common
 {
     /// <summary>
     /// All possible Error Codes which WePay can return with an Error response.

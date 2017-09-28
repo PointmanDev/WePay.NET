@@ -1,6 +1,6 @@
-﻿using WePayApi.Withdrawal.Structure;
+﻿using WePay.Withdrawal.Structure;
 
-namespace WePayApi.Withdrawal.Response
+namespace WePay.Withdrawal.Response
 {
     public class LookupResponse : Shared.WePayResponse
     {
@@ -16,7 +16,7 @@ namespace WePayApi.Withdrawal.Response
 
         /// <summary>
         /// The state that the withdrawal is in.
-        /// (Enumeration of these values can be found in WePayApi.Withdrawal.Common.WithdrawalStates)
+        /// (Enumeration of these values can be found in WePay.Withdrawal.Common.WithdrawalStates)
         /// </summary>
         public string State { get; set; }
 
@@ -27,13 +27,13 @@ namespace WePayApi.Withdrawal.Response
 
         /// <summary>
         /// The currency of the transaction.
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.Currencies)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.Currencies)
         /// </summary>
         public string Currency { get; set; }
 
         /// <summary>
         /// The type of withdrawal.
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.SettlementPaymentMethods)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.SettlementPaymentMethods)
         /// </summary>
         public string Type { get; set; }
 

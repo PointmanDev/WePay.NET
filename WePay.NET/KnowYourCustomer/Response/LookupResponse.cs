@@ -1,6 +1,6 @@
-﻿using WePayApi.KnowYourCustomer.Structure;
+﻿using WePay.KnowYourCustomer.Structure;
 
-namespace WePayApi.KnowYourCustomer.Response
+namespace WePay.KnowYourCustomer.Response
 {
     public class LookupResponse : Shared.WePayResponse
     {
@@ -11,7 +11,7 @@ namespace WePayApi.KnowYourCustomer.Response
 
         /// <summary>
         /// The state of KYC for the account.
-        /// (Enumeration of these values can be found in WePayApi.KnowYourCustomer.Common.KnowYourCustomerStates)
+        /// (Enumeration of these values can be found in WePay.KnowYourCustomer.Common.KnowYourCustomerStates)
         /// </summary>
         public string State { get; set; }
 

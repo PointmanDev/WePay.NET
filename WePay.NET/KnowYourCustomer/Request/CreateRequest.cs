@@ -1,15 +1,15 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.KnowYourCustomer.Response;
-using WePayApi.Shared;
-using WePayApi.KnowYourCustomer.Structure;
+using WePay.KnowYourCustomer.Response;
+using WePay.Shared;
+using WePay.KnowYourCustomer.Structure;
 
-namespace WePayApi.KnowYourCustomer.Request
+namespace WePay.KnowYourCustomer.Request
 {
     public class CreateRequest : WePayRequest<CreateResponse>, IRequiresAdditonalValidation
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.KnowYourCustomer.Request.CreateRequest";
+        private const string Identifier = "WePay.KnowYourCustomer.Request.CreateRequest";
 
         /// <summary>
         /// A unique ID for the application.

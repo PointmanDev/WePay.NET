@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace WePayApi.Shared
+namespace WePay.Shared
 {
     /// <summary>
     /// Utitlties class for building out static classes that store WePay specific values that may need to be referenced in application code

@@ -1,14 +1,14 @@
-﻿using WePayApi.Shared;
-using WePayApi.OAuth2.Response;
+﻿using WePay.Shared;
+using WePay.OAuth2.Response;
 using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.OAuth2.Request
+namespace WePay.OAuth2.Request
 {
     public class AuthorizeRequest : WePayRequest<AuthorizeResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.OAuth2.Request.AuthorizeRequest";
+        private const string Identifier = "WePay.OAuth2.Request.AuthorizeRequest";
 
         /// <summary>
         /// The client id issued to the app, found on your application's dashboard.
@@ -25,9 +25,9 @@ namespace WePayApi.OAuth2.Request
 
         /// <summary>
         /// Custom user permission settings are no longer supported. Please provide a comma-separated list.
-        /// (Enumeration of these values can be found in WePayApi.User.Common.Scopes)
+        /// (Enumeration of these values can be found in WePay.User.Common.Scopes)
         /// </summary>
-        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.User.Common.Scopes", IsCommaSeparated = true)]
+        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePay.User.Common.Scopes", IsCommaSeparated = true)]
         public string Scope { get; set; }
 
         /// <summary>
@@ -50,10 +50,10 @@ namespace WePayApi.OAuth2.Request
 
         /// <summary>
         /// The user's country of origin 2-letter ISO code
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.Countries)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.Countries)
         /// Default: US
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Shared.Common.Countries")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Shared.Common.Countries")]
         public string UserCountry { get; set; }
     }
 }

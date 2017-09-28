@@ -1,14 +1,14 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
-using WePayApi.User.Response;
+using WePay.Shared;
+using WePay.User.Response;
 
-namespace WePayApi.User.Request
+namespace WePay.User.Request
 {
     public class SendConfirmationRequest : WePayRequest<LookupResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.User.Request.SendConfirmationRequest";
+        private const string Identifier = "WePay.User.Request.SendConfirmationRequest";
 
         /// <summary>
         /// A short message that will be included in the email to the user.

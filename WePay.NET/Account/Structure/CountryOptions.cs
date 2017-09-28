@@ -1,4 +1,4 @@
-﻿namespace WePayApi.Account.Structure
+﻿namespace WePay.Account.Structure
 {
     /// <summary>
     /// Enable debit card processing for Canadian based merchants.

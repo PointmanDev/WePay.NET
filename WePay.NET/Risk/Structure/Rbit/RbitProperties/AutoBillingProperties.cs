@@ -1,12 +1,12 @@
 ﻿using Newtonsoft.Json;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.Risk.Structure.Rbit.RbitProperties
+namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
     public class AutoBillingProperties : RbitProperties
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Risk.Structure.Rbit.RbitProperties.AutoBillingProperties";
+        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.AutoBillingProperties";
 
         [JsonIgnore]
         public override string RbitType
@@ -42,18 +42,18 @@ namespace WePayApi.Risk.Structure.Rbit.RbitProperties
 
         /// <summary>
         /// How often they should be billed.
-        /// (Enumeration of these values can be found in WePayApi.Risk.Common.PaymentFrequencies)
+        /// (Enumeration of these values can be found in WePay.Risk.Common.PaymentFrequencies)
         /// Note: Alternatively you may specify the number of days/weeks/months/years as follows,
         /// n(d/w/m/y) where n is a positive integer. E.g. 4d is 4 days, 5m is 5 months etc.
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Risk.Common.PaymentFrequencies", RegularExpression = @"^(([1-9]|[1-9][0-9]|[1-2][0-9][0-9]|3[0-5][0-9]|36[0-5])d)|(([1-9]|[1-4][0-9]|5[0-2])w)|(([1-9]|1[0-2])m)|([1-9]y)$")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Risk.Common.PaymentFrequencies", RegularExpression = @"^(([1-9]|[1-9][0-9]|[1-2][0-9][0-9]|3[0-5][0-9]|36[0-5])d)|(([1-9]|[1-4][0-9]|5[0-2])w)|(([1-9]|1[0-2])m)|([1-9]y)$")]
         public string PaymentFrequency { get; set; }
 
         /// <summary>
         /// Who set-up the auto-billing
-        /// (Enumeration of these values can be found in WePayApi.Risk.Common.AutoBillingCreators)
+        /// (Enumeration of these values can be found in WePay.Risk.Common.AutoBillingCreators)
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Risk.Common.AutoBillingCreators")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Risk.Common.AutoBillingCreators")]
         public string SetupBy { get; set; }
     }
 }

@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
-using WePayApi.Shared.Structure;
+using WePay.Shared;
+using WePay.Shared.Structure;
 
-namespace WePayApi.Checkout.Structure
+namespace WePay.Checkout.Structure
 {
     /// <summary>
     /// Use this to have payers enter payment information on a WePay hosted checkout URL.
@@ -14,7 +14,7 @@ namespace WePayApi.Checkout.Structure
     public class HostedCheckout
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Checkout.Structure.HostedCheckout";
+        private const string Identifier = "WePay.Checkout.Structure.HostedCheckout";
 
         /// <summary>
         /// The URI the payer will be redirected to after payment (if available).
@@ -29,9 +29,9 @@ namespace WePayApi.Checkout.Structure
         /// The options are iframe or regular.
         /// Choose iframe if this is an iframe checkout.
         /// Default: regular
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.ProcessModes)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.ProcessModes)
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Shared.Common.ProcessModes")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Shared.Common.ProcessModes")]
         public string Mode { get; set; }
 
         /// <summary>
@@ -60,13 +60,13 @@ namespace WePayApi.Checkout.Structure
         /// <summary>
         /// What payment method to accept for this checkout.
         /// Must be sent as an array.
-        /// (Enumeration of these values can be found in WePayApi.Checkout.Common.FundingSources)
+        /// (Enumeration of these values can be found in WePay.Checkout.Common.FundingSources)
         /// For example, if only "credit_card" is selected, customers will see option to pay by credit card when they go to the
         /// WePay hosted checkout URL.
         /// They will not be able to pay using their bank account.
         /// If the FundingSources parameter is not specified, both credit card and bank account payments will be accepted in the checkout flow.
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Checkout.Common.FundingSources")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Checkout.Common.FundingSources")]
         public string[] FundingSources { get; set; }
 
         /// <summary>

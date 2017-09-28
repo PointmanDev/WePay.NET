@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.Shared.Structure
+namespace WePay.Shared.Structure
 {
     /// <summary>
     /// The address structure contains information about a street address.
@@ -9,7 +9,7 @@ namespace WePayApi.Shared.Structure
     public class Address
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Shared.Structure.Address";
+        private const string Identifier = "WePay.Shared.Structure.Address";
 
         /// <summary>
         /// The first line of the street address.
@@ -47,9 +47,9 @@ namespace WePayApi.Shared.Structure
 
         /// <summary>
         /// The 2-letter ISO-3166-1 country code.
-        /// (Enumeration of these values can be found in WePayApi.Shared.Common.Countries)
+        /// (Enumeration of these values can be found in WePay.Shared.Common.Countries)
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Shared.Common.Countries")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Shared.Common.Countries")]
         public string Country { get; set; }
     }
 }

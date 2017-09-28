@@ -1,4 +1,4 @@
-﻿namespace WePayApi.Settlement.Response
+﻿namespace WePay.Settlement.Response
 {
     public class CreateResponse : Shared.WePayResponse
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.Withdrawal.Common
+namespace WePay.Withdrawal.Common
 {
     /// <summary>
     /// All possible Withdrawal states

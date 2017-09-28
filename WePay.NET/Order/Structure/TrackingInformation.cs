@@ -1,4 +1,4 @@
-﻿namespace WePayApi.Order.Structure
+﻿namespace WePay.Order.Structure
 {
     /// <summary>
     /// The tracking information structure contains details on mPOS card reader shipments.
@@ -18,7 +18,7 @@
 
         /// <summary>
         /// The status of the package.
-        /// (Enumeration of these values can be found in WePayApi.Order.Common.TrackingInformationStatuses)
+        /// (Enumeration of these values can be found in WePay.Order.Common.TrackingInformationStatuses)
         /// </summary>
         public string Status { get; set; }
     }

@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Reflection;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.User.Common
+namespace WePay.User.Common
 {
     /// <summary>
     /// All possible Scopes currently recognized by WePay (PROTIP: These are just permissions a user can hold)

@@ -1,4 +1,4 @@
-﻿namespace WePayApi.Checkout.Structure
+﻿namespace WePay.Checkout.Structure
 {
     /// <summary>
     /// The refund object contains information about the amount refunded and reason for the refund.

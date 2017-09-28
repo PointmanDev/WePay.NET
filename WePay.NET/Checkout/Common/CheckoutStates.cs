@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.Checkout.Common
+namespace WePay.Checkout.Common
 {
     /// <summary>
     /// All possible checkout states

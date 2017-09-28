@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.KnowYourCustomer.Structure
+namespace WePay.KnowYourCustomer.Structure
 {
     /// <summary>
     /// Contains the user’s address information, including region and postcode.
@@ -9,7 +9,7 @@ namespace WePayApi.KnowYourCustomer.Structure
     public class KycAddress
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.KnowYourCustomer.Structure.KycAddress";
+        private const string Identifier = "WePay.KnowYourCustomer.Structure.KycAddress";
 
         /// <summary>
         /// The street address where the user resides.

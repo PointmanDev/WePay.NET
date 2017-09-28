@@ -1,13 +1,13 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.CreditCard.Response;
+using WePay.CreditCard.Response;
 
-namespace WePayApi.CreditCard.Request
+namespace WePay.CreditCard.Request
 {
     public class LookupRequest : Shared.WePayRequest<LookupResponse>
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.CreditCard.Request.LookupRequest";
+        private const string Identifier = "WePay.CreditCard.Request.LookupRequest";
 
         /// <summary>
         /// The ID for your API application. You can find it on your application's dashboard.

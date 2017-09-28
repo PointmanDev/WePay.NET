@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.Risk.Structure.Rbit.RbitProperties
+namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
     /// <summary>
     /// A code from one of several sources that indicates the industry associated with the business.
@@ -10,7 +10,7 @@ namespace WePayApi.Risk.Structure.Rbit.RbitProperties
     public class IndustryCodeProperties : RbitProperties
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Risk.Structure.Rbit.RbitProperties.IndustryCodeProperties";
+        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.IndustryCodeProperties";
 
         [JsonIgnore]
         public override string RbitType
@@ -27,9 +27,9 @@ namespace WePayApi.Risk.Structure.Rbit.RbitProperties
 
         /// <summary>
         /// The Industry Code Type
-        /// (Enumeration of these values can be found in WePayApi.Risk.Common.IndustryCodeTypes)
+        /// (Enumeration of these values can be found in WePay.Risk.Common.IndustryCodeTypes)
         /// </summary>
-        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.Risk.Common.IndustryCodeTypes")]
+        [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePay.Risk.Common.IndustryCodeTypes")]
         public string IndustryCodeType { get; set; }
 
         /// <summary>

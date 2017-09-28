@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.Risk.Structure.Rbit.RbitProperties
+namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
     /// <summary>
     /// The email address associated with an entity.
@@ -10,7 +10,7 @@ namespace WePayApi.Risk.Structure.Rbit.RbitProperties
     public class EmailProperties : RbitProperties
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Risk.Structure.Rbit.RbitProperties.AddressProperties";
+        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.AddressProperties";
 
         [JsonIgnore]
         public override string RbitType

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.FileUpload.Common
+namespace WePay.FileUpload.Common
 {
     /// <summary>
     /// All possible File Statuses currently recognized by WePay

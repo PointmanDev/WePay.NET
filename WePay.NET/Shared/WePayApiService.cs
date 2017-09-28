@@ -11,16 +11,16 @@ using System.Security.Cryptography.X509Certificates;
 using System.Net.Security;
 using System.Net.Http;
 
-namespace WePayApi.Shared
+namespace WePay.Shared
 {
     public abstract class WePayApiService
     {
         private const string WePayApiVersion = "v2/";
-        private const string StagingUrlPrefix = "https://stage.wepayapi.com/";
-        private const string ProductionUrlPrefix = "https://wepayapi.com/";
+        private const string StagingUrlPrefix = "https://stage.WePay.com/";
+        private const string ProductionUrlPrefix = "https://WePay.com/";
         private const string JsonMediaType = "application/json";
         private const string UserAgentHeaderKey = "User-Agent";
-        private const string UserAgentHeaderValue = "WePay v2 WePayApi.NET";
+        private const string UserAgentHeaderValue = "WePay v2 WePay.NET";
         private static readonly Formatting Formatting = new Formatting();
 
         private static readonly DefaultContractResolver DefaultContractResolver = new DefaultContractResolver
@@ -56,7 +56,7 @@ namespace WePayApi.Shared
         private Exception GetExceptionFromErrorResponse(JObject response)
         {
             var wePayError = response.ToObject<WePayError>(JsonSerializer);
-            var message = GetType().FullName + " - WePayApi.Shared.WePayError";
+            var message = GetType().FullName + " - WePay.Shared.WePayError";
 
             if (wePayError != null)
             {

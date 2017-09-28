@@ -1,8 +1,8 @@
-﻿using WePayApi.Risk.Structure.Rbit;
-using WePayApi.Risk.Structure.Rbit.RbitProperties;
-using WePayApi.Shared;
+﻿using WePay.Risk.Structure.Rbit;
+using WePay.Risk.Structure.Rbit.RbitProperties;
+using WePay.Shared;
 
-namespace WePayApi.Risk.Response
+namespace WePay.Risk.Response
 {
     public class LookupResponse : WePayResponse
     {
@@ -13,7 +13,7 @@ namespace WePayApi.Risk.Response
 
         /// <summary>
         /// The type of object that this rbit is associated with. 
-        /// (Enumeration of these values can be found in WePayApi.Risk.Common.AssociatedObjectTypes)
+        /// (Enumeration of these values can be found in WePay.Risk.Common.AssociatedObjectTypes)
         /// </summary>
         public string AssociatedObjectType { get; set; }
 
@@ -24,7 +24,7 @@ namespace WePayApi.Risk.Response
 
         /// <summary>
         /// The type of rbit.
-        /// (Enumeration of these values can be found in WePayApi.Risk.Common.RbitTypes)
+        /// (Enumeration of these values can be found in WePay.Risk.Common.RbitTypes)
         /// </summary>
         public string Type { get; set; }
 
@@ -40,7 +40,7 @@ namespace WePayApi.Risk.Response
 
         /// <summary>
         /// Source of the information
-        /// (Enumeration of these values can be found in WePayApi.Risk.Common.Sources)
+        /// (Enumeration of these values can be found in WePay.Risk.Common.Sources)
         /// </summary>
         public string Source { get; set; }
 

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace WePayApi.Risk.Structure.Rbit.RbitProperties
+namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
     public class RbitProperties
     {

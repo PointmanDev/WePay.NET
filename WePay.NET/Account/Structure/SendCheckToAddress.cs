@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 
-namespace WePayApi.Account.Structure
+namespace WePay.Account.Structure
 {
     /// <summary>
     /// Contains destination address information for a settlement check.
@@ -9,7 +9,7 @@ namespace WePayApi.Account.Structure
     public class SendCheckToAddress
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Account.Structure.SendCheckToAddress";
+        private const string Identifier = "WePay.Account.Structure.SendCheckToAddress";
 
         /// <summary>
         /// The street address where the check is to be sent.

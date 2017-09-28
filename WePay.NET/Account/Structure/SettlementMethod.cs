@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.Account.Structure
+namespace WePay.Account.Structure
 {
     /// <summary>
     /// Contains information about the bank to which funds are sent after withdrawal from a merchant’s account.
@@ -11,7 +11,7 @@ namespace WePayApi.Account.Structure
     public class SettlementMethod : IRequiresAdditonalValidation
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.Account.Structure.SettlementMethod";
+        private const string Identifier = "WePay.Account.Structure.SettlementMethod";
 
         /// <summary>
         /// Primary settlement bank ID for auto withdrawal.

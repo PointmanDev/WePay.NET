@@ -1,4 +1,4 @@
-﻿namespace WePayApi.CreditCard.Response
+﻿namespace WePay.CreditCard.Response
 {
     public class SimpleResponse : Shared.WePayResponse
     {

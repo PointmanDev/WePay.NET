@@ -1,16 +1,16 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
-using WePayApi.Shared;
-using WePayApi.Shared.Structure;
-using WePayApi.CreditCard.Response;
-using WePayApi.Shared.Common;
+using WePay.Shared;
+using WePay.Shared.Structure;
+using WePay.CreditCard.Response;
+using WePay.Shared.Common;
 
-namespace WePayApi.CreditCard.Request
+namespace WePay.CreditCard.Request
 {
     public class CreateRequest : Shared.WePayRequest<LookupResponse>, IRequiresAdditonalValidation
     {
         [JsonIgnore]
-        private const string Identifier = "WePayApi.CreditCard.Request.CreateRequest";
+        private const string Identifier = "WePay.CreditCard.Request.CreateRequest";
 
         /// <summary>
         /// The ID for your API application. You can find it on your app dashboard.
@@ -104,10 +104,10 @@ namespace WePayApi.CreditCard.Request
 
         /// <summary>
         /// This is set if the merchant has manually entered the credit card number.
-        /// (Enumeration of these values can be found in WePayApi.CreditCard.Common.VirtualTerminalModes)
+        /// (Enumeration of these values can be found in WePay.CreditCard.Common.VirtualTerminalModes)
         /// PERMISSION REQUIRED
         /// </summary>
-        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePayApi.CreditCard.Common.VirtualTerminalModes")]
+        [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.CreditCard.Common.VirtualTerminalModes")]
         public string VirtualTerminal { get; set; }
 
         /// <summary>

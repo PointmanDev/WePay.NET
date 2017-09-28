@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using WePayApi.Shared;
+using WePay.Shared;
 
-namespace WePayApi.Order.Common
+namespace WePay.Order.Common
 {
     /// <summary>
     /// All possible statuses for tracking information pertaining to a given order

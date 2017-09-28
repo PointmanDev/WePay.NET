@@ -1,4 +1,4 @@
-﻿namespace WePayApi.Account.Response
+﻿namespace WePay.Account.Response
 {
     public class DeleteResponse : Shared.WePayResponse
     {
@@ -9,7 +9,7 @@
 
         /// <summary>
         /// The state of the account.
-        /// (Enumeration of these values can be found in WePayApi.Account.Common.AccountStates)
+        /// (Enumeration of these values can be found in WePay.Account.Common.AccountStates)
         /// </summary>
         public string State { get; set; }
     }
