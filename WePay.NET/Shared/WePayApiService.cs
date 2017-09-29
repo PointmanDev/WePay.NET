@@ -10,14 +10,15 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using System.Net.Security;
 using System.Net.Http;
+using System.Net.Http.Headers;
 
 namespace WePay.Shared
 {
     public abstract class WePayApiService
     {
         private const string WePayApiVersion = "v2/";
-        private const string StagingUrlPrefix = "https://stage.WePay.com/";
-        private const string ProductionUrlPrefix = "https://WePay.com/";
+        private const string StagingUrlPrefix = "https://stage.wepayapi.com/";
+        private const string ProductionUrlPrefix = "https://wepayapi.com/";
         private const string JsonMediaType = "application/json";
         private const string UserAgentHeaderKey = "User-Agent";
         private const string UserAgentHeaderValue = "WePay v2 WePay.NET";
@@ -103,8 +104,8 @@ namespace WePay.Shared
 
         protected async Task<T> PostRequestAsync<T>(WePayRequest<T> Request,
                                                     string wePayEndPoint,
-                                                    string accessToken = null,
-                                                    bool? useStaging = null) where T : WePayResponse
+                                                    string accessToken,
+                                                    bool? useStaging) where T : WePayResponse
         {
             if (EnableValidation)
             {
@@ -122,22 +123,21 @@ namespace WePay.Shared
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12 | SecurityProtocolType.Ssl3;
             ServicePointManager.ServerCertificateValidationCallback = delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) { return true; };
 
-            using (var httpClientHandler = new HttpClientHandler { Credentials = new NetworkCredential(accessToken ?? AccessToken, "")})
+            using (var httpClient = new HttpClient())
             {
-                using (var httpClient = new HttpClient(httpClientHandler))
-                {
-                    httpClient.DefaultRequestHeaders.Add(UserAgentHeaderKey, UserAgentHeaderValue);
-                    HttpResponseMessage httpResponseMessage = await httpClient.PostAsync(GenerateWePayEndPointUrl(wePayEndPoint, useStaging), httpContent);
-                    JObject response = (JObject)JsonConvert.DeserializeObject(await httpResponseMessage.Content.ReadAsStringAsync(), JsonSerializerSettings);
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken ?? AccessToken ?? "");
+                httpClient.DefaultRequestHeaders.Add(UserAgentHeaderKey, UserAgentHeaderValue);
 
-                    if ((int?)response[ErrorCodeKey] != null)
-                    {
-                        throw GetExceptionFromErrorResponse(response);
-                    }
-                    else
-                    {
-                        return response.ToObject<T>(JsonSerializer);
-                    }
+                HttpResponseMessage httpResponseMessage = await httpClient.PostAsync(GenerateWePayEndPointUrl(wePayEndPoint, useStaging), httpContent);
+                JObject response = (JObject)JsonConvert.DeserializeObject(await httpResponseMessage.Content.ReadAsStringAsync(), JsonSerializerSettings);
+
+                if ((int?)response[ErrorCodeKey] != null)
+                {
+                    throw GetExceptionFromErrorResponse(response);
+                }
+                else
+                {
+                    return response.ToObject<T>(JsonSerializer);
                 }
             }
         }

@@ -7,3 +7,4 @@ C:\Users\Nick\Documents\GIT\WePay.NET\WePay.NET\obj\Release\net45\WePay.NET.Asse
 C:\Users\Nick\Documents\GIT\WePay.NET\WePay.NET\obj\Release\net45\WePay.NET.AssemblyInfo.cs
 C:\Users\Nick\Documents\GIT\WePay.NET\WePay.NET\obj\Release\net45\WePay.NET.dll
 C:\Users\Nick\Documents\GIT\WePay.NET\WePay.NET\obj\Release\net45\WePay.NET.pdb
+C:\Users\Nick\Documents\GIT\WePay.NET\WePay.NET\obj\Release\net45\WePay.NET.csprojResolveAssemblyReference.cache

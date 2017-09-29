@@ -35,10 +35,9 @@ namespace WePay.User.Common
         {
             string scopes = "";
 
-            foreach (var p in typeof(Scopes).GetFields(BindingFlags.Static | BindingFlags.Public))
+            foreach (var value in Values)
             {
-                var value = p.GetValue(null);
-                scopes += (string)value + ",";
+                scopes += value + ",";
             }
 
             return scopes.Substring(0, scopes.Length - 1);

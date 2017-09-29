@@ -2,14 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>WePay.NET</id>
-    <version>1.0.3</version>
+    <version>1.0.5.1</version>
     <title>WePay.NET</title>
     <authors>Leonardo DiBella</authors>
     <owners>Leonardo DiBella</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectUrl>https://github.com/leosdibella/WePay.NET</projectUrl>
     <description>A complete class library for integrating with WePay's API (v2) (https://developer.wepay.com/api)</description>
-    <releaseNotes>Forgot to enable the XML output ...</releaseNotes>
     <tags>WePay WePay.NET WePayDotNet WePayNET</tags>
     <repository url="https://github.com/leosdibella/WePay.NET" />
     <dependencies>
