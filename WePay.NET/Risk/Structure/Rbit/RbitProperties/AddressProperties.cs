@@ -9,17 +9,20 @@ namespace WePay.Risk.Structure.Rbit.RbitProperties
     {
         [JsonIgnore]
         private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.AddressProperties";
-        
+
+        /// <summary>
+        /// Not an API field, only use for validating requests, mainly for testing purposes
+        /// </summary>
         [JsonIgnore]
         public override string RbitType
         {
             get
             {
-                return RbitType;
+                return RbitTypeContainer;
             }
             set
             {
-                RbitType = Common.RbitTypes.Address;
+                RbitTypeContainer = Common.RbitTypes.Address;
             }
         }
 

@@ -4,25 +4,24 @@ using WePay.Shared;
 
 namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
-    /// <summary>
-    /// A phone number associated with a user or account.
-    /// Rbits of type phone should be sent either as a related rbit of type = person or as a top level rbit for an account 
-    /// </summary>
     public class PhoneProperties : RbitProperties
     {
         [JsonIgnore]
         private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.PhoneProperties";
 
+        /// <summary>
+        /// Not an API field, only use for validating requests, mainly for testing purposes
+        /// </summary>
         [JsonIgnore]
         public override string RbitType
         {
             get
             {
-                return RbitType;
+                return RbitTypeContainer;
             }
             set
             {
-                RbitType = Common.RbitTypes.Phone;
+                RbitTypeContainer = Common.RbitTypes.Phone;
             }
         }
 

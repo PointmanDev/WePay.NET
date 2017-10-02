@@ -1,30 +1,27 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 using WePay.Shared;
-using WePay.Shared.Structure;
 
 namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
-    /// <summary>
-    /// Information about a person associated with a user or account.
-    /// It could be a person who does not have formal access to the user or account (e.g., an employee of a company who provided information).
-    /// Rbits of type person are usually associated with the following related rbits: Phone and Address.
-    /// </summary>
     public class PersonProperties : RbitProperties
     {
         [JsonIgnore]
         private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.PersonProperties";
 
+        /// <summary>
+        /// Not an API field, only use for validating requests, mainly for testing purposes
+        /// </summary>
         [JsonIgnore]
         public override string RbitType
         {
             get
             {
-                return RbitType;
+                return RbitTypeContainer;
             }
             set
             {
-                RbitType = Common.RbitTypes.Person;
+                RbitTypeContainer = Common.RbitTypes.Person;
             }
         }
 

@@ -4,6 +4,10 @@ using WePay.Shared;
 
 namespace WePay.Risk.Structure.Rbit
 {
+    /// <summary>
+    /// Information about an event that is the context for a donation transaction or donation account.
+    /// It can therefore be passed as an rbit associated with a checkout or an account.
+    /// </summary>
     public class FundraisingEventRbit : Rbit
     {
         [JsonIgnore]
@@ -19,11 +23,11 @@ namespace WePay.Risk.Structure.Rbit
         {
             get
             {
-                return Type;
+                return TypeContainer;
             }
             set
             {
-                Type = Common.RbitTypes.FundraisingEvent;
+                TypeContainer = Common.RbitTypes.FundraisingEvent;
             }
         }
 

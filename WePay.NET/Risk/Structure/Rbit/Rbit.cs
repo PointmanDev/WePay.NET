@@ -4,17 +4,36 @@ using WePay.Shared;
 
 namespace WePay.Risk.Structure.Rbit
 {
+    /// <summary>
+    /// Base class for Rbits
+    /// </summary>
     public class Rbit : IRequiresAdditonalValidation
     {
         [JsonIgnore]
         private const string Identifier = "WePay.Risk.Structure.Rbit.Rbit";
 
         /// <summary>
+        /// Holds the value for type so it can't be overridden
+        /// </summary>
+        [JsonIgnore]
+        protected string TypeContainer { get; set; }
+
+        /// <summary>
         /// The value describing the kind of risk information the rbit contains.
         /// (Enumeration of these values can be found in WePay.Risk.Common.RbitTypes)
         /// </summary>
         [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePay.Risk.Common.RbitTypes")]
-        public virtual string Type { get; set; }
+        public virtual string Type
+        {
+            get
+            {
+                return TypeContainer;
+            }
+            set
+            {
+                TypeContainer = value;
+            }
+        }
 
         /// <summary>
         /// A parameter set to the key value pair of properties for this type.

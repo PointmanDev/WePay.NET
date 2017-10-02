@@ -4,25 +4,24 @@ using WePay.Shared;
 
 namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
-    /// <summary>
-    /// Information about an event that is the context for a donation transaction or donation account.
-    /// It can therefore be passed as an rbit associated with a checkout or an account.
-    /// </summary>
     public class FundraisingEventProperties : RbitProperties
     {
         [JsonIgnore]
         private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.FundraisingEventProperties";
 
+        /// <summary>
+        /// Not an API field, only use for validating requests, mainly for testing purposes
+        /// </summary>
         [JsonIgnore]
         public override string RbitType
         {
             get
             {
-                return RbitType;
+                return RbitTypeContainer;
             }
             set
             {
-                RbitType = Common.RbitTypes.FundraisingEvent;
+                RbitTypeContainer = Common.RbitTypes.FundraisingEvent;
             }
         }
 

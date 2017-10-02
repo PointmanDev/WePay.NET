@@ -4,6 +4,10 @@ using WePay.Shared;
 
 namespace WePay.Risk.Structure.Rbit
 {
+    /// <summary>
+    /// The email address associated with an entity.
+    /// Usually passed in as a RelatedRbit of type = person
+    /// </summary>
     public class EmailRbit : Rbit
     {
         [JsonIgnore]
@@ -19,11 +23,11 @@ namespace WePay.Risk.Structure.Rbit
         {
             get
             {
-                return Type;
+                return TypeContainer;
             }
             set
             {
-                Type = Common.RbitTypes.Email;
+                TypeContainer = Common.RbitTypes.Email;
             }
         }
 

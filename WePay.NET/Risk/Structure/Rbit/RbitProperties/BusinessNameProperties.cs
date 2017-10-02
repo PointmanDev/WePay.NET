@@ -1,28 +1,27 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 using WePay.Shared;
-using WePay.Shared.Structure;
 
 namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
-    /// <summary>
-    /// The business name associated with an account.
-    /// </summary>
     public class BusinessNameProperties : RbitProperties
     {
         [JsonIgnore]
         private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.BusinessNameProperties";
 
+        /// <summary>
+        /// Not an API field, only use for validating requests, mainly for testing purposes
+        /// </summary>
         [JsonIgnore]
         public override string RbitType
         {
             get
             {
-                return RbitType;
+                return RbitTypeContainer;
             }
             set
             {
-                RbitType = Common.RbitTypes.BusinessName;
+                RbitTypeContainer = Common.RbitTypes.BusinessName;
             }
         }
 

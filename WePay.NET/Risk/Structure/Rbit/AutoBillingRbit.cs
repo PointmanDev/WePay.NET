@@ -4,6 +4,10 @@ using WePay.Shared;
 
 namespace WePay.Risk.Structure.Rbit
 {
+    /// <summary>
+    /// If the transaction is set-up for auto-billing (where the users card is charged automatically every month),
+    /// include this rbit to provide details of the auto-billing.
+    /// </summary>
     public class AutoBillingRbit : Rbit
     {
         [JsonIgnore]
@@ -19,11 +23,11 @@ namespace WePay.Risk.Structure.Rbit
         {
             get
             {
-                return Type;
+                return TypeContainer;
             }
             set
             {
-                Type = Common.RbitTypes.AutoBilling;
+                TypeContainer = Common.RbitTypes.AutoBilling;
             }
         }
 

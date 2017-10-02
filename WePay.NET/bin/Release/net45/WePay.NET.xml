@@ -5123,6 +5123,13 @@
             <param name="useStaging"></param>
             <returns></returns>
         </member>
+        <member name="T:WePay.Risk.Structure.Rbit.AddressRbit">
+            <summary>
+            A mailing address associated with a user or account.
+            Rbits of type address should be sent either as a related rbit of type = person or as a top level rbit
+            for an account
+            </summary>
+        </member>
         <member name="P:WePay.Risk.Structure.Rbit.AddressRbit.Type">
             <summary>
             The value describing the kind of risk information the rbit contains.
@@ -5133,6 +5140,12 @@
         <member name="P:WePay.Risk.Structure.Rbit.AddressRbit.Properties">
             <summary>
             A parameter set to the key value pair of properties for this type.
+            </summary>
+        </member>
+        <member name="T:WePay.Risk.Structure.Rbit.AutoBillingRbit">
+            <summary>
+            If the transaction is set-up for auto-billing (where the users card is charged automatically every month),
+            include this rbit to provide details of the auto-billing.
             </summary>
         </member>
         <member name="P:WePay.Risk.Structure.Rbit.AutoBillingRbit.Type">
@@ -5147,6 +5160,11 @@
             A parameter set to the key value pair of properties for this type.
             </summary>
         </member>
+        <member name="T:WePay.Risk.Structure.Rbit.BusinessDescriptionRbit">
+            <summary>
+            Rbts of type 'BusinessDescription” should be sent as a top-level rbit for an account.
+            </summary>
+        </member>
         <member name="P:WePay.Risk.Structure.Rbit.BusinessDescriptionRbit.Type">
             <summary>
             The value describing the kind of risk information the rbit contains.
@@ -5157,6 +5175,11 @@
         <member name="P:WePay.Risk.Structure.Rbit.BusinessDescriptionRbit.Properties">
             <summary>
             A parameter set to the key value pair of properties for this type.
+            </summary>
+        </member>
+        <member name="T:WePay.Risk.Structure.Rbit.BusinessNameRbit">
+            <summary>
+            The business name associated with an account.
             </summary>
         </member>
         <member name="P:WePay.Risk.Structure.Rbit.BusinessNameRbit.Type">
@@ -5171,6 +5194,12 @@
             A parameter set to the key value pair of properties for this type.
             </summary>
         </member>
+        <member name="T:WePay.Risk.Structure.Rbit.EmailRbit">
+            <summary>
+            The email address associated with an entity.
+            Usually passed in as a RelatedRbit of type = person
+            </summary>
+        </member>
         <member name="P:WePay.Risk.Structure.Rbit.EmailRbit.Type">
             <summary>
             The value describing the kind of risk information the rbit contains.
@@ -5181,6 +5210,11 @@
         <member name="P:WePay.Risk.Structure.Rbit.EmailRbit.Properties">
             <summary>
             A parameter set to the key value pair of properties for this type.
+            </summary>
+        </member>
+        <member name="T:WePay.Risk.Structure.Rbit.ExternalAccount">
+            <summary>
+            The user’s external accounts, such as Facebook or Twitter.
             </summary>
         </member>
         <member name="P:WePay.Risk.Structure.Rbit.ExternalAccount.Type">
@@ -5195,6 +5229,12 @@
             A parameter set to the key value pair of properties for this type.
             </summary>
         </member>
+        <member name="T:WePay.Risk.Structure.Rbit.FundraisingEventRbit">
+            <summary>
+            Information about an event that is the context for a donation transaction or donation account.
+            It can therefore be passed as an rbit associated with a checkout or an account.
+            </summary>
+        </member>
         <member name="P:WePay.Risk.Structure.Rbit.FundraisingEventRbit.Type">
             <summary>
             The value describing the kind of risk information the rbit contains.
@@ -5205,6 +5245,11 @@
         <member name="P:WePay.Risk.Structure.Rbit.FundraisingEventRbit.Properties">
             <summary>
             A parameter set to the key value pair of properties for this type.
+            </summary>
+        </member>
+        <member name="T:WePay.Risk.Structure.Rbit.IndustryCodeRbit">
+            <summary>
+            A code from one of several sources that indicates the industry associated with the business.
             </summary>
         </member>
         <member name="P:WePay.Risk.Structure.Rbit.IndustryCodeRbit.Type">
@@ -5219,6 +5264,13 @@
             A parameter set to the key value pair of properties for this type.
             </summary>
         </member>
+        <member name="T:WePay.Risk.Structure.Rbit.PartnerServiceRbit">
+            <summary>
+            This type describes one type of service or product the user has signed up for on the partner site.
+            This should be passed as a related rbit of the ExternalAccount rbit that contains partner site information.
+            If the user is signed up for multiple services, you can pass multiple related rbits.
+            </summary>
+        </member>
         <member name="P:WePay.Risk.Structure.Rbit.PartnerServiceRbit.Type">
             <summary>
             The value describing the kind of risk information the rbit contains.
@@ -5229,6 +5281,13 @@
         <member name="P:WePay.Risk.Structure.Rbit.PartnerServiceRbit.Properties">
             <summary>
             A parameter set to the key value pair of properties for this type.
+            </summary>
+        </member>
+        <member name="T:WePay.Risk.Structure.Rbit.PersonRbit">
+            <summary>
+            Information about a person associated with a user or account.
+            It could be a person who does not have formal access to the user or account (e.g., an employee of a company who provided information).
+            Rbits of type person are usually associated with the following related rbits: Phone and Address.
             </summary>
         </member>
         <member name="P:WePay.Risk.Structure.Rbit.PersonRbit.Type">
@@ -5243,6 +5302,12 @@
             A parameter set to the key value pair of properties for this type.
             </summary>
         </member>
+        <member name="T:WePay.Risk.Structure.Rbit.PhoneRbit">
+            <summary>
+            A phone number associated with a user or account.
+            Rbits of type phone should be sent either as a related rbit of type = person or as a top level rbit for an account 
+            </summary>
+        </member>
         <member name="P:WePay.Risk.Structure.Rbit.PhoneRbit.Type">
             <summary>
             The value describing the kind of risk information the rbit contains.
@@ -5253,6 +5318,16 @@
         <member name="P:WePay.Risk.Structure.Rbit.PhoneRbit.Properties">
             <summary>
             A parameter set to the key value pair of properties for this type.
+            </summary>
+        </member>
+        <member name="T:WePay.Risk.Structure.Rbit.Rbit">
+            <summary>
+            Base class for Rbits
+            </summary>
+        </member>
+        <member name="P:WePay.Risk.Structure.Rbit.Rbit.TypeContainer">
+            <summary>
+            Holds the value for type so it can't be overridden
             </summary>
         </member>
         <member name="P:WePay.Risk.Structure.Rbit.Rbit.Type">
@@ -5288,6 +5363,11 @@
             The type of object that this rbit is associated with. 
             </summary>
         </member>
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AddressProperties.RbitType">
+            <summary>
+            Not an API field, only use for validating requests, mainly for testing purposes
+            </summary>
+        </member>
         <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AddressProperties.Address">
             <summary>
             An address associated with a user or account
@@ -5313,6 +5393,11 @@
             <summary>
             The normalized address status
             (Enumeration of these values can be found in WePay.Risk.Common.NormalizedAddressStatuses)
+            </summary>
+        </member>
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AutoBillingProperties.RbitType">
+            <summary>
+            Not an API field, only use for validating requests, mainly for testing purposes
             </summary>
         </member>
         <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AutoBillingProperties.AutobillSetupTime">
@@ -5348,9 +5433,9 @@
             (Enumeration of these values can be found in WePay.Risk.Common.AutoBillingCreators)
             </summary>
         </member>
-        <member name="T:WePay.Risk.Structure.Rbit.RbitProperties.BusinessDescriptionProperties">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.BusinessDescriptionProperties.RbitType">
             <summary>
-            Rbts of type 'BusinessDescription” should be sent as a top-level rbit for an account.
+            Not an API field, only use for validating requests, mainly for testing purposes
             </summary>
         </member>
         <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.BusinessDescriptionProperties.BusinessDescription">
@@ -5369,9 +5454,9 @@
             false: indicates that this merchant does not collect sales tax for each transaction
             </summary>
         </member>
-        <member name="T:WePay.Risk.Structure.Rbit.RbitProperties.BusinessNameProperties">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.BusinessNameProperties.RbitType">
             <summary>
-            The business name associated with an account.
+            Not an API field, only use for validating requests, mainly for testing purposes
             </summary>
         </member>
         <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.BusinessNameProperties.BusinessName">
@@ -5385,10 +5470,9 @@
             (Enumeration of these values can be found in WePay.Risk.Common.BusinessNameTypes)
             </summary>
         </member>
-        <member name="T:WePay.Risk.Structure.Rbit.RbitProperties.EmailProperties">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.EmailProperties.RbitType">
             <summary>
-            The email address associated with an entity.
-            Usually passed in as a RelatedRbit of type = person
+            Not an API field, only use for validating requests, mainly for testing purposes
             </summary>
         </member>
         <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.EmailProperties.Email">
@@ -5396,9 +5480,9 @@
             Email address
             </summary>
         </member>
-        <member name="T:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountProperties">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountProperties.RbitType">
             <summary>
-            The user’s external accounts, such as Facebook or Twitter.
+            Not an API field, only use for validating requests, mainly for testing purposes
             </summary>
         </member>
         <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountProperties.IsPartnerAccount">
@@ -5463,10 +5547,9 @@
             Average feedback score for this user (for star rating feedback systems) normalized between 0.0 (worst) and 1.0 (best).
             </summary>
         </member>
-        <member name="T:WePay.Risk.Structure.Rbit.RbitProperties.FundraisingEventProperties">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.FundraisingEventProperties.RbitType">
             <summary>
-            Information about an event that is the context for a donation transaction or donation account.
-            It can therefore be passed as an rbit associated with a checkout or an account.
+            Not an API field, only use for validating requests, mainly for testing purposes
             </summary>
         </member>
         <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.FundraisingEventProperties.Name">
@@ -5500,9 +5583,9 @@
             URI that points to the fundraising event page
             </summary>
         </member>
-        <member name="T:WePay.Risk.Structure.Rbit.RbitProperties.IndustryCodeProperties">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.IndustryCodeProperties.RbitType">
             <summary>
-            A code from one of several sources that indicates the industry associated with the business.
+            Not an API field, only use for validating requests, mainly for testing purposes
             </summary>
         </member>
         <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.IndustryCodeProperties.IndustryCodeType">
@@ -5522,11 +5605,9 @@
             For example, this may be category or actual drop-down text selected by the end user that maps to a particular industry code.
             </summary>
         </member>
-        <member name="T:WePay.Risk.Structure.Rbit.RbitProperties.PartnerServiceProperties">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PartnerServiceProperties.RbitType">
             <summary>
-            This type describes one type of service or product the user has signed up for on the partner site.
-            This should be passed as a related rbit of the ExternalAccount rbit that contains partner site information.
-            If the user is signed up for multiple services, you can pass multiple related rbits.
+            Not an API field, only use for validating requests, mainly for testing purposes
             </summary>
         </member>
         <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PartnerServiceProperties.ServiceName">
@@ -5551,11 +5632,9 @@
             Array of PartnerServices for each module the user has signed up for in the partner's site
             </summary>
         </member>
-        <member name="T:WePay.Risk.Structure.Rbit.RbitProperties.PersonProperties">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PersonProperties.RbitType">
             <summary>
-            Information about a person associated with a user or account.
-            It could be a person who does not have formal access to the user or account (e.g., an employee of a company who provided information).
-            Rbits of type person are usually associated with the following related rbits: Phone and Address.
+            Not an API field, only use for validating requests, mainly for testing purposes
             </summary>
         </member>
         <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PersonProperties.Name">
@@ -5574,10 +5653,9 @@
             (Enumeration of these values can be found in WePay.Risk.Common.PersonRoles)
             </summary>
         </member>
-        <member name="T:WePay.Risk.Structure.Rbit.RbitProperties.PhoneProperties">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PhoneProperties.RbitType">
             <summary>
-            A phone number associated with a user or account.
-            Rbits of type phone should be sent either as a related rbit of type = person or as a top level rbit for an account 
+            Not an API field, only use for validating requests, mainly for testing purposes
             </summary>
         </member>
         <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PhoneProperties.Phone">
@@ -5591,9 +5669,25 @@
             (Enumeration of these values can be found in WePay.Risk.Common.PhoneTypes)
             </summary>
         </member>
-        <member name="T:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsProperties">
+        <member name="T:WePay.Risk.Structure.Rbit.RbitProperties.RbitProperties">
             <summary>
-            Information regarding a specific transaction.
+            Base class for RbitProperties
+            </summary>
+        </member>
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.RbitProperties.RbitTypeContainer">
+            <summary>
+            Holds the value for type so it can't be overridden
+            </summary>
+        </member>
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.RbitProperties.RbitType">
+            <summary>
+            The value describing the kind of risk information the rbit contains.
+            (Enumeration of these values can be found in WePay.Risk.Common.RbitTypes)
+            </summary>
+        </member>
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsProperties.RbitType">
+            <summary>
+            Not an API field, only use for validating requests, mainly for testing purposes
             </summary>
         </member>
         <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsProperties.ReceiptUri">
@@ -5647,9 +5741,19 @@
             Optional note on the invoice or address.
             </summary>
         </member>
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.WebsiteUriProperties.RbitType">
+            <summary>
+            Not an API field, only use for validating requests, mainly for testing purposes
+            </summary>
+        </member>
         <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.WebsiteUriProperties.Uri">
             <summary>
             Website Uri
+            </summary>
+        </member>
+        <member name="T:WePay.Risk.Structure.Rbit.TransactionDetailsRbit">
+            <summary>
+            Information regarding a specific transaction.
             </summary>
         </member>
         <member name="P:WePay.Risk.Structure.Rbit.TransactionDetailsRbit.Type">
@@ -5662,6 +5766,11 @@
         <member name="P:WePay.Risk.Structure.Rbit.TransactionDetailsRbit.Properties">
             <summary>
             A parameter set to the key value pair of properties for this type.
+            </summary>
+        </member>
+        <member name="T:WePay.Risk.Structure.Rbit.WebsiteUriRbit">
+            <summary>
+            Information regarding a website url
             </summary>
         </member>
         <member name="P:WePay.Risk.Structure.Rbit.WebsiteUriRbit.Type">

@@ -3,24 +3,24 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
-    /// <summary>
-    /// Rbts of type 'BusinessDescription” should be sent as a top-level rbit for an account.
-    /// </summary>
     public class BusinessDescriptionProperties : RbitProperties
     {
         [JsonIgnore]
         private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.BusinessDescriptionProperties";
 
+        /// <summary>
+        /// Not an API field, only use for validating requests, mainly for testing purposes
+        /// </summary>
         [JsonIgnore]
         public override string RbitType
         {
             get
             {
-                return RbitType;
+                return RbitTypeContainer;
             }
             set
             {
-                RbitType = Common.RbitTypes.BusinessDescription;
+                RbitTypeContainer = Common.RbitTypes.BusinessDescription;
             }
         }
 

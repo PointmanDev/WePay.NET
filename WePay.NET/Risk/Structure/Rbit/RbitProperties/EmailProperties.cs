@@ -3,25 +3,24 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
-    /// <summary>
-    /// The email address associated with an entity.
-    /// Usually passed in as a RelatedRbit of type = person
-    /// </summary>
     public class EmailProperties : RbitProperties
     {
         [JsonIgnore]
         private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.AddressProperties";
 
+        /// <summary>
+        /// Not an API field, only use for validating requests, mainly for testing purposes
+        /// </summary>
         [JsonIgnore]
         public override string RbitType
         {
             get
             {
-                return RbitType;
+                return RbitTypeContainer;
             }
             set
             {
-                RbitType = Common.RbitTypes.Address;
+                RbitTypeContainer = Common.RbitTypes.Email;
             }
         }
 

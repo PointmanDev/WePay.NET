@@ -4,6 +4,9 @@ using WePay.Shared;
 
 namespace WePay.Risk.Structure.Rbit
 {
+    /// <summary>
+    /// Information regarding a specific transaction.
+    /// </summary>
     public class TransactionDetailsRbit : Rbit
     {
         [JsonIgnore]
@@ -19,11 +22,11 @@ namespace WePay.Risk.Structure.Rbit
         {
             get
             {
-                return Type;
+                return TypeContainer;
             }
             set
             {
-                Type = Common.RbitTypes.TransactionDetails;
+                TypeContainer = Common.RbitTypes.TransactionDetails;
             }
         }
 

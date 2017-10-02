@@ -4,6 +4,9 @@ using WePay.Shared;
 
 namespace WePay.Risk.Structure.Rbit
 {
+    /// <summary>
+    /// The user’s external accounts, such as Facebook or Twitter.
+    /// </summary>
     public class ExternalAccount : Rbit
     {
         [JsonIgnore]
@@ -19,11 +22,11 @@ namespace WePay.Risk.Structure.Rbit
         {
             get
             {
-                return Type;
+                return TypeContainer;
             }
             set
             {
-                Type = Common.RbitTypes.ExternalAccount;
+                TypeContainer = Common.RbitTypes.ExternalAccount;
             }
         }
 

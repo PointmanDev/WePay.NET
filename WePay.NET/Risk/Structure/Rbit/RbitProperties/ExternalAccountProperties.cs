@@ -4,27 +4,26 @@ using WePay.Shared;
 
 namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
-    /// <summary>
-    /// The user’s external accounts, such as Facebook or Twitter.
-    /// </summary>
     public class ExternalAccountProperties : RbitProperties
     {
         [JsonIgnore]
         private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountProperties";
 
+        /// <summary>
+        /// Not an API field, only use for validating requests, mainly for testing purposes
+        /// </summary>
         [JsonIgnore]
         public override string RbitType
         {
             get
             {
-                return RbitType;
+                return RbitTypeContainer;
             }
             set
             {
-                RbitType = Common.RbitTypes.ExternalAccount;
+                RbitTypeContainer = Common.RbitTypes.ExternalAccount;
             }
         }
-
 
         /// <summary>
         /// (Enumeration of these values can be found in WePay.Risk.Common.IsPartnerAccountOptions)

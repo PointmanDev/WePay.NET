@@ -4,6 +4,9 @@ using WePay.Shared;
 
 namespace WePay.Risk.Structure.Rbit
 {
+    /// <summary>
+    /// A code from one of several sources that indicates the industry associated with the business.
+    /// </summary>
     public class IndustryCodeRbit : Rbit
     {
         [JsonIgnore]
@@ -19,11 +22,11 @@ namespace WePay.Risk.Structure.Rbit
         {
             get
             {
-                return Type;
+                return TypeContainer;
             }
             set
             {
-                Type = Common.RbitTypes.IndustryCode;
+                TypeContainer = Common.RbitTypes.IndustryCode;
             }
         }
 

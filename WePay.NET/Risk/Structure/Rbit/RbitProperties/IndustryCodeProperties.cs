@@ -4,24 +4,24 @@ using WePay.Shared;
 
 namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
-    /// <summary>
-    /// A code from one of several sources that indicates the industry associated with the business.
-    /// </summary>
     public class IndustryCodeProperties : RbitProperties
     {
         [JsonIgnore]
         private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.IndustryCodeProperties";
 
+        /// <summary>
+        /// Not an API field, only use for validating requests, mainly for testing purposes
+        /// </summary>
         [JsonIgnore]
         public override string RbitType
         {
             get
             {
-                return RbitType;
+                return RbitTypeContainer;
             }
             set
             {
-                RbitType = Common.RbitTypes.IndustryCode;
+                RbitTypeContainer = Common.RbitTypes.IndustryCode;
             }
         }
 

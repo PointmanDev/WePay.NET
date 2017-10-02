@@ -5,24 +5,24 @@ using WePay.Shared.Structure;
 
 namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
-    /// <summary>
-    /// Information regarding a specific transaction.
-    /// </summary>
     public class TransactionDetailsProperties : RbitProperties
     {
         [JsonIgnore]
         private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsProperties";
 
+        /// <summary>
+        /// Not an API field, only use for validating requests, mainly for testing purposes
+        /// </summary>
         [JsonIgnore]
         public override string RbitType
         {
             get
             {
-                return RbitType;
+                return RbitTypeContainer;
             }
             set
             {
-                RbitType = Common.RbitTypes.TransactionDetails;
+                RbitTypeContainer = Common.RbitTypes.TransactionDetails;
             }
         }
 

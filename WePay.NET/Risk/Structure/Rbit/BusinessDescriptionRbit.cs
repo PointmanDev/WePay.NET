@@ -4,6 +4,9 @@ using WePay.Shared;
 
 namespace WePay.Risk.Structure.Rbit
 {
+    /// <summary>
+    /// Rbts of type 'BusinessDescription” should be sent as a top-level rbit for an account.
+    /// </summary>
     public class BusinessDescriptionRbit : Rbit
     {
         [JsonIgnore]
@@ -19,11 +22,11 @@ namespace WePay.Risk.Structure.Rbit
         {
             get
             {
-                return Type;
+                return TypeContainer;
             }
             set
             {
-                Type = Common.RbitTypes.BusinessDescription;
+                TypeContainer = Common.RbitTypes.BusinessDescription;
             }
         }
 

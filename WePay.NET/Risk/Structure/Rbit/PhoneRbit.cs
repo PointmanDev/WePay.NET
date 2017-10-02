@@ -4,6 +4,10 @@ using WePay.Shared;
 
 namespace WePay.Risk.Structure.Rbit
 {
+    /// <summary>
+    /// A phone number associated with a user or account.
+    /// Rbits of type phone should be sent either as a related rbit of type = person or as a top level rbit for an account 
+    /// </summary>
     public class PhoneRbit : Rbit
     {
         [JsonIgnore]
@@ -19,11 +23,11 @@ namespace WePay.Risk.Structure.Rbit
         {
             get
             {
-                return Type;
+                return TypeContainer;
             }
             set
             {
-                Type = Common.RbitTypes.Phone;
+                TypeContainer = Common.RbitTypes.Phone;
             }
         }
 

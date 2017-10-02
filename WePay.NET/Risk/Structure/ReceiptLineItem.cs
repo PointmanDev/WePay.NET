@@ -11,9 +11,9 @@ namespace WePay.Risk.Structure
     {
         private void SetAmount()
         {
-            if (ItemPrice != null && Quantity != null)
+            if (ItemPriceContainer != null && QuantityContainer != null)
             {
-                Amount = Quantity * ItemPrice;
+                Amount = ItemPriceContainer * QuantityContainer;
             }
             else
             {
@@ -23,6 +23,12 @@ namespace WePay.Risk.Structure
 
         [JsonIgnore]
         private const string Identifier = "WePay.Risk.Structure.ReceiptLineItem";
+
+        [JsonIgnore]
+        private double? ItemPriceContainer { get; set; }
+
+        [JsonIgnore]
+        private double? QuantityContainer { get; set; }
 
         /// <summary>
         /// Line item description.
@@ -40,11 +46,11 @@ namespace WePay.Risk.Structure
         {
             get
             {
-                return ItemPrice;
+                return ItemPriceContainer;
             }
             set
             {
-                ItemPrice = value;
+                ItemPriceContainer = value;
                 SetAmount();
             }
         }
@@ -57,11 +63,11 @@ namespace WePay.Risk.Structure
         {
             get
             {
-                return Quantity;
+                return QuantityContainer;
             }
             set
             {
-                Quantity = value;
+                QuantityContainer = value;
                 SetAmount();
             }
         }

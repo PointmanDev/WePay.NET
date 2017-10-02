@@ -4,26 +4,24 @@ using WePay.Shared;
 
 namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
-    /// <summary>
-    /// This type describes one type of service or product the user has signed up for on the partner site.
-    /// This should be passed as a related rbit of the ExternalAccount rbit that contains partner site information.
-    /// If the user is signed up for multiple services, you can pass multiple related rbits.
-    /// </summary>
     public class PartnerServiceProperties : RbitProperties
     {
         [JsonIgnore]
         private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.PartnerServiceProperties";
 
+        /// <summary>
+        /// Not an API field, only use for validating requests, mainly for testing purposes
+        /// </summary>
         [JsonIgnore]
         public override string RbitType
         {
             get
             {
-                return RbitType;
+                return RbitTypeContainer;
             }
             set
             {
-                RbitType = Common.RbitTypes.Address;
+                RbitTypeContainer = Common.RbitTypes.PartnerService;
             }
         }
 

@@ -4,6 +4,11 @@ using WePay.Shared;
 
 namespace WePay.Risk.Structure.Rbit
 {
+    /// <summary>
+    /// Information about a person associated with a user or account.
+    /// It could be a person who does not have formal access to the user or account (e.g., an employee of a company who provided information).
+    /// Rbits of type person are usually associated with the following related rbits: Phone and Address.
+    /// </summary>
     public class PersonRbit : Rbit
     {
         [JsonIgnore]
@@ -19,11 +24,11 @@ namespace WePay.Risk.Structure.Rbit
         {
             get
             {
-                return Type;
+                return TypeContainer;
             }
             set
             {
-                Type = Common.RbitTypes.Person;
+                TypeContainer = Common.RbitTypes.Person;
             }
         }
 
