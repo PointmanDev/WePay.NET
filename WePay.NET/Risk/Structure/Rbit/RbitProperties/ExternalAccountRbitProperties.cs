@@ -4,10 +4,10 @@ using WePay.Shared;
 
 namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
-    public class ExternalAccountProperties : RbitProperties
+    public class ExternalAccountRbitProperties : RbitProperties
     {
         [JsonIgnore]
-        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountProperties";
+        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountRbitProperties";
 
         /// <summary>
         /// Not an API field, only use for validating requests, mainly for testing purposes
@@ -89,5 +89,10 @@ namespace WePay.Risk.Structure.Rbit.RbitProperties
         /// Average feedback score for this user (for star rating feedback systems) normalized between 0.0 (worst) and 1.0 (best).
         /// </summary>
         public float? FeedbackAverageScore { get; set; }
+
+        public ExternalAccountRbitProperties()
+        {
+            RbitTypeContainer = Common.RbitTypes.ExternalAccount;
+        }
     }
 }

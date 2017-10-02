@@ -7,10 +7,10 @@ namespace WePay.Risk.Structure.Rbit
     /// <summary>
     /// The user’s external accounts, such as Facebook or Twitter.
     /// </summary>
-    public class ExternalAccount : Rbit
+    public class ExternalAccountRbit : Rbit
     {
         [JsonIgnore]
-        private const string Identifier = "WePay.Risk.Structure.Rbit.ExternalAccount";
+        private const string Identifier = "WePay.Risk.Structure.Rbit.ExternalAccountRbit";
 
         /// <summary>
         /// The value describing the kind of risk information the rbit contains.
@@ -33,6 +33,11 @@ namespace WePay.Risk.Structure.Rbit
         /// <summary>
         /// A parameter set to the key value pair of properties for this type.
         /// </summary>
-        public new ExternalAccountProperties Properties { get; set; }
+        public new ExternalAccountRbitProperties Properties { get; set; }
+
+        public ExternalAccountRbit()
+        {
+            TypeContainer = Common.RbitTypes.ExternalAccount;
+        }
     }
 }

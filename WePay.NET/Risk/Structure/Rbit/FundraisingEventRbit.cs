@@ -34,6 +34,11 @@ namespace WePay.Risk.Structure.Rbit
         /// <summary>
         /// A parameter set to the key value pair of properties for this type.
         /// </summary>
-        public new FundraisingEventProperties Properties { get; set; }
+        public new FundraisingEventRbitProperties Properties { get; set; }
+
+        public FundraisingEventRbit()
+        {
+            TypeContainer = Common.RbitTypes.FundraisingEvent;
+        }
     }
 }

@@ -20,8 +20,7 @@ namespace WePay.Risk.Structure.Rbit
         /// PROTIP: You don't need to set this, I already did it for you
         /// </summary>
         [ValidateWePayValue(IsRequired = true, ErrorMessage = Identifier, WePayValuesClassName = "WePay.Risk.Common.RbitTypes")]
-        public override string Type
-        {
+        public override string Type {
             get
             {
                 return TypeContainer;
@@ -35,6 +34,11 @@ namespace WePay.Risk.Structure.Rbit
         /// <summary>
         /// A parameter set to the key value pair of properties for this type.
         /// </summary>
-        public new PersonProperties Properties { get; set; }
+        public new PersonRbitProperties Properties { get; set; }
+
+        public PersonRbit()
+        {
+            TypeContainer = Common.RbitTypes.Person;
+        }
     }
 }

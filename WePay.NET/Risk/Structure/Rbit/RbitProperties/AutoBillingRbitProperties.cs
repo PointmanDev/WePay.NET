@@ -3,10 +3,10 @@ using WePay.Shared;
 
 namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
-    public class AutoBillingProperties : RbitProperties
+    public class AutoBillingRbitProperties : RbitProperties
     {
         [JsonIgnore]
-        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.AutoBillingProperties";
+        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.AutoBillingRbitProperties";
 
         /// <summary>
         /// Not an API field, only use for validating requests, mainly for testing purposes
@@ -58,5 +58,10 @@ namespace WePay.Risk.Structure.Rbit.RbitProperties
         /// </summary>
         [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Risk.Common.AutoBillingCreators")]
         public string SetupBy { get; set; }
+
+        public AutoBillingRbitProperties()
+        {
+            RbitTypeContainer = Common.RbitTypes.AutoBilling;
+        }
     }
 }

@@ -5212,19 +5212,19 @@
             A parameter set to the key value pair of properties for this type.
             </summary>
         </member>
-        <member name="T:WePay.Risk.Structure.Rbit.ExternalAccount">
+        <member name="T:WePay.Risk.Structure.Rbit.ExternalAccountRbit">
             <summary>
             The user’s external accounts, such as Facebook or Twitter.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.ExternalAccount.Type">
+        <member name="P:WePay.Risk.Structure.Rbit.ExternalAccountRbit.Type">
             <summary>
             The value describing the kind of risk information the rbit contains.
             (Enumeration of these values can be found in WePay.Risk.Common.RbitTypes)
             PROTIP: You don't need to set this, I already did it for you
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.ExternalAccount.Properties">
+        <member name="P:WePay.Risk.Structure.Rbit.ExternalAccountRbit.Properties">
             <summary>
             A parameter set to the key value pair of properties for this type.
             </summary>
@@ -5327,7 +5327,7 @@
         </member>
         <member name="P:WePay.Risk.Structure.Rbit.Rbit.TypeContainer">
             <summary>
-            Holds the value for type so it can't be overridden
+            Container to hold the Type to make derived classes "immutable"
             </summary>
         </member>
         <member name="P:WePay.Risk.Structure.Rbit.Rbit.Type">
@@ -5363,55 +5363,55 @@
             The type of object that this rbit is associated with. 
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AddressProperties.RbitType">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AddressRbitProperties.RbitType">
             <summary>
             Not an API field, only use for validating requests, mainly for testing purposes
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AddressProperties.Address">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AddressRbitProperties.Address">
             <summary>
             An address associated with a user or account
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AddressProperties.AddressType">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AddressRbitProperties.AddressType">
             <summary>
             The type of Address
             (Enumeration of these values can be found in WePay.Risk.Common.AddressTypes)
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AddressProperties.NormalizedAddress">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AddressRbitProperties.NormalizedAddress">
             <summary>
             Normalized version of Address
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AddressProperties.NormalizedSource">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AddressRbitProperties.NormalizedSource">
             <summary>
             String with vendor for address normalization.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AddressProperties.NormalizedAddressStatus">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AddressRbitProperties.NormalizedAddressStatus">
             <summary>
             The normalized address status
             (Enumeration of these values can be found in WePay.Risk.Common.NormalizedAddressStatuses)
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AutoBillingProperties.RbitType">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AutoBillingRbitProperties.RbitType">
             <summary>
             Not an API field, only use for validating requests, mainly for testing purposes
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AutoBillingProperties.AutobillSetupTime">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AutoBillingRbitProperties.AutobillSetupTime">
             <summary>
             Unix timestamp when auto-bill was first set up or last updated by the user.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AutoBillingProperties.PaymentNumber">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AutoBillingRbitProperties.PaymentNumber">
             <summary>
             If this is the first payment of the auto-billing, PaymentNumber should be set to 1.
             If the second, PaymentNumber should be set to 2, etc.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AutoBillingProperties.TotalPaymentsScheduled">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AutoBillingRbitProperties.TotalPaymentsScheduled">
             <summary>
             The number of payments that are scheduled to be auto-billed.
             For example, if a payer is paying for an item over three installments,
@@ -5419,7 +5419,7 @@
             If there is no scheduled end to the auto-billed payments, do not include this parameter.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AutoBillingProperties.PaymentFrequency">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AutoBillingRbitProperties.PaymentFrequency">
             <summary>
             How often they should be billed.
             (Enumeration of these values can be found in WePay.Risk.Common.PaymentFrequencies)
@@ -5427,243 +5427,243 @@
             n(d/w/m/y) where n is a positive integer. E.g. 4d is 4 days, 5m is 5 months etc.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AutoBillingProperties.SetupBy">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.AutoBillingRbitProperties.SetupBy">
             <summary>
             Who set-up the auto-billing
             (Enumeration of these values can be found in WePay.Risk.Common.AutoBillingCreators)
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.BusinessDescriptionProperties.RbitType">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.BusinessDescriptionRbitProperties.RbitType">
             <summary>
             Not an API field, only use for validating requests, mainly for testing purposes
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.BusinessDescriptionProperties.BusinessDescription">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.BusinessDescriptionRbitProperties.BusinessDescription">
             <summary>
             Text description of the business.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.BusinessDescriptionProperties.NumberOfEmployees">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.BusinessDescriptionRbitProperties.NumberOfEmployees">
             <summary>
             Number of employees employed by the business.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.BusinessDescriptionProperties.SalesTaxLiabilityFlag">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.BusinessDescriptionRbitProperties.SalesTaxLiabilityFlag">
             <summary>
             true: indicates that this merchant collects sales tax for each transaction
             false: indicates that this merchant does not collect sales tax for each transaction
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.BusinessNameProperties.RbitType">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.BusinessNameRbitProperties.RbitType">
             <summary>
             Not an API field, only use for validating requests, mainly for testing purposes
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.BusinessNameProperties.BusinessName">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.BusinessNameRbitProperties.BusinessName">
             <summary>
             The full name of the business.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.BusinessNameProperties.NameType">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.BusinessNameRbitProperties.NameType">
             <summary>
             The kind of name used for the business.
             (Enumeration of these values can be found in WePay.Risk.Common.BusinessNameTypes)
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.EmailProperties.RbitType">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.EmailRbitProperties.RbitType">
             <summary>
             Not an API field, only use for validating requests, mainly for testing purposes
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.EmailProperties.Email">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.EmailRbitProperties.Email">
             <summary>
             Email address
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountProperties.RbitType">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountRbitProperties.RbitType">
             <summary>
             Not an API field, only use for validating requests, mainly for testing purposes
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountProperties.IsPartnerAccount">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountRbitProperties.IsPartnerAccount">
             <summary>
             (Enumeration of these values can be found in WePay.Risk.Common.IsPartnerAccountOptions)
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountProperties.AccountType">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountRbitProperties.AccountType">
             <summary>
             Name of the provider of the account.
             If this is an account controlled by you, set this parameter to the name of the company where the account was created
             (Enumeration of these values can be found in WePay.Risk.Common.ExternalAccountTypes)
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountProperties.UserId">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountRbitProperties.UserId">
             <summary>
             The user's ID of the external account.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountProperties.Uri">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountRbitProperties.Uri">
             <summary>
             The user's profile URL on the external service.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountProperties.CreateTime">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountRbitProperties.CreateTime">
             <summary>
             The Unix timestamp when external account was created (unix seconds since Jan 1st 1970 UTC).
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountProperties.ModifyTime">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountRbitProperties.ModifyTime">
             <summary>
             The Unix timestamp when external account was modified (unix seconds since Jan 1st 1970 UTC).
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountProperties.Following">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountRbitProperties.Following">
             <summary>
             The number of people the user is following (Twitter) or has in his/her circles (Google+).
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountProperties.Followers">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountRbitProperties.Followers">
             <summary>
             The number of followers (Twitter) or the number of members in his/her circles (Google+).
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountProperties.Connections">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountRbitProperties.Connections">
             <summary>
             The number of friends (Facebook) or connections (LinkedIn).
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountProperties.FeedbackScoresProvided">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountRbitProperties.FeedbackScoresProvided">
             <summary>
             Number of times this user has received feedback.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountProperties.FeedbackScorePercentPositive">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountRbitProperties.FeedbackScorePercentPositive">
             <summary>
             Percentage of feedback which is positive (for positive / negative scoring systems).
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountProperties.FeedbackAverageScore">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountRbitProperties.FeedbackAverageScore">
             <summary>
             Average feedback score for this user (for star rating feedback systems) normalized between 0.0 (worst) and 1.0 (best).
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.FundraisingEventProperties.RbitType">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.FundraisingEventRbitProperties.RbitType">
             <summary>
             Not an API field, only use for validating requests, mainly for testing purposes
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.FundraisingEventProperties.Name">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.FundraisingEventRbitProperties.Name">
             <summary>
             Name of the fundraising event.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.FundraisingEventProperties.EventTime">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.FundraisingEventRbitProperties.EventTime">
             <summary>
             The Unix time of when the event starts.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.FundraisingEventProperties.GivingDeadline">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.FundraisingEventRbitProperties.GivingDeadline">
             <summary>
             The Unix time of deadline for when donations will no longer be accepted.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.FundraisingEventProperties.FundraisingGoal">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.FundraisingEventRbitProperties.FundraisingGoal">
             <summary>
             The fundraising goal established by the event organizers
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.FundraisingEventProperties.Currency">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.FundraisingEventRbitProperties.Currency">
             <summary>
             The currency used.
             (Enumeration of these values can be found in WePay.Shared.Common.Currencies)
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.FundraisingEventProperties.Uri">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.FundraisingEventRbitProperties.Uri">
             <summary>
             URI that points to the fundraising event page
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.IndustryCodeProperties.RbitType">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.IndustryCodeRbitProperties.RbitType">
             <summary>
             Not an API field, only use for validating requests, mainly for testing purposes
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.IndustryCodeProperties.IndustryCodeType">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.IndustryCodeRbitProperties.IndustryCodeType">
             <summary>
             The Industry Code Type
             (Enumeration of these values can be found in WePay.Risk.Common.IndustryCodeTypes)
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.IndustryCodeProperties.IndustryCode">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.IndustryCodeRbitProperties.IndustryCode">
             <summary>
             The industry code for the IndustryType set. Either the Mcc, Sic, or Naics industry code.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.IndustryCodeProperties.IndustryDetail">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.IndustryCodeRbitProperties.IndustryDetail">
             <summary>
             Additional text describing the industry code.
             For example, this may be category or actual drop-down text selected by the end user that maps to a particular industry code.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PartnerServiceProperties.RbitType">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PartnerServiceRbitProperties.RbitType">
             <summary>
             Not an API field, only use for validating requests, mainly for testing purposes
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PartnerServiceProperties.ServiceName">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PartnerServiceRbitProperties.ServiceName">
             <summary>
             The name of the service or product the user has signed up for on the partner s site.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PartnerServiceProperties.ServiceMonthlyCost">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PartnerServiceRbitProperties.ServiceMonthlyCost">
             <summary>
             Monthly cost of the service.
             If billed annually, provide the average monthly amount.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PartnerServiceProperties.Currency">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PartnerServiceRbitProperties.Currency">
             <summary>
             The currency used.
             (Enumeration of these values can be found in WePay.Shared.Common.Currencies)
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PartnerServiceProperties.ModulesUsed">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PartnerServiceRbitProperties.ModulesUsed">
             <summary>
             Array of PartnerServices for each module the user has signed up for in the partner's site
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PersonProperties.RbitType">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PersonRbitProperties.RbitType">
             <summary>
             Not an API field, only use for validating requests, mainly for testing purposes
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PersonProperties.Name">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PersonRbitProperties.Name">
             <summary>
             The full name of the person
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PersonProperties.Birthdate">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PersonRbitProperties.Birthdate">
             <summary>
             The birthdate of the person. Must be in YYYY-MM-DD format. i.e 1989-08-10
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PersonProperties.Role">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PersonRbitProperties.Role">
             <summary>
             The role the person currently satisfies
             (Enumeration of these values can be found in WePay.Risk.Common.PersonRoles)
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PhoneProperties.RbitType">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PhoneRbitProperties.RbitType">
             <summary>
             Not an API field, only use for validating requests, mainly for testing purposes
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PhoneProperties.Phone">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PhoneRbitProperties.Phone">
             <summary>
             Phone number, ideally including country code prefix (+1 for US)
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PhoneProperties.PhoneType">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.PhoneRbitProperties.PhoneType">
             <summary>
             The type of phone number.
             (Enumeration of these values can be found in WePay.Risk.Common.PhoneTypes)
@@ -5685,68 +5685,68 @@
             (Enumeration of these values can be found in WePay.Risk.Common.RbitTypes)
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsProperties.RbitType">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsRbitProperties.RbitType">
             <summary>
             Not an API field, only use for validating requests, mainly for testing purposes
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsProperties.ReceiptUri">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsRbitProperties.ReceiptUri">
             <summary>
             The buyer agreement or transactions page URL on the application's website or service (e.g. receipt page).
             It can be HTML, PDF, image, or any other type of file.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsProperties.ItemizedReceipt">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsRbitProperties.ItemizedReceipt">
             <summary>
             Array of ReceiptLineItems providing all the line item details of the transaction (including tax and shipping line items).
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsProperties.TermsUri">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsRbitProperties.TermsUri">
             <summary>
             URL of the terms of service for the transaction.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsProperties.ShippingAddress">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsRbitProperties.ShippingAddress">
             <summary>
             The shipping address for this transaction (if transaction is shipped).
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsProperties.ShippingInfo">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsRbitProperties.ShippingInfo">
             <summary>
             Array of ShippingInfos that describe the shipment status.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsProperties.ServiceAddress">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsRbitProperties.ServiceAddress">
             <summary>
             Optional address of where the service is consumed.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsProperties.TermsText">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsRbitProperties.TermsText">
             <summary>
             Terms associated with the invoice or transaction.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsProperties.PoNumber">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsRbitProperties.PoNumber">
             <summary>
             Purchase order number.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsProperties.Discount">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsRbitProperties.Discount">
             <summary>
             Discount (if any) on the order.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsProperties.Note">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsRbitProperties.Note">
             <summary>
             Optional note on the invoice or address.
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.WebsiteUriProperties.RbitType">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.WebsiteUriRbitProperties.RbitType">
             <summary>
             Not an API field, only use for validating requests, mainly for testing purposes
             </summary>
         </member>
-        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.WebsiteUriProperties.Uri">
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.WebsiteUriRbitProperties.Uri">
             <summary>
             Website Uri
             </summary>

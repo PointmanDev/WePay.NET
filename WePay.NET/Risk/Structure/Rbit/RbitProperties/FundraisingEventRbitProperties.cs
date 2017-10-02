@@ -4,10 +4,10 @@ using WePay.Shared;
 
 namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
-    public class FundraisingEventProperties : RbitProperties
+    public class FundraisingEventRbitProperties : RbitProperties
     {
         [JsonIgnore]
-        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.FundraisingEventProperties";
+        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.FundraisingEventRbitProperties";
 
         /// <summary>
         /// Not an API field, only use for validating requests, mainly for testing purposes
@@ -59,5 +59,10 @@ namespace WePay.Risk.Structure.Rbit.RbitProperties
         /// </summary>
         [StringLength(2083, ErrorMessage = Identifier + " - Uri cannot exceed 2083 characters")]
         public string Uri { get; set; }
+
+        public FundraisingEventRbitProperties()
+        {
+            RbitTypeContainer = Common.RbitTypes.FundraisingEvent;
+        }
     }
 }

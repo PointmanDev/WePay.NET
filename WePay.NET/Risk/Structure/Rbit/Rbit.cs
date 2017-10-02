@@ -13,7 +13,7 @@ namespace WePay.Risk.Structure.Rbit
         private const string Identifier = "WePay.Risk.Structure.Rbit.Rbit";
 
         /// <summary>
-        /// Holds the value for type so it can't be overridden
+        /// Container to hold the Type to make derived classes "immutable"
         /// </summary>
         [JsonIgnore]
         protected string TypeContainer { get; set; }

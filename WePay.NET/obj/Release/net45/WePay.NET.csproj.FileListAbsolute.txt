@@ -2,9 +2,9 @@ C:\Users\Nick\Documents\GIT\WePay.NET\WePay.NET\bin\Release\net45\WePay.NET.xml
 C:\Users\Nick\Documents\GIT\WePay.NET\WePay.NET\bin\Release\net45\WePay.NET.dll
 C:\Users\Nick\Documents\GIT\WePay.NET\WePay.NET\bin\Release\net45\WePay.NET.pdb
 C:\Users\Nick\Documents\GIT\WePay.NET\WePay.NET\bin\Release\net45\Newtonsoft.Json.dll
+C:\Users\Nick\Documents\GIT\WePay.NET\WePay.NET\obj\Release\net45\WePay.NET.csprojResolveAssemblyReference.cache
 C:\Users\Nick\Documents\GIT\WePay.NET\WePay.NET\obj\Release\net45\WePay.NET.csproj.CoreCompileInputs.cache
 C:\Users\Nick\Documents\GIT\WePay.NET\WePay.NET\obj\Release\net45\WePay.NET.AssemblyInfoInputs.cache
 C:\Users\Nick\Documents\GIT\WePay.NET\WePay.NET\obj\Release\net45\WePay.NET.AssemblyInfo.cs
 C:\Users\Nick\Documents\GIT\WePay.NET\WePay.NET\obj\Release\net45\WePay.NET.dll
 C:\Users\Nick\Documents\GIT\WePay.NET\WePay.NET\obj\Release\net45\WePay.NET.pdb
-C:\Users\Nick\Documents\GIT\WePay.NET\WePay.NET\obj\Release\net45\WePay.NET.csprojResolveAssemblyReference.cache

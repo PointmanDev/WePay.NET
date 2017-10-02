@@ -34,6 +34,11 @@ namespace WePay.Risk.Structure.Rbit
         /// <summary>
         /// A parameter set to the key value pair of properties for this type.
         /// </summary>
-        public new PhoneProperties Properties { get; set; }
+        public new PhoneRbitProperties Properties { get; set; }
+
+        public PhoneRbit()
+        {
+            TypeContainer = Common.RbitTypes.Phone;
+        }
     }
 }

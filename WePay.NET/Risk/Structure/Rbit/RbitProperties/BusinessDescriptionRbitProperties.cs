@@ -3,10 +3,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
-    public class BusinessDescriptionProperties : RbitProperties
+    public class BusinessDescriptionRbitProperties : RbitProperties
     {
         [JsonIgnore]
-        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.BusinessDescriptionProperties";
+        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.BusinessDescriptionRbitProperties";
 
         /// <summary>
         /// Not an API field, only use for validating requests, mainly for testing purposes
@@ -41,5 +41,10 @@ namespace WePay.Risk.Structure.Rbit.RbitProperties
         /// false: indicates that this merchant does not collect sales tax for each transaction
         /// </summary>
         public bool? SalesTaxLiabilityFlag { get; set; }
+
+        public BusinessDescriptionRbitProperties()
+        {
+            RbitTypeContainer = Common.RbitTypes.BusinessDescription;
+        }
     }
 }

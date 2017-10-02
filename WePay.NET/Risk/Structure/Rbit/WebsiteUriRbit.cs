@@ -33,6 +33,11 @@ namespace WePay.Risk.Structure.Rbit
         /// <summary>
         /// A parameter set to the key value pair of properties for this type.
         /// </summary>
-        public new WebsiteUriProperties Properties { get; set; }
+        public new WebsiteUriRbitProperties Properties { get; set; }
+
+        public WebsiteUriRbit()
+        {
+            TypeContainer = Common.RbitTypes.WebsiteUri;
+        }
     }
 }

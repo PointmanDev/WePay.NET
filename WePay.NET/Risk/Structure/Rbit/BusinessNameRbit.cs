@@ -33,6 +33,11 @@ namespace WePay.Risk.Structure.Rbit
         /// <summary>
         /// A parameter set to the key value pair of properties for this type.
         /// </summary>
-        public new BusinessNameProperties Properties { get; set; }
+        public new BusinessNameRbitProperties Properties { get; set; }
+
+        public BusinessNameRbit()
+        {
+            TypeContainer = Common.RbitTypes.BusinessName;
+        }
     }
 }

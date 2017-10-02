@@ -34,6 +34,11 @@ namespace WePay.Risk.Structure.Rbit
         /// <summary>
         /// A parameter set to the key value pair of properties for this type.
         /// </summary>
-        public new AutoBillingProperties Properties { get; set; }
+        public new AutoBillingRbitProperties Properties { get; set; }
+
+        public AutoBillingRbit()
+        {
+            TypeContainer = Common.RbitTypes.AutoBilling;
+        }
     }
 }

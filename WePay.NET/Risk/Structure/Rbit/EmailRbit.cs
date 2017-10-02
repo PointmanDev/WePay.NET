@@ -34,6 +34,11 @@ namespace WePay.Risk.Structure.Rbit
         /// <summary>
         /// A parameter set to the key value pair of properties for this type.
         /// </summary>
-        public new EmailProperties Properties { get; set; }
+        public new EmailRbitProperties Properties { get; set; }
+
+        public EmailRbit()
+        {
+            TypeContainer = Common.RbitTypes.Email;
+        }
     }
 }

@@ -35,6 +35,11 @@ namespace WePay.Risk.Structure.Rbit
         /// <summary>
         /// A parameter set to the key value pair of properties for this type.
         /// </summary>
-        public new AddressProperties Properties { get; set; }
+        public new AddressRbitProperties Properties { get; set; }
+
+        public AddressRbit()
+        {
+            TypeContainer = Common.RbitTypes.Address;
+        }
     }
 }

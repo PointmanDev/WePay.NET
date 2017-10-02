@@ -5,10 +5,10 @@ using WePay.Shared.Structure;
 
 namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
-    public class TransactionDetailsProperties : RbitProperties
+    public class TransactionDetailsRbitProperties : RbitProperties
     {
         [JsonIgnore]
-        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsProperties";
+        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsRbitProperties";
 
         /// <summary>
         /// Not an API field, only use for validating requests, mainly for testing purposes
@@ -86,5 +86,10 @@ namespace WePay.Risk.Structure.Rbit.RbitProperties
         /// </summary>
         [StringLength(10000, ErrorMessage = Identifier + " - Note cannot exceed 10000 characters")]
         public string Note { get; set; }
+
+        public TransactionDetailsRbitProperties()
+        {
+            RbitTypeContainer = Common.RbitTypes.TransactionDetails;
+        }
     }
 }

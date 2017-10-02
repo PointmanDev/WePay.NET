@@ -4,10 +4,10 @@ using WePay.Shared;
 
 namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
-    public class PhoneProperties : RbitProperties
+    public class PhoneRbitProperties : RbitProperties
     {
         [JsonIgnore]
-        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.PhoneProperties";
+        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.PhoneRbitProperties";
 
         /// <summary>
         /// Not an API field, only use for validating requests, mainly for testing purposes
@@ -38,5 +38,10 @@ namespace WePay.Risk.Structure.Rbit.RbitProperties
         /// </summary>
         [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Risk.Common.PhoneTypes")]
         public string PhoneType { get; set; }
+
+        public PhoneRbitProperties()
+        {
+            RbitTypeContainer = Common.RbitTypes.Phone;
+        }
     }
 }

@@ -33,6 +33,11 @@ namespace WePay.Risk.Structure.Rbit
         /// <summary>
         /// A parameter set to the key value pair of properties for this type.
         /// </summary>
-        public new TransactionDetailsProperties Properties { get; set; }
+        public new TransactionDetailsRbitProperties Properties { get; set; }
+
+        public TransactionDetailsRbit()
+        {
+            TypeContainer = Common.RbitTypes.TransactionDetails;
+        }
     }
 }

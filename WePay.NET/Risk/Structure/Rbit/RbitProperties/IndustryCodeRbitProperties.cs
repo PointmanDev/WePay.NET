@@ -4,10 +4,10 @@ using WePay.Shared;
 
 namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
-    public class IndustryCodeProperties : RbitProperties
+    public class IndustryCodeRbitProperties : RbitProperties
     {
         [JsonIgnore]
-        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.IndustryCodeProperties";
+        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.IndustryCodeRbitProperties";
 
         /// <summary>
         /// Not an API field, only use for validating requests, mainly for testing purposes
@@ -45,5 +45,10 @@ namespace WePay.Risk.Structure.Rbit.RbitProperties
         /// </summary>
         [StringLength(1023, ErrorMessage = Identifier + " - IndustryDetail cannot exceed 1023 characters")]
         public string IndustryDetail { get; set; }
+
+        public IndustryCodeRbitProperties()
+        {
+            RbitTypeContainer = Common.RbitTypes.IndustryCode;
+        }
     }
 }

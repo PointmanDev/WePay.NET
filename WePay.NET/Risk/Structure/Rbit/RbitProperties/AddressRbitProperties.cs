@@ -5,10 +5,10 @@ using WePay.Shared.Structure;
 
 namespace WePay.Risk.Structure.Rbit.RbitProperties
 {
-    public class AddressProperties : RbitProperties
+    public class AddressRbitProperties : RbitProperties
     {
         [JsonIgnore]
-        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.AddressProperties";
+        private const string Identifier = "WePay.Risk.Structure.Rbit.RbitProperties.AddressRbitProperties";
 
         /// <summary>
         /// Not an API field, only use for validating requests, mainly for testing purposes
@@ -57,5 +57,10 @@ namespace WePay.Risk.Structure.Rbit.RbitProperties
         /// </summary>
         [ValidateWePayValue(ErrorMessage = Identifier, WePayValuesClassName = "WePay.Risk.Common.NormalizedAddressStatuses")]
         public string NormalizedAddressStatus { get; set; }
+
+        public AddressRbitProperties()
+        {
+            RbitTypeContainer = Common.RbitTypes.Address;
+        }
     }
 }
