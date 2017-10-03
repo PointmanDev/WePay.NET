@@ -8,7 +8,7 @@
     /// Whenever something important happens to the object that we think you should be notified of (typically a state change),
     /// we will make an HTTP POST request to your CallbackUri with the *TYPE*Id in the body of the request.
     /// </summary>
-    class IpnNotification
+    public class IpnNotification
     {
         public long? AccountId { get; set; }
         public long? CheckoutId { get; set; }
