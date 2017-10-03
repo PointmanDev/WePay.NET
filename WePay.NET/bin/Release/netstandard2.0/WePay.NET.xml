@@ -6550,6 +6550,16 @@
             Holds all values for iteration
             </summary>
         </member>
+        <member name="T:WePay.Shared.IpnNotification">
+            <summary>
+            Instant Payment Notifications (IPNs) allow you to receive notifications whenever the state on an object changes
+            (or something important happens to that object).
+            
+            To set up IPNs for an object, set a CallbackUri on that object.
+            Whenever something important happens to the object that we think you should be notified of (typically a state change),
+            we will make an HTTP POST request to your CallbackUri with the *TYPE*Id in the body of the request.
+            </summary>
+        </member>
         <member name="T:WePay.Shared.Structure.Address">
             <summary>
             The address structure contains information about a street address.
