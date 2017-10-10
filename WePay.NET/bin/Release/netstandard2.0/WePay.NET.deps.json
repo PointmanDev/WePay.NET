@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "WePay.NET/1.0.5.5": {
+      "WePay.NET/1.0.5.6": {
         "dependencies": {
           "NETStandard.Library": "2.0.0",
           "Newtonsoft.Json": "9.0.1",
@@ -420,7 +420,7 @@
     }
   },
   "libraries": {
-    "WePay.NET/1.0.5.5": {
+    "WePay.NET/1.0.5.6": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

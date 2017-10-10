@@ -1131,7 +1131,7 @@
             The checkout object represents a single payment and defines the amount, the destination account, the application fee, etc
             </summary>
         </member>
-        <member name="M:WePay.Checkout.CheckoutService.CreateAsync(WePay.Checkout.Request.CreateRequest,System.String,System.Boolean)">
+        <member name="M:WePay.Checkout.CheckoutService.CreateAsync(WePay.Checkout.Request.CreateRequest,System.String,System.Nullable{System.Boolean})">
             <summary>
             Use this call to create a checkout for an account.
             There are two ways to have your customers make a payment.

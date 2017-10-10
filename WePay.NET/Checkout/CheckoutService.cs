@@ -43,7 +43,7 @@ namespace WePay.Checkout
         /// <returns></returns>
         public async Task<LookupResponse> CreateAsync(CreateRequest createRequest,
                                                       string accessToken = null,
-                                                      bool useStaging = false)
+                                                      bool? useStaging = null)
         {
             return await PostRequestAsync(createRequest, EndPointUrls.Create, accessToken, useStaging);
         }

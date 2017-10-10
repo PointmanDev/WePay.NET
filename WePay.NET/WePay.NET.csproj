@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <PackageId>WePay.NET</PackageId>
     <Title>WePay.NET</Title>
-    <PackageVersion>1.0.5.5</PackageVersion>
+    <PackageVersion>1.0.5.6</PackageVersion>
     <Authors>Leonardo DiBella</Authors>
     <Summary>A complete class library for integrating with WePay's API (v2) (https://developer.wepay.com/api)</Summary>
     <Description>A complete class library for integrating with WePay's API (v2) (https://developer.wepay.com/api)</Description>
@@ -13,9 +13,9 @@
     <Copyright></Copyright>
     <PackageTags>WePay WePay.NET WePayDotNet WePayNET</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.5.5</Version>
-    <AssemblyVersion>1.0.5.5</AssemblyVersion>
-    <FileVersion>1.0.5.5</FileVersion>
+    <Version>1.0.5.6</Version>
+    <AssemblyVersion>1.0.5.6</AssemblyVersion>
+    <FileVersion>1.0.5.6</FileVersion>
     <PackageProjectUrl>https://github.com/leosdibella/WePay.NET</PackageProjectUrl>
     <RepositoryUrl>https://github.com/leosdibella/WePay.NET</RepositoryUrl>
   </PropertyGroup>
