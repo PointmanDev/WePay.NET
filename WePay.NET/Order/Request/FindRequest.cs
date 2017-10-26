@@ -11,10 +11,10 @@ namespace WePay.Order.Request
         private const string Identifier = "WePay.Order.Request.FindRequest";
 
         /// <summary>
-        /// The unique ID of the order you want to look up.
+        /// The AccountId of the order you want to look up.
         /// </summary>
-        [Required(ErrorMessage = Identifier + " - Requires OrderId")]
-        public long? OrderId { get; set; }
+        [Required(ErrorMessage = Identifier + " - Requires AccountId")]
+        public long? AccountId { get; set; }
 
         /// <summary>
         /// Starting point for looking up existing orders.
