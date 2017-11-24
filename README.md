@@ -14,7 +14,7 @@ Table of Contents
 
 Structure
 =================
-The root namespace is `WePay` and this library namespacing structure try to follow the API reference (https://developer.wepay.com/api/) as closely as possible.
+The root namespace is `WePay` and this library namespacing structure tries to follow the API reference (https://developer.wepay.com/api/) as closely as possible.
 
 Each WePay API endpoint is given its own namespace (e.g. `User`, `Account`, `Checkout`, `CreditCard` etc.). Each namespace will generally follow the structure below,
   * `WePay.<API>.Common`
@@ -43,7 +43,9 @@ The functions in each `WePay.<API>.<API>Service` generally (with very few except
   
 Please note that all functions are Async, and unless there is strong feedback requesting non-Async versions of the functions, it will likely stay this way.
 
-Each `WePay.<API>.<API>Service` inherits from `WePay.Shared.WePayApiService<T>`, and provides a `public readonly List<string> EndPoints` which are the suffixes of the WePay API endpoint Urls used in each function. Please note, should you decide to venture out on your own that you will need to prefix these strings with either (https://stage.wepayapi.com/INSERT_VERSION_HERE/ for staging or https://wepayapi.com/INSERT_VERSION_HERE/ for production).
+Each `WePay.<API>.<API>Service` inherits from `WePay.Shared.WePayApiService<T>`, and provides a `public readonly List<string> EndPoints` which are the suffixes of the WePay API endpoint Urls used in each function. Please note, should you decide to venture out on your own that you will need to prefix these strings with either,
+  * https://stage.wepayapi.com/INSERT_VERSION_HERE/ for staging,
+  * https://wepayapi.com/INSERT_VERSION_HERE/ for production.
 
 Each `WePay.<API>.Structure`, `WePay.<API>.Request` and `WePay.<API>.Response` object is documented within the code about each field and where the predefined values can be found (if it accepts predefined values), if it's required or not and what the specific requirements are (e.g. max length of string, min length of string etc.).
 
