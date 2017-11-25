@@ -55,3 +55,35 @@ Generally, each `WePay.<API>.Common` object contains,
   * An `enum` called `ValueIndices` which contains all the named indices for `Values`
   
 I know this structure is not perfect by any means, but my hope is that everyone will find it versatile enough to make use of it regardless of their needs. If this is not the case, please let me know so I can make revisions to allow for more flexibility. More to come! Thanks! :)
+
+User
+====
+
+First you need to initialize the service,
+`WePay.User.UserService WePayUserService = new WePay.User.UserService(false, ACCESS_TOKEN, false);`
+
+Then we can register a user,
+
+    var registerResponse = await WePayUserService.RegisterAsync(new WePay.User.Request.RegisterRequest
+    {
+        ClientId = CLIENT_ID,
+        ClientSecret = CLIENT_SECRET,
+        Email = "example@example.com",
+        Scope = WePay.User.Common.Scopes.AllowAllScopes(),
+        FirstName = "John",
+        LastName = "Doe",
+        OriginalIp = IP_ADDRESS,
+        OriginalDevice = USER_AGENT,
+        TosAcceptanceTime = DateTimeOffset.UtcNow.Ticks,
+        RedirectUri = "https://www.yourWebsiteGoesHere.com",
+        CallbackUri = "https://www.yourApiUrlGoesHere.com"
+    });
+
+Then you can send a user confirmation email as follows,
+
+    var sendConfirmationResponse = await WePayUserService.SendConfirmationAsync(new WePay.User.Request.SendConfirmationRequest
+    {
+        EmailMessage = "Please give us money with this.",
+        EmailButtonText = "Click to Money",
+        EmailSubject = "Hey You got WePay Now :)"
+    }, WE_PAY_USERS_ACCESS_TOKEN);
