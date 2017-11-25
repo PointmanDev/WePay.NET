@@ -11,7 +11,8 @@ Table of Contents
   * [User](#user)
   * [Account](#account)
   * [Checkout](#checkout)
-
+  * [Callbacks](#callbacks)
+  
 Structure
 =================
 The root namespace is `WePay` and this library namespacing structure tries to follow the API reference (https://developer.wepay.com/api/) as closely as possible.
@@ -60,11 +61,12 @@ User
 ====
 
 First you need to initialize the service,
-`WePay.User.UserService WePayUserService = new WePay.User.UserService(false, ACCESS_TOKEN, false);`
+
+    var wePayUserService = new WePay.User.UserService(false, ACCESS_TOKEN, false);
 
 Then we can register a user,
 
-    var registerResponse = await WePayUserService.RegisterAsync(new WePay.User.Request.RegisterRequest
+    var registerResponse = await wePayUserService.RegisterAsync(new WePay.User.Request.RegisterRequest
     {
         ClientId = CLIENT_ID,
         ClientSecret = CLIENT_SECRET,
@@ -81,9 +83,345 @@ Then we can register a user,
 
 Then you can send a user confirmation email as follows,
 
-    var sendConfirmationResponse = await WePayUserService.SendConfirmationAsync(new WePay.User.Request.SendConfirmationRequest
+    var sendConfirmationResponse = await wePayUserService.SendConfirmationAsync(new WePay.User.Request.SendConfirmationRequest
     {
         EmailMessage = "Please give us money with this.",
         EmailButtonText = "Click to Money",
         EmailSubject = "Hey You got WePay Now :)"
-    }, WE_PAY_USERS_ACCESS_TOKEN);
+    }, WE_PAY_USER_ACCESS_TOKEN);
+    
+Account
+=======
+
+First you need to initialize the service,
+
+    var wePayAccountService = new WePay.Account.AccountService(false, ACCESS_TOKEN, false);
+
+Then we need to build up the Rbits (Risk data) for the account create request,
+
+    long recieveTime = DateTimeOffset.UtcNow.Ticks / TimeSpan.TicksPerSecond;
+    string source = WePay.Risk.Common.Sources.User;
+
+    var businessNameRbit = new WePay.Risk.Structure.Rbit.BusinessNameRbit
+    {
+         ReceiveTime = recieveTime,
+         Source = source,
+         Properties = new WePay.Risk.Structure.Rbit.RbitProperties.BusinessNameRbitProperties
+         {
+             BusinessName = "Example LLC"
+         }
+     };
+     
+     var personRbit = new WePay.Risk.Structure.Rbit.PersonRbit
+     {
+         ReceiveTime = recieveTime,
+         Source = source,
+         Properties = new WePay.Risk.Structure.Rbit.RbitProperties.PersonRbitProperties
+         {
+             Name = "John Doe"
+         }
+     };
+
+     var emailAddressRbit = new WePay.Risk.Structure.Rbit.EmailRbit
+     {
+         ReceiveTime = recieveTime,
+         Source = source,
+         Properties = new WePay.Risk.Structure.Rbit.RbitProperties.EmailRbitProperties
+         {
+             Email = "example@example.com"
+         }
+     };
+
+     var phoneNumberRbit = new WePay.Risk.Structure.Rbit.PhoneRbit
+     {
+          ReceiveTime = recieveTime,
+          Source = source,
+          Properties = new WePay.Risk.Structure.Rbit.RbitProperties.PhoneRbitProperties
+          {
+              Phone = "555-555-5555"
+          }
+     };
+     
+     var websiteUriRbit = new WePay.Risk.Structure.Rbit.WebsiteUriRbit
+     {
+          ReceiveTime = recieveTime,
+          Source = source,
+          Properties = new WePay.Risk.Structure.Rbit.RbitProperties.WebsiteUriRbitProperties
+          {
+               Uri = "https://www.examplellc.com"
+          }
+     };
+
+     var businessAddressRbit = new WePay.Risk.Structure.Rbit.AddressRbit
+     {
+          ReceiveTime = recieveTime,
+          Source = source,
+          Properties = new WePay.Risk.Structure.Rbit.RbitProperties.AddressRbitProperties
+          {
+               Address = new WePay.Shared.Structure.Address
+               {
+                    Address1 = "123 Example Street",
+                    Address2 = "Suite 123",
+                    City = "Manhattan",
+                    Region = "NY",
+                    PostalCode = "12345",
+                    Country = "US"
+               }
+          }
+     };
+     
+     var industryCodeRbit = new WePay.Risk.Structure.Rbit.IndustryCodeRbit
+     {
+          ReceiveTime = recieveTime,
+          Source = source,
+          Properties = new WePay.Risk.Structure.Rbit.RbitProperties.IndustryCodeRbitProperties
+          {
+               IndustryCode = "",
+               IndustryCodeType = WePay.Risk.Common.IndustryCodeTypes.Mcc,
+               IndustryDetail = "Example LLC"
+          }
+     };
+     
+     var businessDescriptionRbit = new WePay.Risk.Structure.Rbit.BusinessDescriptionRbit
+     {
+          ReceiveTime = recieveTime,
+          Source = source,
+          Properties = new WePay.Risk.Structure.Rbit.RbitProperties.BusinessDescriptionRbitProperties
+          {
+                BusinessDescription = "Example LLC merchant",
+                NumberOfEmployees = 300
+          }
+     };
+     
+     var externalAccountRbit = new WePay.Risk.Structure.Rbit.ExternalAccountRbit
+     {
+           ReceiveTime = organization.CreatedAt.Value.UtcTicks / TimeSpan.TicksPerSecond,
+           Source = WePay.Risk.Common.Sources.PartnerDatabase,
+           Properties = new WePay.Risk.Structure.Rbit.RbitProperties.ExternalAccountRbitProperties
+           {
+                IsPartnerAccount = WePay.Risk.Common.IsPartnerAccountOptions.Yes,
+                AccountType = "Field Nimble " + organization.CreatedAt.Value.ToString("F")
+           }
+      };
+      
+      var accountCreateRbits = new WePay.Risk.Structure.Rbit.Rbit[]
+      {
+            businessNameRbit,
+            personRbit,
+            emailAddressRbit,
+            phoneNumberRbit,
+            websiteUriRbit,
+            businessAddressRbit,
+            industryCodeRbit,
+            businessDescriptionRbit,
+            externalAccountRbit
+       };
+       
+Now we can build and make the actual Account create request,
+
+    var createResponse = await wePayAccountService.CreateAsync(new WePay.Account.Request.CreateRequest {
+         Name = "Example LLC Account",
+         Description = "An account to receive payments for Example LLC",
+         CallbackUri = "https://www.yourApiUrlGoesHere.com",
+         ReferenceId = A_UNIQUE_STRING,
+         Rbits = accountCreateRbits,
+         Type = WePay.Account.Common.AccountTypes.Business
+    }, WE_PAY_USER_ACCESS_TOKEN);
+    
+Now we can modify an Account later if so desired,
+
+    var modifyResponse = await wePayAccountService.ModifyAsync(new WePay.Account.Request.ModifyRequest {
+        AccountId = AN_ACCOUNT_ID,
+        Name = "I changed it",
+        Description = "Because I wanted to"
+    }, WE_PAY_USER_ACCESS_TOKEN);
+    
+Or we can delete an Account,
+
+    var stateResponse = await wePayAccountService.DeleteAsync(new WePay.Account.Request.DeleteRequest
+    {
+         AccountId = AN_ACCOUNT_ID,
+         Reason = "Because I felt like it."
+    }, WE_PAY_USER_ACCESS_TOKEN);
+    
+Checkout
+========
+
+First we need to initialize the service
+
+    var wePayCheckoutService = new WePay.Checkout.CheckoutService(false, ACCESS_TOKEN, false);
+    
+Then we need to build up the Payer Rbits (Risk data) for the Checkout create request,
+
+    long receiveTime = DateTimeOffset.UtcNow.Ticks / TimeSpan.TicksPerSecond;
+    string source = WePay.Risk.Common.Sources.User;
+    
+    var emailAddressRbit = new WePay.Risk.Structure.Rbit.EmailRbit
+    {
+         ReceiveTime = receiveTime,
+         Source = source,
+         Properties = new WePay.Risk.Structure.Rbit.RbitProperties.EmailRbitProperties
+         {
+              Email = PAYERS_EMAIL
+         }
+    };
+    
+    var personRbit = new WePay.Risk.Structure.Rbit.PersonRbit
+    {
+         ReceiveTime = receiveTime,
+         Source = source,
+         Properties = new WePay.Risk.Structure.Rbit.RbitProperties.PersonRbitProperties
+         {
+             Name = PAYERS_FIRST_NAME + " " + PAYERS_LAST_NAME
+         }
+    };
+
+    var phoneNumberRbit = new WePay.Risk.Structure.Rbit.PhoneRbit
+    {
+         ReceiveTime = receiveTime,
+         Source = source,
+         Properties = new WePay.Risk.Structure.Rbit.RbitProperties.PhoneRbitProperties
+         {
+             Phone = PAYERS_PHONE_NUMBER
+         }
+    };
+    
+    var addressRbit = new WePay.Risk.Structure.Rbit.AddressRbit
+    {
+         ReceiveTime = receiveTime,
+         Source = source,
+         Properties = new WePay.Risk.Structure.Rbit.RbitProperties.AddressRbitProperties
+         {
+              Address = new WePay.Shared.Structure.Address
+              {
+                  PostalCode = PAYERS_POSTAL_CODE
+              }
+         }
+    };
+            
+    var checkoutCreatePayerRbits = new WePay.Risk.Structure.Rbit.Rbit[]
+    {
+        emailAddressRbit,
+        personRbit,
+        phoneNumberRbit,
+        addressRbit
+    };
+    
+Then we need to build up the Transaction Rbits (Risk data) for the Checkout create request,
+
+    var transactionDetailRbit = new WePay.Risk.Structure.Rbit.TransactionDetailsRbit
+    {
+         ReceiveTime = receiveTime,
+         Source = source,
+         Properties = new WePay.Risk.Structure.Rbit.RbitProperties.TransactionDetailsRbitProperties
+         {
+              ItemizedReceipt = new List<WePay.Risk.Structure.ReceiptLineItem>() {
+                   new WePay.Risk.Structure.ReceiptLineItem
+                   {
+                        Description = "A cool thing",
+                        Currency = WePay.Shared.Common.Currencies.USD,
+                        Quantity = 3,
+                        ServiceBillingMethod = WePay.Risk.Common.ServiceBillingMethods.FreeFormEntry,
+                        ProjectName = "Operation: Put food on the table",
+                        ItemPrice = 300.00
+                   },
+                   new WePay.Risk.Structure.ReceiptLineItem
+                   {
+                        Description = "Another cool thing",
+                        Currency = WePay.Shared.Common.Currencies.USD,
+                        Quantity = 5,
+                        ServiceBillingMethod = WePay.Risk.Common.ServiceBillingMethods.FreeFormEntry,
+                        ProjectName = "Operation: Put the kids through college",
+                        ItemPrice = 700.00
+                   }
+              },
+              Discount = "I took off $20 bux ... after I charged them $100 for a restrictive software license >:)",
+              Note = INVOICE_NUMBER_OR_SOMETHING,
+              ServiceAddress = new WePay.Shared.Structure.Address
+              {
+                   Address1 = "123 Service Street",
+                   Address2 = "Aparment 123",
+                   City = "Manhattan",
+                   Region = "NY",
+                   PostalCode = "12345",
+                   Country = WePay.Shared.Common.Countries.US
+              },
+              TermsText = ""
+         }
+    };
+
+    var transactionDetailRbits = new WePay.Risk.Structure.Rbit.Rbit[]
+    {
+         transactionDetailRbit
+    };
+
+Now we can build and make the Checkout create request,
+
+    var createResponse = await WePayCheckoutService.CreateAsync(new 
+    {
+        AccountId = ACCOUNT_ID,
+        ShortDescription = "",
+        Type = WePay.Checkout.Common.CheckoutTypes.Service,
+        Amount = PAYMENT_AMOUNT,
+        Currency = WePay.Shared.Common.Currencies.USD,
+        Fee = new WePay.Checkout.Structure.Fee
+        {
+             AppFee = AMOUNT_YOUR_APP_COLLECTS_ON_THIS_CHECKOUT,
+             FeePayer = WePay.Checkout.Common.FeePayers.Payee
+        },
+        EmailMessage = "HEYO",
+        CallbackUri = CallbackUris.CheckoutCreate,
+        ReferenceId = A_UNIQUE_STRING,
+        UniqueId = ANOTHER_UNIQUE_STRING_BUT_COULD_BE_EQUAL_TO_REFERENCE_ID,
+        PaymentMethod = new WePay.Checkout.Structure.PaymentMethod
+        {
+             Type = WePay.Checkout.Common.PaymentTypes.CreditCard,
+             CreditCard = new WePay.CreditCard.Structure.CreditCard
+             {
+                 Id = CREDIT_CARD_ID,
+                 Data = new WePay.CreditCard.Structure.CreditCardAdditionalData // or null if not coming from credit card reader
+                 {
+                     TransactionToken = EMV_TOKEN_FROM_CARD_READER
+                 }
+             }
+        },
+        PayerRbits = checkoutCreatePayerRbits,
+        TransactionRbits = 
+    }, WE_PAY_USER_ACCESS_TOKEN);
+    
+Now we can cancel Checkouts as follows,
+
+    var cancelRequest = new WePay.Checkout.Request.CancelRequest
+    {
+         CheckoutId = CHECKOUT_ID
+         CancelReason = "Cause I felt like it."
+    };
+    
+Or we can refund Checkouts as follows,
+
+    var refundRequest = new WePay.Checkout.Request.RefundRequest
+    {
+         CheckoutId = payment.WePayCheckout.CheckoutId,
+         RefundReason = "Cause I felt like it."
+    };
+
+Callbacks
+=========
+
+Callbacks are how WePay updates your platform of any changes, they will send you request with an Id that corresponds to an `Account`, `User`, `Checkout` etc.
+
+Use the `WePay.Shared.IpnNotification` object to recieve these requests and then route them as desired. This will typically entail making a request with that Id to see any changes and then taking action as you see fit, examples below,
+
+    var userLookupResponse = await WePayUserService.LookupAsync(WE_PAY_USER_ACCESS_TOKEN);
+    
+    var accountLookupResponse = await WePayAccountService.LookupAsync(new WePay.Account.Request.LookupRequest
+    {
+         AccountId = accountId
+    }, WE_PAY_USER_ACCESS_TOKEN);
+                
+    var checkoutLookupResponse = await WePayCheckoutService.LookupAsync(new WePay.Checkout.Request.LookupRequest
+    {
+         CheckoutId = CHECKOUT_ID
+    });
+    
+More on the way! :)
