@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using WePay.Batch.Request;
 using WePay.Batch.Response;
@@ -34,12 +35,18 @@ namespace WePay.Batch
         {
             var results = new List<WePayResponse>();
             BulkCreateResponse response = await PostRequestAsync(createRequest, EndPointUrls.Create, accessToken, useStaging);
+            Type type = null;
 
             if (response.Calls != null)
             {
-                foreach (var result in response.Calls)
+                for (int i = 0; i < response.Calls.Count; ++i)
                 {
-                    results.Add(result.Response);
+                    type = createRequest.Calls
+                                        .GetType()
+                                        .BaseType
+                                        .GetGenericArguments()[0];
+
+                    results.Add((WePayResponse)response.Calls[i].ToObject(type));
                 }
             }
 

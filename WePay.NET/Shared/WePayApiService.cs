@@ -36,7 +36,7 @@ namespace WePay.Shared
             NullValueHandling = NullValueHandling.Ignore
         };
 
-        private static readonly JsonSerializer JsonSerializer = new JsonSerializer()
+        protected static readonly JsonSerializer JsonSerializer = new JsonSerializer()
         {
             ContractResolver = DefaultContractResolver
         };
