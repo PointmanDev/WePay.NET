@@ -1,9 +1,10 @@
-﻿using WePay.Shared;
+﻿using System.Collections.Generic;
+using WePay.Shared;
 
 namespace WePay.Batch.Response
 {
     public class BulkCreateResponse : WePayResponse
     {
-        public WePayFindResponse<IndividualCreateResponse> Calls { get; set; }
+        public List<IndividualCreateResponse> Calls { get; set; }
     }
 }

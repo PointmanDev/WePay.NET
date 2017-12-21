@@ -8,3 +8,12 @@ C:\Users\Nick\Documents\GIT\WePay.NET\WePay.NET\obj\Release\netstandard2.0\WePay
 C:\Users\Nick\Documents\GIT\WePay.NET\WePay.NET\obj\Release\netstandard2.0\WePay.NET.AssemblyInfo.cs
 C:\Users\Nick\Documents\GIT\WePay.NET\WePay.NET\obj\Release\netstandard2.0\WePay.NET.dll
 C:\Users\Nick\Documents\GIT\WePay.NET\WePay.NET\obj\Release\netstandard2.0\WePay.NET.pdb
+D:\GIT\WePay.NET\WePay.NET\bin\Release\netstandard2.0\WePay.NET.deps.json
+D:\GIT\WePay.NET\WePay.NET\bin\Release\netstandard2.0\WePay.NET.dll
+D:\GIT\WePay.NET\WePay.NET\bin\Release\netstandard2.0\WePay.NET.pdb
+D:\GIT\WePay.NET\WePay.NET\bin\Release\netstandard2.0\WePay.NET.xml
+D:\GIT\WePay.NET\WePay.NET\obj\Release\netstandard2.0\WePay.NET.csproj.CoreCompileInputs.cache
+D:\GIT\WePay.NET\WePay.NET\obj\Release\netstandard2.0\WePay.NET.AssemblyInfoInputs.cache
+D:\GIT\WePay.NET\WePay.NET\obj\Release\netstandard2.0\WePay.NET.AssemblyInfo.cs
+D:\GIT\WePay.NET\WePay.NET\obj\Release\netstandard2.0\WePay.NET.dll
+D:\GIT\WePay.NET\WePay.NET\obj\Release\netstandard2.0\WePay.NET.pdb

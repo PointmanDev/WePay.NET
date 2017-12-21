@@ -2872,28 +2872,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nick\\.nuget\\packages\\": {},
+    "C:\\Users\\PISS\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.5.6",
+    "version": "1.0.5.7",
     "restoreSettings": {
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nick\\Documents\\GIT\\WePay.NET\\WePay.NET\\WePay.NET.csproj",
+      "projectUniqueName": "D:\\GIT\\WePay.NET\\WePay.NET\\WePay.NET.csproj",
       "projectName": "WePay.NET",
-      "projectPath": "C:\\Users\\Nick\\Documents\\GIT\\WePay.NET\\WePay.NET\\WePay.NET.csproj",
-      "packagesPath": "C:\\Users\\Nick\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nick\\Documents\\GIT\\WePay.NET\\WePay.NET\\obj\\",
+      "projectPath": "D:\\GIT\\WePay.NET\\WePay.NET\\WePay.NET.csproj",
+      "packagesPath": "C:\\Users\\PISS\\.nuget\\packages\\",
+      "outputPath": "D:\\GIT\\WePay.NET\\WePay.NET\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Nick\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\PISS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "net45",
@@ -2920,31 +2923,31 @@
     "frameworks": {
       "net45": {
         "dependencies": {
-          "System.ComponentModel.Annotations": {
-            "target": "Package",
-            "version": "4.4.0"
-          },
           "Newtonsoft.Json": {
             "target": "Package",
-            "version": "9.0.1"
+            "version": "[9.0.1, )"
+          },
+          "System.ComponentModel.Annotations": {
+            "target": "Package",
+            "version": "[4.4.0, )"
           }
         }
       },
       "netstandard2.0": {
         "dependencies": {
-          "System.ComponentModel.Annotations": {
-            "target": "Package",
-            "version": "4.4.0"
-          },
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
           },
           "Newtonsoft.Json": {
             "target": "Package",
-            "version": "9.0.1"
+            "version": "[9.0.1, )"
+          },
+          "System.ComponentModel.Annotations": {
+            "target": "Package",
+            "version": "[4.4.0, )"
           }
         },
         "imports": [

@@ -25,6 +25,7 @@ namespace WePay.Batch
         /// In addition, an AccessToken will be passed for each call in the list, allowing you to make batch API calls for multiple users.
         /// </summary>
         /// <param name="createRequest"></param>
+        /// <param name="accessToken"></param>
         /// <param name="useStaging"></param>
         /// <returns></returns>
         public async Task<List<WePayResponse>> CreateAsync(CreateRequest createRequest,
@@ -34,9 +35,9 @@ namespace WePay.Batch
             var results = new List<WePayResponse>();
             BulkCreateResponse response = await PostRequestAsync(createRequest, EndPointUrls.Create, accessToken, useStaging);
 
-            if (response.Calls != null && response.Calls.Results != null)
+            if (response.Calls != null)
             {
-                foreach (var result in response.Calls.Results)
+                foreach (var result in response.Calls)
                 {
                     results.Add(result.Response);
                 }

@@ -25,7 +25,8 @@ namespace WePay.Risk.Common
             Person,
             Phone,
             TransactionDetails,
-            WebSiteUri
+            WebSiteUri,
+            Comment
         }
 
         /// <summary>
@@ -100,6 +101,11 @@ namespace WePay.Risk.Common
         /// Information regarding a website
         /// </summary>
         public const string WebsiteUri = "website_uri";
+
+        /// <summary>
+        /// A comment
+        /// </summary>
+        public const string Comment = "comment";
 
         /// <summary>
         /// Holds all values for iteration

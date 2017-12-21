@@ -1083,6 +1083,7 @@
             In addition, an AccessToken will be passed for each call in the list, allowing you to make batch API calls for multiple users.
             </summary>
             <param name="createRequest"></param>
+            <param name="accessToken"></param>
             <param name="useStaging"></param>
             <returns></returns>
         </member>
@@ -3978,9 +3979,9 @@
             The URL that we will POST IPN data to.
             </summary>
         </member>
-        <member name="P:WePay.Order.Request.FindRequest.OrderId">
+        <member name="P:WePay.Order.Request.FindRequest.AccountId">
             <summary>
-            The unique ID of the order you want to look up.
+            The AccountId of the order you want to look up.
             </summary>
         </member>
         <member name="P:WePay.Order.Request.FindRequest.Start">
@@ -4800,6 +4801,11 @@
             Information regarding a website
             </summary>
         </member>
+        <member name="F:WePay.Risk.Common.RbitTypes.Comment">
+            <summary>
+            A comment
+            </summary>
+        </member>
         <member name="F:WePay.Risk.Common.RbitTypes.Values">
             <summary>
             Holds all values for iteration
@@ -5194,6 +5200,23 @@
             A parameter set to the key value pair of properties for this type.
             </summary>
         </member>
+        <member name="T:WePay.Risk.Structure.Rbit.CommentRbit">
+            <summary>
+            An rbit that allows you to add a comment
+            </summary>
+        </member>
+        <member name="P:WePay.Risk.Structure.Rbit.CommentRbit.Type">
+            <summary>
+            The value describing the kind of risk information the rbit contains.
+            (Enumeration of these values can be found in WePay.Risk.Common.RbitTypes)
+            PROTIP: You don't need to set this, I already did it for you
+            </summary>
+        </member>
+        <member name="P:WePay.Risk.Structure.Rbit.CommentRbit.Properties">
+            <summary>
+            A parameter set to the key value pair of properties for this type.
+            </summary>
+        </member>
         <member name="T:WePay.Risk.Structure.Rbit.EmailRbit">
             <summary>
             The email address associated with an entity.
@@ -5468,6 +5491,16 @@
             <summary>
             The kind of name used for the business.
             (Enumeration of these values can be found in WePay.Risk.Common.BusinessNameTypes)
+            </summary>
+        </member>
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.CommentRbitProperties.RbitType">
+            <summary>
+            Not an API field, only use for validating requests, mainly for testing purposes
+            </summary>
+        </member>
+        <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.CommentRbitProperties.CommentText">
+            <summary>
+            Comment text
             </summary>
         </member>
         <member name="P:WePay.Risk.Structure.Rbit.RbitProperties.EmailRbitProperties.RbitType">
