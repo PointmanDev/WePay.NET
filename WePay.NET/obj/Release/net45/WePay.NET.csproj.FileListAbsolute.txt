@@ -11,6 +11,7 @@ D:\GIT\WePay.NET\WePay.NET\bin\Release\net45\WePay.NET.xml
 D:\GIT\WePay.NET\WePay.NET\bin\Release\net45\WePay.NET.dll
 D:\GIT\WePay.NET\WePay.NET\bin\Release\net45\WePay.NET.pdb
 D:\GIT\WePay.NET\WePay.NET\bin\Release\net45\Newtonsoft.Json.dll
+D:\GIT\WePay.NET\WePay.NET\obj\Release\net45\WePay.NET.csprojResolveAssemblyReference.cache
 D:\GIT\WePay.NET\WePay.NET\obj\Release\net45\WePay.NET.csproj.CoreCompileInputs.cache
 D:\GIT\WePay.NET\WePay.NET\obj\Release\net45\WePay.NET.AssemblyInfoInputs.cache
 D:\GIT\WePay.NET\WePay.NET\obj\Release\net45\WePay.NET.AssemblyInfo.cs
