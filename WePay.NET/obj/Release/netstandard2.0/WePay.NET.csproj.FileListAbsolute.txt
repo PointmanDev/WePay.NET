@@ -17,3 +17,4 @@ D:\GIT\WePay.NET\WePay.NET\obj\Release\netstandard2.0\WePay.NET.AssemblyInfoInpu
 D:\GIT\WePay.NET\WePay.NET\obj\Release\netstandard2.0\WePay.NET.AssemblyInfo.cs
 D:\GIT\WePay.NET\WePay.NET\obj\Release\netstandard2.0\WePay.NET.dll
 D:\GIT\WePay.NET\WePay.NET\obj\Release\netstandard2.0\WePay.NET.pdb
+D:\GIT\WePay.NET\WePay.NET\obj\Release\netstandard2.0\WePay.NET.csprojResolveAssemblyReference.cache
