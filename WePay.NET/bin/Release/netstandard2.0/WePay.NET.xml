@@ -893,17 +893,17 @@
             (Enumeration of these values can be found in WePay.Shared.Common.SettlementPaymentMethods)
             </summary>
         </member>
-        <member name="P:WePay.Account.Structure.Balances.WithdrawlPeriod">
+        <member name="P:WePay.Account.Structure.Balances.WithdrawalPeriod">
             <summary>
             (Enumeration of these values can be found in WePay.Shared.Common.Frequencies )
             </summary>
         </member>
-        <member name="P:WePay.Account.Structure.Balances.WithdrawlNextTime">
+        <member name="P:WePay.Account.Structure.Balances.WithdrawalNextTime">
             <summary>
             The Unix timestamp (UTC) for the next scheduled settlement.
             </summary>
         </member>
-        <member name="P:WePay.Account.Structure.Balances.WithdrawlBankName">
+        <member name="P:WePay.Account.Structure.Balances.WithdrawalBankName">
             <summary>
             The masked name of the entity funds will be settled to.
             If a check is being sent, this will be the name of the entity the check was mailed to (the "pay to the order of" field).
