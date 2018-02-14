@@ -15,7 +15,8 @@ namespace WePay.Account
             Modify,
             Delete,
             GetUpdateUri,
-            SettlementSetup
+            SettlementSetup,
+            RequestRevieew
         }
 
         /// <summary>
@@ -125,6 +126,20 @@ namespace WePay.Account
             return await PostRequestAsync(settlementSetupRequest, EndPointUrls.GetUpdateUri, accessToken, useStaging);
         }
 
+        /// <summary>
+        /// Use this call to request an account review, this is mandatory if this account will be making transactions with a credit card reader.
+        /// </summary>
+        /// <param name="lookupRequest"></param>
+        /// <param name="accessToken"></param>
+        /// <param name="useStaging"></param>
+        /// <returns></returns>
+        public async Task<LookupResponse> RequestReview(LookupRequest lookupRequest,
+                                                        string accessToken = null,
+                                                        bool? useStaging = null)
+        {
+            return await PostRequestAsync(lookupRequest, EndPointUrls.RequestReview, accessToken, useStaging);
+        }
+
         public static class EndPointUrls
         {
             public const string Lookup = "account";
@@ -134,6 +149,7 @@ namespace WePay.Account
             public const string Delete = "account/delete";
             public const string GetUpdateUri = "account/get_update_uri";
             public const string SettlementSetup = "account/settlement_setup";
+            public const string RequestReview = "account/request_review";
         }
 
         public AccountService(bool enableValidation = false,

@@ -248,6 +248,15 @@
             <param name="useStaging"></param>
             <returns></returns>
         </member>
+        <member name="M:WePay.Account.AccountService.RequestReview(WePay.Account.Request.LookupRequest,System.String,System.Nullable{System.Boolean})">
+            <summary>
+            Use this call to request an account review, this is mandatory if this account will be making transactions with a credit card reader.
+            </summary>
+            <param name="lookupRequest"></param>
+            <param name="accessToken"></param>
+            <param name="useStaging"></param>
+            <returns></returns>
+        </member>
         <member name="T:WePay.Account.Common.AccountReviewStatuses">
             <summary>
             All possible account review statuses
